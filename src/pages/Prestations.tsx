@@ -404,7 +404,7 @@ export default function Prestations() {
                   {prestation.id === 'panneaux-photovoltaiques' && (
                     <div className="h-[300px] relative overflow-hidden rounded-2xl shadow-md">
                       <img
-                        src="/dsc03727.jpg"
+                        src="/rony.jpg"
                         alt="Robot de nettoyage en action sur panneaux photovoltaïques"
                         className="w-full h-full object-cover"
                       />
