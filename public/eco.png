@@ -1,1 +1,4 @@
-[DUMMY FILE CONTENT]
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f0fdf4"/>
+  <text x="300" y="220" font-family="Arial" font-size="36" font-weight="bold" fill="#14532d" text-anchor="middle">Écologie</text>
+</svg>
