@@ -78,8 +78,8 @@ export default function Prestations() {
       id: 'demoussage',
       title: 'Toitures saines et protégées, sans échafaudages',
       description:
-        "Sans traitement régulier, les mousses, lichens et champignons dégradent progressivement l’étanchéité de votre toiture, réduisant sa durée de vie jusqu’à 30 %. Préservez votre patrimoine immobilier avec notre service de démoussage par drone, une solution sécurisée, rapide et certifiée pour une toiture durable et performante.",
-      image: '/demoussage-toit-droneproche.jpg',
+        "Sans traitement régulier, les mousses, lichens et champignons dégradent progressivement l'étanchéité de votre toiture, réduisant sa durée de vie jusqu'à 30 %. Préservez votre patrimoine immobilier avec notre service de démoussage par drone, une solution sécurisée, rapide et certifiée pour une toiture durable et performante.",
+      image: '/5kmh_et_jusqu\'a_600m2_heure_de_traitement.png',
       link: '/prestations/demoussage',
       icon: Shield,
       equipment: [
