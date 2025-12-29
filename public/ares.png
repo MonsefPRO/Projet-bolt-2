@@ -1,6 +1,0 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="600" fill="#f0f9ff"/>
-  <circle cx="400" cy="300" r="80" fill="#0284c7" opacity="0.5"/>
-  <text x="400" y="320" font-family="Arial" font-size="32" font-weight="bold" fill="#075985" text-anchor="middle">ARES</text>
-  <text x="400" y="360" font-family="Arial" font-size="18" fill="#0c4a6e" text-anchor="middle">Drone Façade</text>
-</svg>
