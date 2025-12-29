@@ -17,12 +17,12 @@ export default function Prestations() {
   const [currentCarouselImage, setCurrentCarouselImage] = useState(0);
 
   const carouselImages = [
-    { src: '/dsc03681.jpg', alt: 'Robot de nettoyage drone sur panneaux solaires' },
-    { src: '/dsc03727.jpg', alt: 'Système de nettoyage en action' },
-    { src: '/dji_0738.jpg', alt: 'Drone nettoyant une toiture' },
-    { src: '/dsc07832.jpg', alt: 'Drone professionnel au sol' },
-    { src: '/dsc03813.jpg', alt: 'Équipement de nettoyage drone' },
-    { src: '/dsc03616.jpg', alt: 'Drone sur panneaux solaires' },
+    { src: '/rony.jpg', alt: 'Robot de nettoyage drone sur panneaux solaires' },
+    { src: '/abateur_de_frelons.png', alt: 'Système de nettoyage en action' },
+    { src: '/rony3.jpg', alt: 'Drone nettoyant une toiture' },
+    { src: '/ares.jpg', alt: 'Drone professionnel au sol' },
+    { src: '/rony2.jpg', alt: 'Équipement de nettoyage drone' },
+    { src: '/ares2.jpg', alt: 'Drone sur panneaux solaires' },
     { src: '/dsc07631.jpg', alt: 'Technologie de nettoyage drone' }
   ];
 
