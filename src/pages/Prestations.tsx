@@ -365,7 +365,7 @@ export default function Prestations() {
                   isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } gap-0 items-center bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300`}
               >
-                <div className="w-full lg:w-1/2 flex-shrink-0 p-4 space-y-4">
+                <div className="w-full lg:w-1/2 flex-shrink-0 p-4">
                   <div className="h-[320px] relative overflow-hidden rounded-2xl shadow-md">
                     <img
                       src={prestation.image}
@@ -380,46 +380,6 @@ export default function Prestations() {
                       </div>
                     </div>
                   </div>
-
-                  {prestation.id === 'demoussage' && (
-                    <div className="h-[300px] relative overflow-hidden rounded-2xl shadow-md">
-                      <img
-                        src="5kmh_et_jusqu’a_600m2_heure_de_traitement.png."
-                        alt="Drone effectuant le démoussage d'une toiture"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-
-                  {prestation.id === 'demoussage' && (
-                    <div className="h-[300px] relative overflow-hidden rounded-2xl shadow-md">
-                      <img
-                        src="/5kmh_et_jusqu’a_600m2_heure_de_traitement.png"
-                        alt="Drone effectuant le démoussage d'une toiture"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-
-                  {prestation.id === 'panneaux-photovoltaiques' && (
-                    <div className="h-[300px] relative overflow-hidden rounded-2xl shadow-md">
-                      <img
-                        src="/rony.jpg.jpg"
-                        alt="Robot de nettoyage en action sur panneaux photovoltaïques"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-
-                  {prestation.id === 'elimination-frelons' && (
-                    <div className="h-[300px] relative overflow-hidden rounded-2xl shadow-md">
-                      <img
-                        src="/frel.png"
-                        alt="Drone en action pour l'élimination de nids de frelons"
-                        className="w-full h-full object-contain bg-gray-50"
-                      />
-                    </div>
-                  )}
                 </div>
 
                 <div className="w-full lg:w-1/2 p-8 lg:p-12 space-y-6">
