@@ -320,7 +320,7 @@ export default function Prestations() {
           <p className="text-lg text-gray-600 leading-relaxed mb-8">
             Ellipsys Solutions répond au normes éditée par la DGAC & EASA, experte dans les prestations professionnelles par drone
             pour l’entretien, la maintenance et l’inspection de bâtiments industriels.Nous garantissons des interventions
-            100 % conformes à la réglementation européenne, avec l’utilisation exclusive de produits éco-certifiés. Grâce à notre technologie, nos opérations sont jusqu’à 5 fois plus rapides que les méthodes classiques, sans aucun risque pour les opérateurs humains.
+            100 % conformes à la réglementation européenne, avec l’utilisation exclusive de produits éco-certifiés. Grâce à notre technologie, nos opérations sont jusqu’à 5 fois plus rapides que les méthodes classiques, en limitant au maximum les risques d'exploitation.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
             <div className="bg-sky-50 border border-sky-200 rounded-xl p-6">
