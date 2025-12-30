@@ -132,7 +132,7 @@ export default function Demoussage() {
                 {[
                   { title: 'Drone haute performance', desc: 'Stabilité optimale par tous les temps' },
                   { title: 'Systèmes hydrojet haute pression', desc: 'Nettoyage puissant sans endommager tuiles' },
-                  { title: 'Produits biocides biodégradables', desc: 'Traitement anti-mousse écologique certifié AB' },
+                  { title: 'Produits biocides biodégradables', desc: 'Traitement anti-mousse éco-responsable' },
                   { title: 'Traitement hydrofuge professionnel', desc: 'Protection longue durée 10 ans incluse' }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
