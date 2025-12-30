@@ -27,6 +27,7 @@ function App() {
     { src: '/chronos.jpg', alt: 'Drone Chronos' },
     { src: '/rony4.jpg', alt: 'Expert drone Ellipsys' },
     { src: '/chronos2.jpg', alt: 'Drone Chronos 2' },
+    { src: '/rony5.jpg', alt: 'Expert drone Ellipsys' },
     { src: '/dsc03603-2.jpg', alt: 'Drone professionnel' },
     { src: '/dsc03727 copy.jpg', alt: 'Système de nettoyage en action' },
     { src: '/dsc07631 copy.jpg', alt: 'Technologie de nettoyage drone' },
