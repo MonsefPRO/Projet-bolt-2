@@ -7,7 +7,7 @@ export default function CertificationsBanner() {
     },
     {
       id: 2,
-      image: '/2.png',
+      image: '/1.png',
       alt: 'Certification 2'
     },
     {
