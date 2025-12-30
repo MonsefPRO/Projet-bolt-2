@@ -32,9 +32,10 @@ export default function DroneBenefits() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
             {t('benefits.title')}
           </h2>
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium">
-            {t('benefits.summary')}
-          </p>
+          <p
+            className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: t('benefits.summary') }}
+          />
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -59,9 +60,10 @@ export default function DroneBenefits() {
         <div className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex-1">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                {t('benefits.summary')}
-              </h3>
+              <h3
+                className="text-2xl md:text-3xl font-bold mb-4"
+                dangerouslySetInnerHTML={{ __html: t('benefits.summary') }}
+              />
             </div>
             <a
               href="/devis"
