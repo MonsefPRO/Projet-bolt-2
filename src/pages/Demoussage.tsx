@@ -35,7 +35,7 @@ export default function Demoussage() {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <div className="lg:col-span-2 space-y-8">
             <section>
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Démoussage de Toiture par Drone : Sécurité, Efficacité et Respect des Matériaux</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Démoussage de Toiture par Drone</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Ellipsys modernise l’entretien de toiture grâce au démoussage par drone, une solution innovante conçue pour les professionnels, collectivités et grands comptes. Cette méthode aérienne supprime les risques liés aux interventions humaines, tout en assurant un traitement précis et non invasif de la couverture.
               </p>
