@@ -22,13 +22,13 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
               <img
                 src="/logo_de_cote.png"
                 alt="Ellipsys"
-                className='h-28 sm:h-36 md:h-44 lg:h-52 xl:h-60 2xl:h-72 w-auto -ml-4 hover:scale-110 transition-transform duration-300 cursor-pointer'
+                className='h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-80 w-auto -ml-4 hover:scale-110 transition-transform duration-300 cursor-pointer'
               />
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-12">
-            <Link to="/prestations" className={`font-semibold text-lg transition-colors relative group ${
+          <div className="hidden md:flex items-center space-x-16 flex-1 justify-center">
+            <Link to="/prestations" className={`font-semibold text-xl transition-colors relative group ${
               onBlueBanner
                 ? 'text-white hover:text-sky-100'
                 : 'text-gray-700 hover:text-sky-600'
@@ -42,7 +42,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
             <div className="relative group">
               <button
                 onMouseEnter={() => setIsActualitesOpen(true)}
-                className={`flex items-center font-semibold text-lg transition-all duration-300 relative ${
+                className={`flex items-center font-semibold text-xl transition-all duration-300 relative ${
                   onBlueBanner
                     ? 'text-white hover:text-sky-100'
                     : 'text-gray-700 hover:text-sky-600'
@@ -72,7 +72,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
               )}
             </div>
 
-            <Link to="/valeurs" className={`font-semibold text-lg transition-colors relative group ${
+            <Link to="/valeurs" className={`font-semibold text-xl transition-colors relative group ${
               onBlueBanner
                 ? 'text-white hover:text-sky-100'
                 : 'text-gray-700 hover:text-sky-600'
@@ -82,7 +82,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
                 onBlueBanner ? 'bg-white' : 'bg-sky-600'
               }`}></span>
             </Link>
-            <Link to="/rejoignez-nous" className={`font-semibold text-lg transition-colors relative group ${
+            <Link to="/rejoignez-nous" className={`font-semibold text-xl transition-colors relative group ${
               onBlueBanner
                 ? 'text-white hover:text-sky-100'
                 : 'text-gray-700 hover:text-sky-600'
@@ -92,7 +92,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
                 onBlueBanner ? 'bg-white' : 'bg-sky-600'
               }`}></span>
             </Link>
-            <a href="#contact" className={`font-semibold text-lg transition-colors relative group ${
+            <a href="#contact" className={`font-semibold text-xl transition-colors relative group ${
               onBlueBanner
                 ? 'text-white hover:text-sky-100'
                 : 'text-gray-700 hover:text-sky-600'
@@ -104,7 +104,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
             </a>
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 ml-auto">
             <LanguageSwitcher />
             <Link
               to="/devis"
