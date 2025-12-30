@@ -98,13 +98,13 @@ export default function Blog() {
           backgroundImage: 'url(/design_sans_titre.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
+          backgroundBlendMode: 'normal'
         }}
       >
-        <div className="absolute inset-0 bg-gray-900/60"></div>
+        <div className="absolute inset-0 bg-gray-900/30"></div>
         <div className="container mx-auto px-4 text-center text-white relative z-10">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6">{t('blog.title')}</h1>
-          <p className="text-2xl text-gray-100">{t('blog.subtitle')}</p>
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">{t('blog.title')}</h1>
+          <p className="text-2xl text-gray-100 drop-shadow-lg">{t('blog.subtitle')}</p>
         </div>
       </div>
 
