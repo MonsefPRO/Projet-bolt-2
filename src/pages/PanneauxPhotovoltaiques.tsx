@@ -12,7 +12,7 @@ export default function PanneauxPhotovoltaiques() {
       <Header />
       <div className="h-96 bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden pt-20">
         <img
-          src="/dsc03681.jpg"
+          src="/rony.jpg"
           alt="Nettoyage de panneaux photovoltaïques par drone"
           className="absolute inset-0 w-full h-full object-cover opacity-40"
         />
