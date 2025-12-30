@@ -108,7 +108,7 @@ export default function Prestations() {
         'Pilotes certifiés',
         'Assurance RC Pro',
         'Normes NF EN 13414',
-        'Produits certifiés AB'
+        'Produits éco-responsable'
       ],
       color: 'green',
       seoKeywords:
