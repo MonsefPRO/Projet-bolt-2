@@ -23,7 +23,7 @@ export default function Prestations() {
     { src: '/ares.png', alt: 'Drone professionnel au sol' },
     { src: '/rony2.jpg', alt: 'Équipement de nettoyage drone' },
     { src: '/ares2.jpg', alt: 'Drone sur panneaux solaires' },
-    { src: '/dsc07631.jpg', alt: 'Technologie de nettoyage drone' }
+    { src: '/Demoussage drone 1.jpg', alt: 'Technologie de nettoyage drone' }
   ];
 
   useEffect(() => {
