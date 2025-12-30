@@ -292,7 +292,7 @@ export default function Valeurs() {
               icon={Cpu}
               title="Technologie française"
               description="Innovation dans notre ADN. Drones français, technologies avancées, excellence et sécurité maximale."
-              color="blue"
+              color="blue" 
               image="/fr.png"
               items={[
                 'Drones fabriqués en France',
