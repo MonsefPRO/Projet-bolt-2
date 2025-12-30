@@ -119,7 +119,7 @@ export default function NettoyageFacade() {
                     'Assurance RC Pro complète',
                     'Conformité législation 2026',
                     'Produits certifiés AB écologiques',
-                    'Garantie satisfaction client'
+                    'Garantie decennale'
                   ].map((cert, idx) => (
                     <div key={idx} className="flex items-center space-x-2 p-3 bg-white rounded-lg border border-sky-100">
                       <Award className="w-5 h-5 text-sky-600 flex-shrink-0" />
