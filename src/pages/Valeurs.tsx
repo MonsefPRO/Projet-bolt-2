@@ -279,7 +279,7 @@ export default function Valeurs() {
               color="green"
               image="/eco.png" 
               items={[
-                'Produits certifiés AB',
+                'Produits éco-responsable',
                 'Respect environnemental',
                 'Approche durable',
                 'Empreinte minimale'
