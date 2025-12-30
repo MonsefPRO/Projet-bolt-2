@@ -118,7 +118,7 @@ export default function Prestations() {
       id: 'panneaux-photovoltaiques',
       title: "Nettoyage de panneaux photovaltaiques",
       description:
-        "Des panneaux solaires encrassés peuvent perdre jusqu\'à 30 % de rendement énergétique, entraînant une perte financière quotidienne. L\'accumulation de saletés peut également provoquer des points chauds (hotspots), causant des dommages localisés et réduisant la durée de vie de vos équipements. Grâce à un nettoyage professionnel par drone, réalisé deux fois par an, vous récupérez une production énergétique maximale et optimisez durablement votre retour sur investissement photovoltaïque.",
+        "Des panneaux solaires encrassés peuvent perdre jusqu\'à 30 % de rendement énergétique. L\'accumulation de saletés peut également provoquer des points chauds (hotspots), causant des dommages localisés et réduisant la durée de vie de vos équipements. Grâce à un nettoyage professionnel par drone, réalisé deux fois par an, vous récupérez une production énergétique maximale et optimisez durablement votre retour sur investissement photovoltaïque.",
       image: '/rony.jpg',
       link: '/prestations/panneaux-photovoltaiques',
       icon: Sun,
