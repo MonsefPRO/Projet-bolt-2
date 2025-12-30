@@ -810,7 +810,7 @@ function App() {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-800 mb-1">{t('contact.phone')}</h3>
-                     <p className="text-gray-600">06 85 57 96 79</p>
+                     <p className="text-gray-600">04 67 20 97 09</p>
                       <p className="text-sm text-gray-500 mt-1">{t('contact.form.phone')}</p>
                     </div>
                   </div>
