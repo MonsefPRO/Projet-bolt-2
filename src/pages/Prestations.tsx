@@ -278,7 +278,7 @@ export default function Prestations() {
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <CheckCircle className="w-5 h-5" />
-                <span className="text-sm font-semibold">Produits certifiés AB</span>
+                <span className="text-sm font-semibold">Produits éco-responsable</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Shield className="w-5 h-5" />
