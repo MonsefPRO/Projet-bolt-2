@@ -20,7 +20,7 @@ export default function Prestations() {
     { src: '/rony.jpg', alt: 'Robot de nettoyage drone sur panneaux solaires' },
     { src: '/abateur_de_frelons.png', alt: 'Système de nettoyage en action' },
     { src: '/rony3.jpg', alt: 'Drone nettoyant une toiture' }, 
-    { src: '/ares.jpg', alt: 'Drone professionnel au sol' },
+    { src: '/ares.png', alt: 'Drone professionnel au sol' },
     { src: '/rony2.jpg', alt: 'Équipement de nettoyage drone' },
     { src: '/ares2.jpg', alt: 'Drone sur panneaux solaires' },
     { src: '/dsc07631.jpg', alt: 'Technologie de nettoyage drone' }
