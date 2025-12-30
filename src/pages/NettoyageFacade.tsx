@@ -163,7 +163,7 @@ export default function NettoyageFacade() {
                     'Assurance RC Pro complète',
                     'Conformité RGPD',
                     'Certifications ISO 9001 et ISO 14001',
-                    'Produits biodégradables certifiés'
+                    'Produits éco-responsable'
                   ].map((cert, idx) => (
                     <li key={idx} className="flex items-start space-x-3">
                       <div className="w-5 h-5 bg-sky-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
