@@ -38,10 +38,10 @@ export default function EliminationFrelons() {
             <section>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Élimination de Nids de Frelons</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                L’élimination des nids de frelons, notamment de frelons asiatiques, représente un risque majeur lorsqu’elle est réalisée sans équipement adapté. Avec notre solution aérienne par drone, nous intervenons sans exposition humaine, même dans les zones les plus complexes d’accès.
+                L'<strong>élimination des nids de frelons</strong>, notamment de <strong>frelons asiatiques</strong>, représente un <strong>risque majeur</strong> lorsqu'elle est réalisée sans équipement adapté. Avec notre <strong>solution aérienne par drone</strong>, nous intervenons <strong>sans exposition humaine</strong>, même dans les zones les plus complexes d'accès.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-               Notre technologie permet une neutralisation rapide et précise des nids, en hauteur ou sur des structures inaccessibles : toitures, arbres, pylônes, façades, hangars... Chaque intervention est menée par des pilotes certifiés DGAC, selon des protocoles stricts de sécurité. Que vous soyez une collectivité, une entreprise industrielle, ou un gestionnaire de site, notre méthode garantit un traitement efficace, durable et conforme à la réglementation en vigueur.
+               Notre technologie permet une <strong>neutralisation rapide et précise</strong> des nids, en hauteur ou sur des structures inaccessibles : toitures, arbres, pylônes, façades, hangars... Chaque intervention est menée par des <strong>pilotes certifiés DGAC</strong>, selon des protocoles stricts de sécurité. Que vous soyez une <strong>collectivité, une entreprise industrielle, ou un gestionnaire de site</strong>, notre méthode garantit un <strong>traitement efficace, durable et conforme</strong> à la réglementation en vigueur.
               </p>
               <div className="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-lg my-8">
                 <div className="flex items-start gap-3">
