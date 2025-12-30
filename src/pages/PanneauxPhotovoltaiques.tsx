@@ -100,7 +100,7 @@ export default function PanneauxPhotovoltaiques() {
                     'Certification DGAC',
                     'Formation photovoltaïque spécialisée',
                     'Assurance RC Pro électricité',
-                    'Conformité normes électriques',
+                    'Garantie decennale',
                     'Protocoles sécurité haute tension',
                     'Conformité législation 2026'
                   ].map((cert, idx) => (
