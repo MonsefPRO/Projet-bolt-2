@@ -894,7 +894,7 @@ export const translations = {
         emailLabel: 'Email *',
         emailPlaceholder: 'votre@email.com',
         phoneLabel: 'Téléphone *',
-        phonePlaceholder: '06 85 57 96 79',
+        phonePlaceholder: '04 67 20 97 09',
         addressLabel: 'Adresse du projet *',
         addressPlaceholder: 'Adresse complète',
         postalCodeLabel: 'Code postal *',
