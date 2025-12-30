@@ -2,7 +2,7 @@ export default function CertificationsBanner() {
   const certifications = [
     {
       id: 1,
-      image: '/2.png',
+      image: '/1.png',
       alt: 'Certification DGAC'
     },
     {
@@ -12,7 +12,7 @@ export default function CertificationsBanner() {
     },
     {
       id: 3,
-      image: '/3.png', 
+      image: '/1.png', 
       alt: 'Certification 3'
     }
   ];
