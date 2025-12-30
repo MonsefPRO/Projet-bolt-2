@@ -32,7 +32,7 @@
 
   /* ✅ Optionnel : titres principaux encore plus "tech" */
   h1, h2 {
-    letter-spacing: 0.06em;
+    letter-spacing: 0.02em;
   }
 }
 
