@@ -36,7 +36,7 @@ export default function PanneauxPhotovoltaiques() {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <div className="lg:col-span-2 space-y-8">
             <section>
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Nettoyage de Panneaux Solaires par Drone. Gagnez Jusqu’à 30 % de Rendement Énergétique</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Nettoyage de Panneaux Solaires</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Des panneaux photovoltaïques encrassés peuvent perdre jusqu’à 30 % de leur production énergétique. Poussières, pollens, fientes d’oiseaux et pollution s’accumulent, réduisant votre performance jour après jour — et impactant directement votre rentabilité énergétique.
               </p>
