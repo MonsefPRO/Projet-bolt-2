@@ -37,10 +37,10 @@ export default function NettoyageFacade() {
             <section>
               <h2 className="text-3xl font-bold text-gray-800 mb-6">Nettoyage de façade</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Ellipsys révolutionne l’entretien des façades avec une solution aérienne par drone, spécialement conçue pour les entreprises, collectivités et gestionnaires de patrimoine immobilier. Alliant sécurité maximale, rapidité d’exécution et rentabilité, notre méthode s’impose comme la nouvelle référence du nettoyage de façade professionnel sans échafaudage.
+                Ellipsys révolutionne l'entretien des façades avec une solution aérienne par <strong>drone</strong>, spécialement conçue pour les <strong>entreprises, collectivités et gestionnaires de patrimoine immobilier</strong>. Alliant <strong>sécurité maximale</strong>, <strong>rapidité d'exécution</strong> et <strong>rentabilité</strong>, notre méthode s'impose comme la nouvelle référence du <strong>nettoyage de façade professionnel sans échafaudage</strong>.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Nos pilotes de drone certifiés DGAC interviennent sur tous types de matériaux : pierre naturelle, béton, brique, crépi, bardage métallique ou encore façades vitrées. Grâce à une pulvérisation précise et douce, nous éliminons efficacement salissures, pollution atmosphérique, mousses, lichens et autres contaminants.
+                Nos pilotes de <strong>drone certifiés DGAC</strong> interviennent sur tous types de matériaux : pierre naturelle, béton, brique, crépi, bardage métallique ou encore façades vitrées. Grâce à une <strong>pulvérisation précise et douce</strong>, nous <strong>éliminons efficacement</strong> salissures, pollution atmosphérique, mousses, lichens et autres contaminants.
               </p>
             </section>
 
