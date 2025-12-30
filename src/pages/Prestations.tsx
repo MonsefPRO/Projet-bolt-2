@@ -156,7 +156,7 @@ export default function Prestations() {
     },
     {
       id: 'elimination-frelons',
-      title: 'Destruction de nids de frelons : Sécurité sans contact',
+      title: 'Destruction de nids de frelons',
       description:
         "L’élimination des nids de frelons, en particulier des frelons asiatiques, constitue un risque sérieux pour les intervenants non équipés. Grâce à notre technologie drone de neutralisation, nous traitons rapidement et efficacement les nids situés en hauteur ou dans des zones difficiles d’accès, sans aucune exposition humaine au danger de piqûres.",
       image: '/abateur_de_frelons.png',
