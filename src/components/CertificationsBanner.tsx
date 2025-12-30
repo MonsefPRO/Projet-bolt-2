@@ -2,7 +2,7 @@ export default function CertificationsBanner() {
   const certifications = [
     {
       id: 1,
-      image: '/1.png',
+      image: '/ecolab.png',
       alt: 'Certification DGAC'
     },
     {
