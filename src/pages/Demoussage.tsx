@@ -179,7 +179,7 @@ export default function Demoussage() {
                     'Pilotes certifiés professionnels',
                     'Assurance RC Pro complète',
                     'Normes NF EN 13414',
-                    'Produits certifiés AB',
+                    'Produits éco-responsable',
                     'Conformité législation 2026'
                   ].map((cert, idx) => (
                     <div key={idx} className="flex items-center space-x-2 p-3 bg-white rounded-lg border border-green-100">
