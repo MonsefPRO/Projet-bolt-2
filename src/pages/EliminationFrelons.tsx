@@ -36,7 +36,7 @@ export default function EliminationFrelons() {
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <section>
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Élimination de Nids de Frelons par Drone : Sécurité Maximale, Intervention Ciblée</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">Élimination de Nids de Frelons</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 L’élimination des nids de frelons, notamment de frelons asiatiques, représente un risque majeur lorsqu’elle est réalisée sans équipement adapté. Avec notre solution aérienne par drone, nous intervenons sans exposition humaine, même dans les zones les plus complexes d’accès.
               </p>
