@@ -264,7 +264,7 @@ export default function Prestations() {
           <div className="text-center text-white px-4">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">Maintenance & Entretien par Drone</h1>
             <p className="text-xl md:text-2xl text-sky-100 mb-6">
-              Des solutions innovantes, rapides et sécurisées pour l’entretien de vos bâtiments industriels
+              La technologie au service de l'humain
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-6">
