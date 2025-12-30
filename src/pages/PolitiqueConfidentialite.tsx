@@ -259,7 +259,7 @@ export default function PolitiqueConfidentialite() {
                   </p>
                   <div className="space-y-2 text-sm">
                     <p>📧 <strong>Email :</strong> contact@ellipsys.fr</p>
-                    <p>📞 <strong>Téléphone :</strong> 06 85 57 96 79</p>
+                    <p>📞 <strong>Téléphone :</strong> 04 67 20 97 09</p>
                   </div>
                   <p className="text-sm mt-4 opacity-90">
                     Nous vous répondrons dans un délai d'un mois maximum.
