@@ -57,28 +57,40 @@ export default function DroneBenefits() {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 md:p-12 text-white shadow-2xl">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <p
-                className="text-xl leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: t('benefits.summaryPart1') }}
-              />
+        <div className="mt-16 bg-gradient-to-br from-white to-sky-50/30 rounded-3xl p-10 md:p-16 shadow-2xl border-2 border-sky-100">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div className="space-y-4">
+                <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full text-sm font-semibold mb-3">
+                  Innovation
+                </div>
+                <p
+                  className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-light"
+                  dangerouslySetInnerHTML={{ __html: t('benefits.summaryPart1') }}
+                />
+              </div>
+              <div className="space-y-4">
+                <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full text-sm font-semibold mb-3">
+                  Performance
+                </div>
+                <p
+                  className="text-2xl md:text-3xl text-gray-800 leading-relaxed font-light"
+                  dangerouslySetInnerHTML={{ __html: t('benefits.summaryPart2') }}
+                />
+              </div>
             </div>
-            <div>
-              <p
-                className="text-xl leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: t('benefits.summaryPart2') }}
-              />
+
+            <div className="flex justify-center pt-8 border-t-2 border-sky-100">
+              <a
+                href="/devis"
+                className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-brand-orange-600 hover:to-red-700 transition-all shadow-xl hover:shadow-2xl hover:scale-105 transform inline-flex items-center gap-3"
+              >
+                <span>{t('hero.cta')}</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
-          </div>
-          <div className="flex justify-center">
-            <a
-              href="/devis"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl"
-            >
-              {t('hero.cta')}
-            </a>
           </div>
         </div>
       </div>
