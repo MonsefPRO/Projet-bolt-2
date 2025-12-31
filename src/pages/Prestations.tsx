@@ -12,6 +12,7 @@ import {
   Users
 } from 'lucide-react';
 import Header from '../components/Header';
+import CertificationsSection from '../components/CertificationsSection';
 
 export default function Prestations() {
   const [currentCarouselImage, setCurrentCarouselImage] = useState(0);
@@ -418,6 +419,8 @@ export default function Prestations() {
           </div>
         </div>
       </div>
+
+      <CertificationsSection />
     </div>
   );
 }
