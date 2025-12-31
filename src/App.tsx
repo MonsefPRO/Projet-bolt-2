@@ -504,7 +504,7 @@ function App() {
           </div>
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-8">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#334786' }}>
                 {t('testimonials.title')}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
