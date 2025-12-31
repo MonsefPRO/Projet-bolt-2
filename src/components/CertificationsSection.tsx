@@ -81,21 +81,6 @@ const CertificationsSection = () => {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-200/20 to-transparent rounded-full blur-3xl"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-sky-100 to-blue-100 border border-sky-200/50 text-sky-700 rounded-full text-sm font-bold mb-6 shadow-lg backdrop-blur-sm hover:scale-105 transition-transform duration-300">
-            <CheckCircle2 className="w-5 h-5" />
-            <span>Certifications & Conformité</span>
-          </div>
-
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-gray-800 via-sky-900 to-gray-800 bg-clip-text text-transparent">
-            Un service réglementé, sécurisé et certifié
-          </h2>
-
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ellipsys s'engage à respecter les plus hauts standards de qualité et de conformité réglementaire pour garantir votre sérénité.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {certifications.map((cert, index) => (
             <CertificationCard
