@@ -301,24 +301,24 @@ function App() {
             ))}
           </div>
           <div className="container mx-auto relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in whitespace-nowrap">
+            <div className="flex flex-col items-center justify-center">
+              <div className="space-y-8 max-w-5xl text-center">
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
                   <span className="bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">
                     {t('hero.title1')}
                   </span>
                   {' '}
                   <span className="text-gray-800">{t('hero.title2')}</span>
                 </h1>
-                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed space-y-3">
+                <p className="text-lg sm:text-xl text-gray-600 leading-relaxed space-y-3 mx-auto">
                   <span className="block">
                     {t('hero.subtitle')}
                   </span>
-                  <span className="block font-medium text-gray-700">
-                    <span className="inline-flex items-center bg-sky-50 px-3 py-1 rounded-lg mr-2 hover:bg-sky-100 hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <span className="flex flex-wrap justify-center gap-2 font-medium text-gray-700">
+                    <span className="inline-flex items-center bg-sky-50 px-3 py-1 rounded-lg hover:bg-sky-100 hover:scale-105 transition-all duration-300 cursor-pointer">
                       <span className="text-sky-700">{t('hero.badge1')}</span>
                     </span>
-                    <span className="inline-flex items-center bg-green-50 px-3 py-1 rounded-lg mr-2 hover:bg-green-100 hover:scale-105 transition-all duration-300 cursor-pointer">
+                    <span className="inline-flex items-center bg-green-50 px-3 py-1 rounded-lg hover:bg-green-100 hover:scale-105 transition-all duration-300 cursor-pointer">
                       <span className="text-green-700">{t('hero.badge2')}</span>
                     </span>
                     <span className="inline-flex items-center bg-blue-50 px-3 py-1 rounded-lg hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -329,7 +329,7 @@ function App() {
                     {t('hero.intervention')}
                   </span>
                 </p>
-                <div className="flex flex-wrap gap-8 py-6">
+                <div className="flex flex-wrap justify-center gap-8 py-6">
                   <div className="flex items-center space-x-3 group cursor-pointer">
                     <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center group-hover:bg-sky-200 group-hover:scale-110 transition-all duration-300">
                       <TrendingUp className="w-6 h-6 text-sky-600 group-hover:rotate-12 transition-transform duration-300" />
@@ -353,7 +353,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/devis"
                     className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center group"
