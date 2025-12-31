@@ -15,7 +15,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
 
   return (
     <header className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-40 transition-all border-b border-gray-100">
-      <nav className="container mx-auto px-4 sm:px-8 lg:px-8">
+      <nav className="container mx-auto px-2 sm:px-4 lg:px-4">
         <div className="flex justify-between items-center h-56">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
