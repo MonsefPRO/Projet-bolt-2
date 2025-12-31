@@ -21,7 +21,7 @@ export const translations = {
       badge3: 'Écologique',
       intervention: 'Intervention sur tous types de surfaces jusqu\'à une hauteur de 100 mètres, sans échafaudage ni nacelle',
       stat1Value: ' m²',
-      stat1Label: 'Nettoyés à ce jour',
+      stat1Label: 'Traités à ce jour',
       stat2Value: ' chantiers',
       stat2Label: 'Réalisés avec succès',
       cta: 'Demander un devis',
