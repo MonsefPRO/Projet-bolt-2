@@ -317,7 +317,7 @@ function App() {
                       <div className="text-3xl font-bold text-gray-800">
                         <AnimatedCounter end={120000} suffix={t('hero.stat1Value')} />
                       </div>
-                      <div className="text-sm text-gray-600">{t('hero.stat1Label')}</div>
+                      <div className="text-sm text-black">{t('hero.stat1Label')}</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3 group cursor-pointer">
@@ -328,7 +328,7 @@ function App() {
                       <div className="text-3xl font-bold text-gray-800">
                         <AnimatedCounter end={62} suffix={t('hero.stat2Value')} />
                       </div>
-                      <div className="text-sm text-gray-600">{t('hero.stat2Label')}</div>
+                      <div className="text-sm text-black">{t('hero.stat2Label')}</div>
                     </div>
                   </div>
                 </div>
