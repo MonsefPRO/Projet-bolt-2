@@ -671,7 +671,7 @@ function App() {
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-brand-orange-500 to-red-600 text-white rounded-full text-sm font-semibold mb-4">
                 {t('contact.title')}
               </div>
-              <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#334786' }}>
                 {t('quote.title')}
               </h2>
               <p className="text-base sm:text-xl text-gray-600">
