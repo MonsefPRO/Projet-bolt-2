@@ -265,7 +265,7 @@ function App() {
       </header>
 
       <main>
-        <section id="accueil" className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section id="accueil" className="pt-32 pb-16 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-sky-50/70 via-blue-50/60 to-white/70 z-10"></div>
           <div className="absolute inset-0">
             {heroImages.map((image, index) => (
@@ -283,13 +283,13 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="container mx-auto relative z-10 px-1 sm:px-2 lg:px-2">
+          <div className="w-full relative z-10">
             <div className="flex flex-col items-center justify-center">
-              <div className="space-y-8 w-full max-w-7xl mx-auto text-center">
-                <h1 className="text-3xl font-bold leading-tight animate-fade-in text-black mx-auto whitespace-nowrap" style={{ maxWidth: '1100px' }}>
+              <div className="space-y-8 w-full text-center">
+                <h1 className="text-3xl font-bold leading-tight animate-fade-in text-black whitespace-nowrap">
                   {t('hero.title1')} {t('hero.title2')}
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-8 mx-auto" style={{ maxWidth: '1100px' }}>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-8">
                   <span className="block whitespace-nowrap">
                     {t('hero.subtitle')}
                   </span>
