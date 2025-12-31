@@ -304,32 +304,34 @@ export default function Prestations() {
             return (
               <div
                 key={prestation.id}
-                className={`flex flex-col ${
-                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } gap-0 items-center bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300`}
+                className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 p-8 lg:p-12"
               >
-                <div className="w-full lg:w-1/2 flex-shrink-0 p-4">
-                  <div className="h-[320px] relative overflow-hidden rounded-2xl shadow-md">
-                    <img
-                      src={prestation.image}
-                      alt={prestation.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <div
-                        className={`w-16 h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}
-                      >
-                        <Icon className="w-8 h-8 text-white" />
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center whitespace-nowrap" style={{ color: '#233B72' }}>{prestation.title}</h2>
+
+                <div className={`flex flex-col ${
+                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } gap-0 items-center`}>
+                  <div className="w-full lg:w-1/2 flex-shrink-0 p-4">
+                    <div className="h-[320px] relative overflow-hidden rounded-2xl shadow-md">
+                      <img
+                        src={prestation.image}
+                        alt={prestation.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <div
+                          className={`w-16 h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}
+                        >
+                          <Icon className="w-8 h-8 text-white" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="w-full lg:w-1/2 p-8 lg:p-12 space-y-6">
-                  <div className="flex flex-col items-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 whitespace-nowrap" style={{ color: '#233B72' }}>{prestation.title}</h2>
-                    <p className="text-gray-600 leading-relaxed text-lg text-justify w-full">{prestation.description}</p>
-                  </div>
+                  <div className="w-full lg:w-1/2 p-4 lg:p-8 space-y-6">
+                    <div>
+                      <p className="text-gray-600 leading-relaxed text-lg text-justify">{prestation.description}</p>
+                    </div>
 
                   <div className={`${colors.bg} ${colors.border} border rounded-xl p-6`}>
                     <h3 className="font-bold text-gray-800 mb-4 text-lg">Bénéfices clients :</h3>
@@ -354,21 +356,22 @@ export default function Prestations() {
                     </ul>
                   </div>
 
-                  <div className="flex gap-4 pt-4">
-                    <Link
-                      to={prestation.link}
-                      className={`inline-flex items-center gap-2 bg-gradient-to-r ${colors.gradient} text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 group`}
-                    >
-                      <span>En savoir plus</span>
-                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="flex gap-4 pt-4">
+                      <Link
+                        to={prestation.link}
+                        className={`inline-flex items-center gap-2 bg-gradient-to-r ${colors.gradient} text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105 group`}
+                      >
+                        <span>En savoir plus</span>
+                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
 
-                    <Link
-                      to="/devis"
-                      className={`inline-flex items-center gap-2 border-2 ${colors.text} border-current px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all`}
-                    >
-                      <span>Demander un devis</span>
-                    </Link>
+                      <Link
+                        to="/devis"
+                        className={`inline-flex items-center gap-2 border-2 ${colors.text} border-current px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all`}
+                      >
+                        <span>Demander un devis</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
