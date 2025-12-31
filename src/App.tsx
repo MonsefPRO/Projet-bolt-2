@@ -283,7 +283,7 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="container mx-auto relative z-10 px-4">
+          <div className="container mx-auto relative z-10 px-4 sm:px-8 lg:px-8">
             <div className="flex flex-col items-center justify-center">
               <div className="space-y-8 w-full max-w-7xl text-center">
                 <h1 className="text-3xl font-bold leading-tight animate-fade-in text-black mx-auto whitespace-nowrap" style={{ maxWidth: '1100px' }}>
