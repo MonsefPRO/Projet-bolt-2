@@ -378,9 +378,10 @@ function App() {
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center" style={{ color: '#334786' }}>
                 {t('mainServices.title')}
               </h2>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed px-4 sm:px-8 text-justify">
-                {t('mainServices.subtitle')}
-              </p>
+              <p
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed px-4 sm:px-8 text-justify"
+                dangerouslySetInnerHTML={{ __html: t('mainServices.subtitle') }}
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-8">

@@ -88,7 +88,7 @@ export const translations = {
     },
     mainServices: {
       title: 'Nos Prestations Principales',
-      subtitle: 'Nos prestations standards s’adaptent à la majorité des chantiers. Pour des demandes spécifiques, nous proposons également des missions complémentaires : cartographie, thermographie, prises de vue techniques, analyses…',
+      subtitle: 'Nos prestations standards s\'adaptent à la majorité des chantiers. Pour des <strong>demandes spécifiques</strong>, nous proposons également des missions complémentaires : <strong>cartographie</strong>, <strong>thermographie</strong>, <strong>prises de vue techniques</strong>, <strong>analyses…</strong>',
       demoussage: {
         title: 'Démoussage de toitures industrielles et résidentielles',
         description: 'Éradiquez mousses, lichens et algues grâce à un traitement curatif et préventif par drone. Idéal pour les toitures de grandes surfaces ou complexes d’accès. Ce service prolonge la durée de vie de vos matériaux de couverture tout en préservant l\’intégrité structurelle..'
