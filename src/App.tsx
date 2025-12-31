@@ -426,7 +426,7 @@ function App() {
                     {t('mainServices.facade.description')}
                   </p>
                 </div>
-                <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="mt-[29px] pt-6 border-t border-gray-100">
                   <Link
                     to="/prestations/nettoyage-facade"
                     className="text-sky-600 font-semibold hover:text-sky-700 inline-flex items-center group"
@@ -449,7 +449,7 @@ function App() {
                     {t('mainServices.demoussage.description')}
                   </p>
                 </div>
-                <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="mt-[29px] pt-6 border-t border-gray-100">
                   <Link
                     to="/prestations/demoussage"
                     className="text-green-600 font-semibold hover:text-green-700 inline-flex items-center group"
@@ -472,7 +472,7 @@ function App() {
                     {t('mainServices.hornets.description')}
                   </p>
                 </div>
-                <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="mt-[29px] pt-6 border-t border-gray-100">
                   <Link
                     to="/prestations/elimination-frelons"
                     className="text-red-600 font-semibold hover:text-red-700 inline-flex items-center group"
@@ -495,7 +495,7 @@ function App() {
                     {t('servicesSection.industrial2.description')}
                   </p>
                 </div>
-                <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="mt-[29px] pt-6 border-t border-gray-100">
                   <Link
                     to="/prestations"
                     className="text-amber-600 font-semibold hover:text-amber-700 inline-flex items-center group"
