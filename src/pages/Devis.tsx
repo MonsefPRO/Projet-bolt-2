@@ -545,7 +545,7 @@ export default function Devis() {
                   📞 Appelez-nous
                 </a>
                 <a
-                  href="mailto:contact@ellipsys.fr"
+                  href="mailto:contact@ellipsys-group.com"
                   className="inline-flex items-center justify-center gap-2 border-2 border-sky-600 text-sky-600 px-6 py-3 rounded-lg font-semibold hover:bg-sky-50 transition-all"
                 >
                   ✉️ Envoyez-nous un email
