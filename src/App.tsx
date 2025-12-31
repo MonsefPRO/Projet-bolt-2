@@ -491,7 +491,7 @@ function App() {
                 muted
                 playsInline
               >
-                <source src="/chronosvideo copy.mp4" type="video/mp4" />
+                <source src="/chronosvideo.mp4" type="video/mp4" />
                 Votre navigateur ne supporte pas la lecture de vidéos.
               </video>
             </div>
