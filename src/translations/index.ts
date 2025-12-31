@@ -1634,7 +1634,7 @@ export const translations = {
         home: 'Accueil',
         current: 'Nos valeurs'
       },
-      intro: 'Chez Ellipsys, la technologie est au service de l\'humain. Nos valeurs guident chacune de nos actions pour des prestations fiables, responsables et de haute qualité.',
+      intro: 'Chez Ellipsys Solutions, la technologie est au service de l\'humain. Nos valeurs guident chacune de nos actions pour des prestations fiables, responsables et de haute qualité.',
       value1: {
         title: 'Bienveillance et proximité',
         description: 'L\'humain au cœur de notre activité. Relation personnalisée, écoute, transparence et accompagnement attentif.',
