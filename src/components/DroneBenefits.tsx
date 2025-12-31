@@ -51,7 +51,7 @@ export default function DroneBenefits() {
                 {benefit.title}
               </h3>
               <p
-                className="text-gray-600 leading-relaxed text-lg"
+                className="text-gray-600 leading-relaxed text-lg text-justify"
                 dangerouslySetInnerHTML={{ __html: benefit.description }}
               />
             </div>
