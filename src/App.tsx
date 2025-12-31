@@ -368,28 +368,30 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="py-4 px-4 bg-gradient-to-r from-sky-600 to-blue-700">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
-              <div className="flex flex-col items-center space-y-2 group cursor-pointer hover:scale-110 transition-all duration-300">
-                <Award className="w-8 h-8 sm:w-10 sm:h-10 group-hover:rotate-12 transition-transform duration-300" />
-                <p className="text-xs sm:text-sm font-semibold">{t('quickStats.economic')}</p>
-                <p className="text-xs opacity-90 hidden sm:block">{t('quickStats.economicSub')}</p>
+        <section className="py-8 bg-white/98 backdrop-blur-md relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sky-50/30 to-transparent"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="flex items-center justify-center gap-12 flex-wrap">
+              <div className="w-40 h-40 bg-white rounded-xl border-2 border-sky-200 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 flex items-center justify-center p-4">
+                <img
+                  src="/ecolab.png"
+                  alt="Certification Ecolab"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="flex flex-col items-center space-y-2 group cursor-pointer hover:scale-110 transition-all duration-300">
-                <Clock className="w-8 h-8 sm:w-10 sm:h-10 group-hover:rotate-12 transition-transform duration-300" />
-                <p className="text-xs sm:text-sm font-semibold">{t('quickStats.fast')}</p>
-                <p className="text-xs opacity-90 hidden sm:block">{t('quickStats.fastSub')}</p>
+              <div className="w-40 h-40 bg-white rounded-xl border-2 border-sky-200 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 flex items-center justify-center p-4">
+                <img
+                  src="/1.png"
+                  alt="Certification DGAC"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="flex flex-col items-center space-y-2 group cursor-pointer hover:scale-110 transition-all duration-300">
-                <Droplets className="w-8 h-8 sm:w-10 sm:h-10 group-hover:rotate-12 transition-transform duration-300" />
-                <p className="text-xs sm:text-sm font-semibold">{t('quickStats.water')}</p>
-                <p className="text-xs opacity-90 hidden sm:block">{t('quickStats.waterSub')}</p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 group cursor-pointer hover:scale-110 transition-all duration-300">
-                <Shield className="w-8 h-8 sm:w-10 sm:h-10 group-hover:rotate-12 transition-transform duration-300" />
-                <p className="text-xs sm:text-sm font-semibold">{t('quickStats.safety')}</p>
-                <p className="text-xs opacity-90 hidden sm:block">{t('quickStats.safetySub')}</p>
+              <div className="w-40 h-40 bg-white rounded-xl border-2 border-sky-200 shadow-lg hover:scale-110 hover:shadow-2xl transition-all duration-300 flex items-center justify-center p-4">
+                <img
+                  src="/3.jpg"
+                  alt="Certification ISO"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </div>
           </div>
