@@ -41,6 +41,7 @@ export default function Prestations() {
       description:
         "Une façade encrassée ou négligée nuit à l'image de votre bâtiment et accélère la dégradation des matériaux. Grâce à notre technologie de nettoyage par drone, certifiée et sans recours à l'échafaudage ou à la nacelle, redonnez éclat, propreté et durabilité à vos façades professionnelles en toute sécurité.",
       image: '/ares.png',
+      image2: '/rony3.jpg',
       link: '/prestations/nettoyage-facade',
       icon: Droplets,
       equipment: [
@@ -81,6 +82,7 @@ export default function Prestations() {
       description:
         "Sans traitement régulier, les mousses, lichens et champignons dégradent progressivement l'étanchéité de votre toiture, réduisant sa durée de vie jusqu'à 30 %. Préservez votre patrimoine immobilier avec notre service de démoussage par drone, une solution sécurisée, rapide et certifiée pour une toiture durable et performante.",
       image: '/Demoussage drone 1.jpg',
+      image2: '/chronos.jpg',
       link: '/prestations/demoussage',
       icon: Shield,
       equipment: [
@@ -121,6 +123,7 @@ export default function Prestations() {
       description:
         "Des panneaux solaires encrassés peuvent perdre jusqu\'à 30 % de rendement énergétique. L\'accumulation de saletés peut également provoquer des points chauds (hotspots), causant des dommages localisés et réduisant la durée de vie de vos équipements. Grâce à un nettoyage professionnel par drone, réalisé deux fois par an, vous récupérez une production énergétique maximale et optimisez durablement votre retour sur investissement photovoltaïque.",
       image: '/rony.jpg',
+      image2: '/rony4.jpg',
       link: '/prestations/panneaux-photovoltaiques',
       icon: Sun,
       equipment: [
@@ -159,8 +162,9 @@ export default function Prestations() {
       id: 'elimination-frelons',
       title: 'Destruction de nids de frelons',
       description:
-        "L’élimination des nids de frelons, en particulier des frelons asiatiques, constitue un risque sérieux pour les intervenants non équipés. Grâce à notre technologie drone de neutralisation, nous traitons rapidement et efficacement les nids situés en hauteur ou dans des zones difficiles d’accès, avec un minimum d'exposition humaine au danger de piqûres.",
+        "L'élimination des nids de frelons, en particulier des frelons asiatiques, constitue un risque sérieux pour les intervenants non équipés. Grâce à notre technologie drone de neutralisation, nous traitons rapidement et efficacement les nids situés en hauteur ou dans des zones difficiles d'accès, avec un minimum d'exposition humaine au danger de piqûres.",
       image: '/abateur_de_frelons.png',
+      image2: '/frel.png',
       link: '/prestations/elimination-frelons',
       icon: AlertTriangle,
       equipment: [
@@ -312,18 +316,27 @@ export default function Prestations() {
                   isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                 } gap-0 items-center`}>
                   <div className="w-full lg:w-1/2 flex-shrink-0 p-4">
-                    <div className="h-[320px] relative overflow-hidden rounded-2xl shadow-md">
-                      <img
-                        src={prestation.image}
-                        alt={prestation.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <div
-                          className={`w-16 h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}
-                        >
-                          <Icon className="w-8 h-8 text-white" />
+                    <div className="space-y-4">
+                      <div className="h-[320px] relative overflow-hidden rounded-2xl shadow-md">
+                        <img
+                          src={prestation.image}
+                          alt={prestation.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute top-4 left-4">
+                          <div
+                            className={`w-16 h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}
+                          >
+                            <Icon className="w-8 h-8 text-white" />
+                          </div>
                         </div>
+                      </div>
+                      <div className="h-[320px] relative overflow-hidden rounded-2xl shadow-md">
+                        <img
+                          src={prestation.image2}
+                          alt={`${prestation.title} - Image 2`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
                       </div>
                     </div>
                   </div>
