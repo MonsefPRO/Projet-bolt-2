@@ -100,7 +100,7 @@ function ValueSection({ icon: Icon, title, description, color, image, items }: V
           </div>
 
           <div className={`bg-gradient-to-br ${colors.bg} rounded-2xl p-8 border ${colors.border} shadow-xl hover:shadow-2xl transition-all duration-300`}>
-            <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+            <p className="text-gray-600 leading-relaxed mb-6 text-lg text-justify">
               {description}
             </p>
 
