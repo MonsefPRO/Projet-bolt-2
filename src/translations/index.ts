@@ -152,7 +152,7 @@ export const translations = {
       }
     },
     testimonials: {
-      title: 'Ils nous ont fait confiance',
+      title: 'Ils nous font confiance',
       subtitle: 'Découvrez les avis de nos clients satisfaits'
     },
     faq: {
