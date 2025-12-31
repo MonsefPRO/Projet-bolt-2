@@ -393,7 +393,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">
                     {t('mainServices.facade.title')}
                   </h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-lg text-justify">
                     {t('mainServices.facade.description')}
                   </p>
                 </div>
@@ -416,7 +416,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">
                     {t('mainServices.demoussage.title')}
                   </h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-lg text-justify">
                     {t('mainServices.demoussage.description')}
                   </p>
                 </div>
@@ -439,7 +439,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">
                     {t('mainServices.hornets.title')}
                   </h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-lg text-justify">
                     {t('mainServices.hornets.description')}
                   </p>
                 </div>
@@ -462,7 +462,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-gray-800 mb-4">
                     {t('servicesSection.industrial2.title')}
                   </h3>
-                  <p className="text-base text-gray-700 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed text-lg text-justify">
                     {t('servicesSection.industrial2.description')}
                   </p>
                 </div>
