@@ -345,7 +345,7 @@ export default function Prestations() {
 
                 <div className="w-full lg:w-1/2 p-8 lg:p-12 space-y-6">
                   <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{prestation.title}</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#233B72' }}>{prestation.title}</h2>
                     <p className="text-lg text-gray-600 leading-relaxed">{prestation.description}</p>
                   </div>
 
