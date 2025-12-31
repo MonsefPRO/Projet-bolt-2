@@ -307,7 +307,7 @@ function App() {
                       <span className="text-black">{t('benefits.cost.title')}</span>
                     </span>
                   </span>
-                  <span className="block text-base sm:text-lg md:text-xl lg:text-2xl">
+                  <span className="block text-base sm:text-lg md:text-xl lg:text-2xl text-black">
                     {t('hero.intervention')}
                   </span>
                 </p>
