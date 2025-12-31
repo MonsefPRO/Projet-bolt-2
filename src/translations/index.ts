@@ -82,7 +82,7 @@ export const translations = {
         description: 'Nettoyage sécurisé des façades vitrées, toitures et structures en hauteur, sans nacelle ni échafaudage. Intervention rapide pour limiter l’impact sur vos équipes et assurer la continuité des opérations.'
       },
       industrial2: {
-        title: 'Nettoyage de panneaux photovoltaïques industriels',
+        title: 'Nettoyage de panneaux photovoltaïques',
         description: 'Les panneaux encrassés perdent jusqu’à 30% de rendement énergétique. Notre service de nettoyage professionnel permet une remise à niveau de la performance énergétique et un retour rapide sur investissement..'
       }
     },
