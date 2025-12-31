@@ -383,7 +383,7 @@ export default function Realisations() {
               Références Clients
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-              Ils nous ont fait confiance
+              Ils nous font confiance
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Collectivités, entreprises et particuliers : découvrez les clients qui ont choisi nos prestations drone certifiées pour leurs projets.
