@@ -287,7 +287,7 @@ function App() {
                   {t('hero.title1')} {t('hero.title2')}
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-7">
-                  <span className="block whitespace-nowrap">
+                  <span className="block whitespace-nowrap text-black">
                     {t('hero.subtitle')}
                   </span>
                   <span className="flex flex-wrap justify-center gap-2 font-bold">
