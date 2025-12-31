@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
+import ScrollToTop from './components/ScrollToTop';
 import App from './App.tsx';
 import Prestations from './pages/Prestations.tsx';
 import NettoyageFacade from './pages/NettoyageFacade.tsx';
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <LanguageProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/prestations" element={<Prestations />} />
