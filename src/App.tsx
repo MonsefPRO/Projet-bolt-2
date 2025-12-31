@@ -303,12 +303,8 @@ function App() {
           <div className="container mx-auto relative z-10 px-4">
             <div className="flex flex-col items-center justify-center">
               <div className="space-y-8 w-full max-w-7xl text-center">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in">
-                  <span className="bg-gradient-to-r from-sky-600 to-blue-700 bg-clip-text text-transparent">
-                    {t('hero.title1')}
-                  </span>
-                  {' '}
-                  <span className="text-gray-800">{t('hero.title2')}</span>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in text-black">
+                  {t('hero.title1')} {t('hero.title2')}
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-4 mx-auto max-w-6xl">
                   <span className="block">
