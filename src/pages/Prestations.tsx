@@ -326,9 +326,9 @@ export default function Prestations() {
                 </div>
 
                 <div className="w-full lg:w-1/2 p-8 lg:p-12 space-y-6">
-                  <div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 whitespace-nowrap text-center" style={{ color: '#233B72' }}>{prestation.title}</h2>
-                    <p className="text-gray-600 leading-relaxed text-lg text-justify">{prestation.description}</p>
+                  <div className="flex flex-col items-center">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-4 whitespace-nowrap" style={{ color: '#233B72' }}>{prestation.title}</h2>
+                    <p className="text-gray-600 leading-relaxed text-lg text-justify w-full">{prestation.description}</p>
                   </div>
 
                   <div className={`${colors.bg} ${colors.border} border rounded-xl p-6`}>
