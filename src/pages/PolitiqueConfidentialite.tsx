@@ -46,7 +46,7 @@ export default function PolitiqueConfidentialite() {
               <div className="pl-13 space-y-3 text-gray-600">
                 <p><strong>Raison sociale :</strong> Ellipsys</p>
                 <p><strong>Site web :</strong> ellipsys-solution.com</p>
-                <p><strong>Email :</strong> contact@ellipsys.fr</p>
+                <p><strong>Email :</strong> contact@ellipsys-group.com</p>
                 <p><strong>Téléphone :</strong> 04 67 20 97 09 </p>
                 <p className="text-sm italic">
                   Le responsable du traitement est la personne qui détermine les finalités et les moyens du traitement des données personnelles.
