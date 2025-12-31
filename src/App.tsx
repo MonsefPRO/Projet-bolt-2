@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Droplets, Shield, Clock, Award, Mail, Phone, MapPin, ChevronRight, ChevronDown, Star, TrendingUp, Users, ChevronLeft } from 'lucide-react';
+import { Menu, X, Droplets, Shield, Clock, Award, Mail, Phone, MapPin, ChevronRight, ChevronDown, Star, TrendingUp, Users, ChevronLeft, Zap, BarChart3 } from 'lucide-react';
 import { AnimatedCounter } from './components/AnimatedCounter';
 import CookieBanner from './components/CookieBanner';
 import LanguageSwitcher from './components/LanguageSwitcher';
@@ -292,6 +292,20 @@ function App() {
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-8">
                   <span className="block whitespace-nowrap">
                     {t('hero.subtitle')}
+                  </span>
+                  <span className="flex flex-wrap justify-center gap-2 font-medium text-gray-700">
+                    <span className="inline-flex items-center bg-sky-50 px-3 py-1 rounded-lg hover:bg-sky-100 hover:scale-105 transition-all duration-300 cursor-pointer">
+                      <Shield className="w-4 h-4 text-sky-700 mr-1.5" />
+                      <span className="text-sky-700">{t('benefits.safety.title')}</span>
+                    </span>
+                    <span className="inline-flex items-center bg-green-50 px-3 py-1 rounded-lg hover:bg-green-100 hover:scale-105 transition-all duration-300 cursor-pointer">
+                      <Zap className="w-4 h-4 text-green-700 mr-1.5" />
+                      <span className="text-green-700">{t('benefits.speed.title')}</span>
+                    </span>
+                    <span className="inline-flex items-center bg-blue-50 px-3 py-1 rounded-lg hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-pointer">
+                      <BarChart3 className="w-4 h-4 text-blue-700 mr-1.5" />
+                      <span className="text-blue-700">{t('benefits.cost.title')}</span>
+                    </span>
                   </span>
                   <span className="block text-base sm:text-lg md:text-xl lg:text-2xl">
                     {t('hero.intervention')}
