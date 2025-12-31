@@ -266,7 +266,7 @@ function App() {
 
       <main>
         <section id="accueil" className="pt-[150px] pb-16 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-50/70 via-blue-50/60 to-white/70 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-50/45 via-blue-50/35 to-white/45 z-10"></div>
           <div className="absolute inset-0">
             {heroImages.map((image, index) => (
               <div
