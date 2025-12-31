@@ -891,7 +891,7 @@ function App() {
                   <li> 34 000 Montpellier (France).</li>
                 </ul>
               </div>
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 ml-auto">
                 <img
                   src="/4.png"
                   alt="Ellipsys"
