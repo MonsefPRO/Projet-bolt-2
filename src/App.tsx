@@ -886,7 +886,7 @@ function App() {
                 <ul className="space-y-2 text-gray-400">
                   <li>04 67 20 97 09</li>
                   <li>contact@ellipsys-group.com</li>
-                  <li>159 Rue de Thor, Business plaza 3</li>
+                  <li>159 Rue de Thor</li>
                   <li>Business plaza 3</li>
                   <li> 34 000 Montpellier (France).</li>
                 </ul>
