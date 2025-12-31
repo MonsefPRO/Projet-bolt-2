@@ -1,4 +1,4 @@
-import { Shield, Clock, TrendingDown } from 'lucide-react';
+import { Shield, Clock, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function DroneBenefits() {
@@ -18,7 +18,7 @@ export default function DroneBenefits() {
       color: 'from-blue-500 to-cyan-600'
     },
     {
-      icon: TrendingDown,
+      icon: TrendingUp,
       title: t('benefits.cost.title'),
       description: t('benefits.cost.text'),
       color: 'from-orange-500 to-amber-600'
