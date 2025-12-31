@@ -483,7 +483,7 @@ function App() {
 
         <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-full mx-auto">
               <video
                 className="w-full rounded-2xl shadow-2xl"
                 autoPlay
