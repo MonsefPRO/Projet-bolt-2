@@ -907,7 +907,7 @@ function App() {
                 {t('footer.privacy')}
               </Link>
             </div>
-            <p>&copy; {new Date().getFullYear()} Ellipsys. {t('footer.rights')}</p>
+            <p>&copy; 2026 Ellipsys Solutions. {t('footer.rights')}</p>
           </div>
         </div>
       </footer>
