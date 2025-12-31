@@ -8,7 +8,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setLanguage('fr')}
         className={`w-8 h-6 rounded overflow-hidden border-2 transition-all ${
-          language === 'fr' ? 'border-blue-600 scale-110' : 'border-gray-300 opacity-70 hover:opacity-100'
+          language === 'fr' ? 'border-blue-600' : 'border-gray-300 opacity-70 hover:opacity-100'
         }`}
         aria-label="Français"
         title="Français"
@@ -23,7 +23,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setLanguage('en')}
         className={`w-8 h-6 rounded overflow-hidden border-2 transition-all ${
-          language === 'en' ? 'border-blue-600 scale-110' : 'border-gray-300 opacity-70 hover:opacity-100'
+          language === 'en' ? 'border-blue-600' : 'border-gray-300 opacity-70 hover:opacity-100'
         }`}
         aria-label="English"
         title="English"
