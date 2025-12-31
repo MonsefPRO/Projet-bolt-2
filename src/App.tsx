@@ -342,7 +342,8 @@ function App() {
                   </Link>
                   <button
                     onClick={() => scrollToSection('services')}
-                    className="border-2 border-sky-600 text-sky-600 px-8 py-4 rounded-lg font-semibold hover:bg-sky-50 transition-all hover:scale-105 transform hover:border-sky-700"
+                    className="border-2 px-8 py-4 rounded-lg font-semibold hover:bg-sky-50 transition-all hover:scale-105 transform"
+                    style={{ borderColor: '#334786', color: '#334786' }}
                   >
                     {t('hero.ctaSecondary')}
                   </button>
