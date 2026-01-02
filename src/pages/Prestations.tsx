@@ -265,7 +265,7 @@ export default function Prestations() {
           ))}
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/40 to-blue-700/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 to-blue-700/20" />
 
         <div className="relative z-10 text-center text-white px-4">
           <div className="text-center text-white px-4">
