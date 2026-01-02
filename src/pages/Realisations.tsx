@@ -433,26 +433,6 @@ export default function Realisations() {
               </div>
             </div>
           </div>
-
-          <div className="mt-12 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 text-center border-2 border-sky-100">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1">
-                <p className="text-2xl font-bold text-gray-800 mb-2">
-                  Plus de 500 projets réalisés
-                </p>
-                <p className="text-gray-600">
-                  Rejoignez nos clients satisfaits et bénéficiez d'une expertise reconnue en prestations drone
-                </p>
-              </div>
-              <Link
-                to="/#contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-600 to-blue-700 text-white px-8 py-4 rounded-xl font-bold hover:from-sky-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
-              >
-                <span>Nous contacter</span>
-                <ChevronRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
         </div>
       </section>
 
