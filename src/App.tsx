@@ -159,15 +159,15 @@ function App() {
               <LanguageSwitcher />
               <Link
                 to="/devis"
-                className="flex items-center gap-2 bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform"
+                className="flex items-center gap-2 bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-110 hover:-translate-y-1 transform"
               >
                 <span>{t('hero.cta')}</span>
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
             <button
-              className="md:hidden"
+              className="md:hidden hover:scale-110 hover:rotate-12 transition-all duration-300 transform"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -176,33 +176,33 @@ function App() {
 
           {isMenuOpen && (
             <div className="md:hidden py-4 space-y-3 border-t">
-              <button onClick={() => scrollToSection('accueil')} className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+              <button onClick={() => scrollToSection('accueil')} className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2 hover:translate-x-2 transition-all duration-300 transform hover:bg-sky-50 rounded px-2">
                 {t('nav.home')}
               </button>
-              <Link to="/prestations" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+              <Link to="/prestations" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2 hover:translate-x-2 transition-all duration-300 transform hover:bg-sky-50 rounded px-2">
                 {t('nav.services')}
               </Link>
               <div className="space-y-1">
                 <div className="text-gray-700 font-medium py-2 px-2 bg-gray-50 rounded">
                   {t('nav.news')}
                 </div>
-                <Link to="/blog" className="block w-full text-left text-gray-600 hover:text-sky-600 py-2 pl-4">
+                <Link to="/blog" className="block w-full text-left text-gray-600 hover:text-sky-600 py-2 pl-4 hover:translate-x-2 transition-all duration-300 transform hover:bg-sky-50 rounded">
                   {t('nav.blog')}
                 </Link>
-                <Link to="/realisations" className="block w-full text-left text-gray-600 hover:text-sky-600 py-2 pl-4">
+                <Link to="/realisations" className="block w-full text-left text-gray-600 hover:text-sky-600 py-2 pl-4 hover:translate-x-2 transition-all duration-300 transform hover:bg-sky-50 rounded">
                   {t('nav.portfolio')}
                 </Link>
               </div>
-              <Link to="/valeurs" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+              <Link to="/valeurs" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2 hover:translate-x-2 transition-all duration-300 transform hover:bg-sky-50 rounded px-2">
                 {t('nav.values')}
               </Link>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+              <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2 hover:translate-x-2 transition-all duration-300 transform hover:bg-sky-50 rounded px-2">
                 {t('contact.title')}
               </button>
               <div className="flex items-center justify-center py-4">
                 <LanguageSwitcher />
               </div>
-              <Link to="/devis" className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-6 py-2.5 rounded-lg font-medium text-center block">
+              <Link to="/devis" className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-6 py-2.5 rounded-lg font-medium text-center block hover:from-brand-orange-600 hover:to-red-700 hover:shadow-xl hover:scale-105 transition-all duration-300 transform">
                 {t('hero.cta')}
               </Link>
             </div>
@@ -284,14 +284,14 @@ function App() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/devis"
-                    className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all shadow-lg hover:shadow-xl flex items-center justify-center group"
+                    className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-110 hover:-translate-y-1 flex items-center justify-center group transform"
                   >
                     {t('hero.cta')}
-                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                   </Link>
                   <button
                     onClick={() => scrollToSection('services')}
-                    className="border-2 px-8 py-4 rounded-lg font-semibold hover:bg-sky-50 transition-all hover:scale-105 transform"
+                    className="border-2 px-8 py-4 rounded-lg font-semibold hover:bg-sky-50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:-translate-y-1 transform"
                     style={{ borderColor: '#334786', color: '#334786' }}
                   >
                     {t('hero.ctaSecondary')}
@@ -304,7 +304,7 @@ function App() {
                 <button
                   key={index}
                   onClick={() => setCurrentHeroImage(index)}
-                  className={`transition-all duration-300 ${
+                  className={`transition-all duration-300 transform hover:scale-125 ${
                     index === currentHeroImage
                       ? 'w-8 h-2 bg-sky-600'
                       : 'w-2 h-2 bg-gray-400 hover:bg-gray-500'
@@ -508,7 +508,7 @@ function App() {
 
                   <button
                     onClick={prevTestimonial}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 md:-translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-sky-600 hover:bg-sky-50 transition-all"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 md:-translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center text-sky-600 hover:bg-sky-50 transition-all duration-300 hover:scale-125 hover:rotate-12 transform"
                     aria-label="Previous testimonial"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -516,7 +516,7 @@ function App() {
 
                   <button
                     onClick={nextTestimonial}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 md:translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center text-sky-600 hover:bg-sky-50 transition-all"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 md:translate-x-12 w-10 h-10 bg-white rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center text-sky-600 hover:bg-sky-50 transition-all duration-300 hover:scale-125 hover:-rotate-12 transform"
                     aria-label="Next testimonial"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -527,7 +527,7 @@ function App() {
                       <button
                         key={index}
                         onClick={() => setCurrentTestimonial(index)}
-                        className={`w-2 h-2 rounded-full transition-all ${
+                        className={`w-2 h-2 rounded-full transition-all duration-300 transform hover:scale-125 ${
                           index === currentTestimonial ? 'bg-sky-600 w-8' : 'bg-gray-300 hover:bg-gray-400'
                         }`}
                         aria-label={`Go to testimonial ${index + 1}`}
@@ -580,10 +580,10 @@ function App() {
                   answer: t('faq.q6.answer')
                 }
               ].map((faq, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02] transform">
                   <button
                     onClick={() => setExpandedFAQ({...expandedFAQ, [index]: !expandedFAQ[index]})}
-                    className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                    className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex justify-between items-center hover:bg-gradient-to-r hover:from-sky-50 hover:to-blue-50 transition-all duration-300"
                   >
                     <h3 className="text-sm sm:text-lg font-semibold text-gray-800 pr-4">{faq.question}</h3>
                     <ChevronDown
@@ -610,10 +610,10 @@ function App() {
               </p>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all shadow-md hover:shadow-lg inline-flex items-center"
+                className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-brand-orange-600 hover:to-red-700 transition-all duration-300 shadow-md hover:shadow-2xl hover:scale-110 hover:-translate-y-1 transform inline-flex items-center group"
               >
                 {t('contact.title')}
-                <ChevronRight className="ml-2 w-5 h-5" />
+                <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </div>
           </div>
@@ -778,10 +778,10 @@ function App() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-5 rounded-xl font-bold text-lg hover:from-brand-orange-600 hover:to-red-700 transition-all shadow-xl hover:shadow-2xl hover:scale-[1.02] transform flex items-center justify-center gap-3"
+                  className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-5 rounded-xl font-bold text-lg hover:from-brand-orange-600 hover:to-red-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 hover:-translate-y-1 transform flex items-center justify-center gap-3 group"
                 >
                   <span>{t('quote.form.submit')}</span>
-                  <ChevronRight className="w-5 h-5" />
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
 
                 <p className="text-sm text-gray-500 text-center">
@@ -800,37 +800,37 @@ function App() {
               <h3 className="font-bold mb-4">{t('footer.quickLinks')}</h3>
               <ul className="space-y-2">
                 <li>
-                  <button onClick={() => scrollToSection('accueil')} className="text-gray-400 hover:text-white transition-colors">
+                  <button onClick={() => scrollToSection('accueil')} className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('nav.home')}
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors">
+                  <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('footer.services')}
                   </button>
                 </li>
                 <li>
-                  <Link to="/valeurs" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/valeurs" className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('nav.values')}
                   </Link>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('avantages')} className="text-gray-400 hover:text-white transition-colors">
+                  <button onClick={() => scrollToSection('avantages')} className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('whyUs.badge')}
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-white transition-colors">
+                  <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('contact.title')}
                   </button>
                 </li>
                 <li>
-                  <Link to="/realisations" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/realisations" className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('nav.portfolio')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/politique-confidentialite" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/politique-confidentialite" className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-2 transform">
                     {t('footer.privacy')}
                   </Link>
                 </li>
@@ -860,7 +860,7 @@ function App() {
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
             <div className="flex flex-wrap justify-center gap-4 mb-4">
-              <Link to="/politique-confidentialite" className="hover:text-white transition-colors">
+              <Link to="/politique-confidentialite" className="hover:text-white transition-all duration-300 hover:scale-110 transform">
                 {t('footer.privacy')}
               </Link>
             </div>
