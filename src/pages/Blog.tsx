@@ -86,8 +86,7 @@ export default function Blog() {
       category: "Technologie",
       title: "Soft-Wash vs Haute Pression : Protégez vos enduits",
       date: "20 Déc 2025",
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800",
-      excerpt: "Trop de prestataires utilisent encore la haute pression sur des façades fragiles. Découvrez pourquoi nous privilégions la pulvérisation basse pression.",
+      image: "facadeblog.png",
       content: `
         <div class="space-y-6 text-slate-700 leading-relaxed">
           <p class="text-lg font-medium text-[#334786]">Le nettoyage de façade a mauvaise réputation, et pour cause. L'utilisation massive des nettoyeurs haute pression (type Kärcher) a causé des dégâts irréversibles sur de nombreux bâtiments.</p>
