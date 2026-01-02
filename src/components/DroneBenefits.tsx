@@ -6,16 +6,19 @@ export default function DroneBenefits() {
 
   const benefits = [
     {
+      id: 'benefit-safety',
       icon: Shield,
       title: t('benefits.safety.title'),
       description: t('benefits.safety.text'),
     },
     {
+      id: 'benefit-speed',
       icon: Zap,
       title: t('benefits.speed.title'),
       description: t('benefits.speed.text'),
     },
     {
+      id: 'benefit-cost',
       icon: BarChart3,
       title: t('benefits.cost.title'),
       description: t('benefits.cost.text'),
@@ -39,6 +42,7 @@ export default function DroneBenefits() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
+              id={benefit.id}
               className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 shadow-lg" style={{ backgroundColor: '#233B72' }}>
