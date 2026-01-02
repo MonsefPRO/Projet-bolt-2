@@ -197,7 +197,7 @@ export default function Blog() {
       <div
         className="relative bg-gradient-to-br from-gray-800 to-gray-900 py-32 pt-40 overflow-hidden"
         style={{
-          backgroundImage: 'url(/design_sans_titre.png)',
+          backgroundImage: 'url(/banniereblog.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundBlendMode: 'normal'
