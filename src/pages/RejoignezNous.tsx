@@ -100,7 +100,7 @@ function WhyJoinSection() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Pourquoi nous rejoindre ?</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 leading-relaxed text-lg text-justify max-w-2xl mx-auto">
             Découvrez les avantages de faire partie de l'équipe Ellipsys
           </p>
         </div>
@@ -121,7 +121,7 @@ function WhyJoinSection() {
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                <p className="text-gray-600 leading-relaxed text-lg text-justify">{benefit.description}</p>
               </div>
             </div>
           ))}
@@ -220,7 +220,7 @@ export default function RejoignezNous() {
                     <Icon className={`w-8 h-8 ${isActive ? 'text-white' : `text-gray-400 group-hover:text-${c.text}`} transition-colors duration-300`} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-gray-900 transition-colors duration-300">{title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{desc}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg text-justify group-hover:text-gray-700 transition-colors duration-300">{desc}</p>
                   <div className={`mt-4 flex items-center gap-2 text-${c.text} opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0`}>
                     <span className="text-sm font-semibold">En savoir plus</span>
                     <ArrowRight className="w-4 h-4" />
@@ -281,7 +281,7 @@ function ApporteurAffairesForm() {
             <p className="text-sky-600 font-medium">Générez des revenus complémentaires</p>
           </div>
         </div>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed text-lg text-justify">
           Vous connaissez des professionnels ou particuliers qui pourraient bénéficier de nos services ?
           Devenez partenaire et bénéficiez d'une rémunération attractive pour chaque affaire apportée.
         </p>
@@ -293,7 +293,7 @@ function ApporteurAffairesForm() {
             <Send className="w-10 h-10 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-green-800 mb-3">Demande envoyée !</h3>
-          <p className="text-green-700 text-lg">Nous vous contacterons très prochainement pour discuter de notre partenariat.</p>
+          <p className="text-gray-600 leading-relaxed text-lg text-justify">Nous vous contacterons très prochainement pour discuter de notre partenariat.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -465,7 +465,7 @@ function CandidatureSpontaneeForm() {
             <p className="text-green-600 font-medium">Rejoignez notre équipe</p>
           </div>
         </div>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed text-lg text-justify">
           Vous êtes passionné par les nouvelles technologies et souhaitez rejoindre une équipe dynamique ?
           Envoyez-nous votre candidature spontanée !
         </p>
@@ -477,7 +477,7 @@ function CandidatureSpontaneeForm() {
             <Send className="w-10 h-10 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-green-800 mb-3">Candidature reçue !</h3>
-          <p className="text-green-700 text-lg">Nous examinerons votre profil avec attention et vous contacterons rapidement.</p>
+          <p className="text-gray-600 leading-relaxed text-lg text-justify">Nous examinerons votre profil avec attention et vous contacterons rapidement.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -657,7 +657,7 @@ function FranchiseeForm() {
             <p className="text-amber-600 font-medium">Développez votre propre activité</p>
           </div>
         </div>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed text-lg text-justify">
           Vous êtes entrepreneur et souhaitez développer une activité dans le secteur des services par drone ?
           Devenez franchisé Ellipsys et bénéficiez de notre expertise et de notre réseau établi.
         </p>
@@ -669,7 +669,7 @@ function FranchiseeForm() {
             <Send className="w-10 h-10 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-green-800 mb-3">Demande reçue !</h3>
-          <p className="text-green-700 text-lg">Nous vous contacterons rapidement pour discuter de votre projet de franchise.</p>
+          <p className="text-gray-600 leading-relaxed text-lg text-justify">Nous vous contacterons rapidement pour discuter de votre projet de franchise.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -884,7 +884,7 @@ function ArchitecteForm() {
             <p className="text-orange-600 font-medium">Partenariat exclusif</p>
           </div>
         </div>
-        <p className="text-gray-600 leading-relaxed mb-6">
+        <p className="text-gray-600 leading-relaxed text-lg text-justify mb-6">
           Vous êtes architecte et souhaitez offrir des services innovants à vos clients ?
           Intégrez notre réseau de partenaires et bénéficiez de nos expertises en drone pour vos projets.
         </p>
@@ -893,30 +893,30 @@ function ArchitecteForm() {
             <Award className="w-6 h-6 mr-2" />
             Avantages du partenariat
           </h3>
-          <ul className="space-y-3 text-orange-900">
+          <ul className="space-y-3">
             <li className="flex items-start group">
               <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform">
                 <ChevronRight className="w-4 h-4 text-white" />
               </div>
-              <span className="leading-relaxed">Inspections de toitures et façades par drone pour vos projets</span>
+              <span className="text-gray-600 leading-relaxed text-lg text-justify">Inspections de toitures et façades par drone pour vos projets</span>
             </li>
             <li className="flex items-start group">
               <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform">
                 <ChevronRight className="w-4 h-4 text-white" />
               </div>
-              <span className="leading-relaxed">Modélisation 3D et photogrammétrie pour diagnostics précis</span>
+              <span className="text-gray-600 leading-relaxed text-lg text-justify">Modélisation 3D et photogrammétrie pour diagnostics précis</span>
             </li>
             <li className="flex items-start group">
               <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform">
                 <ChevronRight className="w-4 h-4 text-white" />
               </div>
-              <span className="leading-relaxed">Tarifs préférentiels réservés aux partenaires</span>
+              <span className="text-gray-600 leading-relaxed text-lg text-justify">Tarifs préférentiels réservés aux partenaires</span>
             </li>
             <li className="flex items-start group">
               <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform">
                 <ChevronRight className="w-4 h-4 text-white" />
               </div>
-              <span className="leading-relaxed">Support technique dédié et réactivité garantie</span>
+              <span className="text-gray-600 leading-relaxed text-lg text-justify">Support technique dédié et réactivité garantie</span>
             </li>
           </ul>
         </div>
@@ -928,7 +928,7 @@ function ArchitecteForm() {
             <Send className="w-10 h-10 text-white" />
           </div>
           <h3 className="text-2xl font-bold text-green-800 mb-3">Demande envoyée !</h3>
-          <p className="text-green-700 text-lg">Nous vous contacterons rapidement pour échanger sur notre partenariat.</p>
+          <p className="text-gray-600 leading-relaxed text-lg text-justify">Nous vous contacterons rapidement pour échanger sur notre partenariat.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
