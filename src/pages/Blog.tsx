@@ -110,7 +110,7 @@ export default function Blog() {
       category: "Technologie",
       title: "IA et inspection thermique : Voir l'invisible",
       date: "10 Déc 2025",
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
+      image: "scan.png",
       excerpt: "Cartographiez les déperditions de chaleur de vos bâtiments en temps réel grâce à nos capteurs radiométriques et l'analyse IA.",
       content: `
         <div class="space-y-6 text-slate-700 leading-relaxed">
