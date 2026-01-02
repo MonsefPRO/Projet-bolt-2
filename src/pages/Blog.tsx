@@ -22,7 +22,7 @@ export default function Blog() {
       category: "Conseils",
       title: "Rendement photovoltaïque : Pourquoi 30% de votre énergie s'évapore ?",
       date: "15 Janv 2026",
-      image: "rendement.jpg",
+      image: "rendement.png",
       excerpt: "Ce n'est plus une estimation, mais une réalité mesurée : l'accumulation de poussières fines crée un voile statique que la pluie ne peut rincer.",
       content: `
         <div class="space-y-6 text-slate-700 leading-relaxed">
