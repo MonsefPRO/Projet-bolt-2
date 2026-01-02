@@ -34,8 +34,8 @@ export default function Realisations() {
       date: "Octobre 2024",
       surface: "2 500 m²",
       service: "Nettoyage de façade",
-      imageBefore: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800",
-      imageAfter: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=800",
+      imageBefore: "bati1.png",
+      imageAfter: "bati2.png",
       description: "Nettoyage complet d'une façade vitrée de 8 étages avec technologie drone. Intervention réalisée en 2 jours sans interruption d'activité.",
       benefits: [
         "Aucun échafaudage nécessaire",
