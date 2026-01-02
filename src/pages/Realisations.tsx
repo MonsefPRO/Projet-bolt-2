@@ -57,8 +57,8 @@ export default function Realisations() {
       date: "Septembre 2024",
       surface: "5 000 m²",
       service: "Démoussage de toiture",
-      imageBefore: "https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800",
-      imageAfter: "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800",
+      imageBefore: "indus1.png",
+      imageAfter: "indus2.png",
       description: "Traitement et démoussage d'une toiture industrielle avec application de produit anti-mousse longue durée par drone.",
       benefits: [
         "Traitement homogène sur toute la surface",
