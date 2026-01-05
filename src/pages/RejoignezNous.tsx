@@ -142,33 +142,29 @@ export default function RejoignezNous() {
     <div className="min-h-screen bg-white">
       <Header onBlueBanner={true} />
 
-      <div className="h-96 bg-gradient-to-br from-sky-600 to-blue-700 relative overflow-hidden pt-20">
-        <div className="absolute inset-0 overflow-hidden">
-          <FloatingOrb delay={0} />
-          <FloatingOrb delay={2} />
-          <FloatingOrb delay={4} />
+     {/* BANNIÈRE HARMONISÉE - IDENTIQUE À PRESTATIONS */}
+      <div className="h-[500px] bg-gradient-to-br from-sky-600 to-blue-700 relative overflow-hidden pt-32">
+        <div className="absolute inset-0">
+          <img
+            src="/reji.png"
+            alt="Rejoignez l'équipe Ellipsys"
+            className="w-full h-full object-cover"
+          />
         </div>
-        <img
-          src="/reji.png"
-          alt="Rejoignez l'équipe Ellipsys"
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white px-4 relative z-10">
-            <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full text-sm font-semibold mb-6 animate-pulse">
-              Rejoignez l'aventure
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg" style={{
-              animation: 'slideInDown 0.8s ease-out'
-            }}>
-              Rejoignez-nous
-            </h1>
-            <p className="text-xl md:text-2xl text-sky-100" style={{
-              animation: 'slideInUp 0.8s ease-out 0.2s both'
-            }}>
-              Développons ensemble l'avenir des services par drone
-            </p>
+
+        {/* FILTRE BLEUTÉ EXACT (OPACITÉ 20%) */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 to-blue-700/20" />
+
+        <div className="relative z-10 text-center text-white px-4">
+          <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full text-sm font-semibold mb-6">
+            Rejoignez l'aventure
           </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+            Rejoignez-nous
+          </h1>
+          <p className="text-xl md:text-2xl text-sky-100">
+            Développons ensemble l'avenir des services par drone
+          </p>
         </div>
       </div>
 
