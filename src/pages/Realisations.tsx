@@ -193,7 +193,7 @@ export default function Realisations() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-blue-600/10 to-blue-700/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 via-blue-600/10 to-blue-700/20"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <Link
             to="/"
