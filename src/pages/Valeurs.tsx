@@ -188,7 +188,7 @@ export default function Valeurs() {
     <div className="min-h-screen bg-gradient-to-b from-white via-sky-50/30 to-white">
       <Header />
       <div className="h-[500px] bg-gradient-to-br from-sky-500 to-blue-700 relative overflow-hidden pt-32"> 
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-400/10 to-blue-600/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 to-blue-700/20"></div>
         <img
           src="/banniere_page_nos_valeurs.png" 
           alt="Nos valeurs - Ellipsys"
