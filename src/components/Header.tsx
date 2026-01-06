@@ -21,7 +21,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
           <div className="flex items-center h-full">
             <Link to="/" className="flex items-center py-2">
               <img 
-                src="/logo.png" 
+                src="/logo_de_cote.png" 
                 alt="Ellipsys Logo"
                 className="h-20 w-auto md:h-28 max-h-full object-contain transition-transform hover:scale-105"
               />
