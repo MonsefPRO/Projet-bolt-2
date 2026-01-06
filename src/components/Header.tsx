@@ -15,25 +15,23 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
 
   return (
     <header className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-40 transition-all border-b border-gray-100">
-  <nav className="w-full">
-<div className="flex justify-between items-center h-24 md:h-[120px] px-6 md:px-[120px]">
-      <div className="flex items-center">
-        <Link to="/" className="flex-shrink-0">
-<Link to="/" className="flex-shrink-0">
-  <img 
-    src="/logo.png" 
-    alt="Ellipsys Logo"
-    className="h-16 md:h-20 w-auto object-contain transition-transform hover:scale-105"
-  />
-</Link>
-      </div>
+      <nav className="w-full">
+        <div className="flex justify-between items-center h-24 md:h-[120px] px-6 md:px-[120px]">
+          {/* ZONE LOGO CORRIGÉE */}
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <img 
+                src="/logo.png" 
+                alt="Ellipsys Logo"
+                className="h-16 md:h-24 w-auto object-contain transition-transform hover:scale-105"
+              />
+            </Link>
+          </div>
 
-
+          {/* MENU PC */}
           <div className="hidden md:flex items-center space-x-12">
             <Link to="/prestations" className={`font-semibold text-lg transition-colors relative group ${
-              onBlueBanner
-                ? 'text-white hover:text-sky-100'
-                : 'text-gray-700 hover:text-sky-600'
+              onBlueBanner ? 'text-white hover:text-sky-100' : 'text-gray-700 hover:text-sky-600'
             }`}>
               <span>{t('nav.services')}</span>
               <span className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
@@ -45,9 +43,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
               <button
                 onMouseEnter={() => setIsActualitesOpen(true)}
                 className={`flex items-center font-semibold text-lg transition-all duration-300 relative ${
-                  onBlueBanner
-                    ? 'text-white hover:text-sky-100'
-                    : 'text-gray-700 hover:text-sky-600'
+                  onBlueBanner ? 'text-white hover:text-sky-100' : 'text-gray-700 hover:text-sky-600'
                 }`}
               >
                 <span>{t('nav.news')}</span>
@@ -75,29 +71,25 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
             </div>
 
             <Link to="/valeurs" className={`font-semibold text-lg transition-colors relative group ${
-              onBlueBanner
-                ? 'text-white hover:text-sky-100'
-                : 'text-gray-700 hover:text-sky-600'
+              onBlueBanner ? 'text-white hover:text-sky-100' : 'text-gray-700 hover:text-sky-600'
             }`}>
               <span>{t('nav.values')}</span>
               <span className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
                 onBlueBanner ? 'bg-white' : 'bg-sky-600'
               }`}></span>
             </Link>
+            
             <Link to="/rejoignez-nous" className={`font-semibold text-lg transition-colors relative group ${
-              onBlueBanner
-                ? 'text-white hover:text-sky-100'
-                : 'text-gray-700 hover:text-sky-600'
+              onBlueBanner ? 'text-white hover:text-sky-100' : 'text-gray-700 hover:text-sky-600'
             }`}>
               <span>Rejoignez-nous</span>
               <span className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
                 onBlueBanner ? 'bg-white' : 'bg-sky-600'
               }`}></span>
             </Link>
+
             <Link to="/#contact" className={`font-semibold text-lg transition-colors relative group ${
-              onBlueBanner
-                ? 'text-white hover:text-sky-100'
-                : 'text-gray-700 hover:text-sky-600'
+              onBlueBanner ? 'text-white hover:text-sky-100' : 'text-gray-700 hover:text-sky-600'
             }`}>
               <span>Contact</span>
               <span className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 ${
@@ -117,45 +109,51 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
             </Link>
           </div>
 
+          {/* BOUTON MENU MOBILE */}
           <button
-            className="md:hidden"
+            className="md:hidden p-2 text-gray-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
           </button>
         </div>
 
+        {/* MENU MOBILE DÉROULANT */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-3 border-t">
-            <Link to="/" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+          <div className="md:hidden bg-white border-t px-6 py-8 space-y-6 shadow-xl animate-in slide-in-from-top duration-300">
+            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-sky-600 font-bold text-xl border-b pb-2">
               {t('nav.home')}
             </Link>
-            <Link to="/prestations" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+            <Link to="/prestations" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-sky-600 font-bold text-xl border-b pb-2">
               {t('nav.services')}
             </Link>
-            <div className="space-y-1">
-              <div className="text-gray-700 font-medium py-2 px-2 bg-gray-50 rounded">
+            <div className="space-y-4">
+              <div className="text-gray-400 font-bold text-sm uppercase tracking-wider">
                 {t('nav.news')}
               </div>
-              <Link to="/blog" className="block w-full text-left text-gray-600 hover:text-sky-600 py-2 pl-4">
+              <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 text-gray-700 hover:text-sky-600 font-bold text-xl pl-4">
+                <ChevronRight className="w-5 h-5 text-sky-500" />
                 {t('nav.blog')}
               </Link>
-              <Link to="/realisations" className="block w-full text-left text-gray-600 hover:text-sky-600 py-2 pl-4">
+              <Link to="/realisations" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 text-gray-700 hover:text-sky-600 font-bold text-xl pl-4">
+                <ChevronRight className="w-5 h-5 text-sky-500" />
                 {t('nav.portfolio')}
               </Link>
             </div>
-            <Link to="/valeurs" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+            <Link to="/valeurs" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-sky-600 font-bold text-xl border-b pb-2">
               {t('nav.values')}
             </Link>
-            <Link to="/#contact" className="block w-full text-left text-gray-700 hover:text-sky-600 font-medium py-2">
+            <Link to="/#contact" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-sky-600 font-bold text-xl border-b pb-2">
               {t('contact.title')}
             </Link>
-            <div className="flex items-center justify-center py-4">
-              <LanguageSwitcher />
+            <div className="pt-4 space-y-4">
+              <div className="flex justify-center">
+                <LanguageSwitcher />
+              </div>
+              <Link to="/devis" onClick={() => setIsMenuOpen(false)} className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-6 py-4 rounded-xl font-bold text-center block shadow-lg">
+                {t('hero.cta')}
+              </Link>
             </div>
-            <Link to="/devis" className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-6 py-2.5 rounded-lg font-medium text-center block">
-              {t('hero.cta')}
-            </Link>
           </div>
         )}
       </nav>
