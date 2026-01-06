@@ -195,12 +195,12 @@ export default function Valeurs() {
         
         <div className="relative z-10 w-full text-center text-white px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg text-white">
-              Nos valeurs
-            </h1>
-            <p className="text-xl md:text-2xl text-sky-100 drop-shadow-md">
-              Les drones au service de l'humain
-            </p>
+           <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg" style={{ color: '#233B72' }}>
+  Nos valeurs
+</h1>
+<p className="text-xl md:text-2xl drop-shadow-md font-semibold" style={{ color: '#233B72' }}>
+  Les drones au service de l'humain
+</p>
           </div>
         </div>
       </section>
