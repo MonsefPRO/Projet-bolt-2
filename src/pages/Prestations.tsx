@@ -237,12 +237,12 @@ export default function Prestations() {
         <HeroCarousel />
         
         <div className="relative z-10 w-full text-center text-white px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2 drop-shadow-lg">
-            Maintenance & Entretien par Drone
-          </h1>
-          <p className="text-lg md:text-xl text-sky-100 drop-shadow-md">
-            Les drones au service de l'humain
-          </p>
+        <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg" style={{ color: '#233B72' }}>
+  Maintenance & Entretien par Drone
+</h1>
+<p className="text-xl md:text-2xl drop-shadow-md font-semibold" style={{ color: '#233B72' }}>
+  Les drones au service de l'humain
+</p>
         </div>
       </section>
 
