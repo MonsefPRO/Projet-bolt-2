@@ -221,7 +221,7 @@ export default function Valeurs() {
               title="Sécurité"
               description="Nous plaçons la sécurité de vos équipes au cœur de chaque intervention. Lors de chaque opération, un agent au sol accompagne le pilote, établissant un périmètre de sécurité pour garantir que l'intervention se déroule sans risque. Toutes nos actions respectent les normes et réglementations en vigueur, assurant un nettoyage par drone sûr, fiable et maîtrisé."
               color="red"
-              image="/security.png" 
+              image="/newsecu.png" 
               items={[
                 'Conformité aux normes en vigueur',
                 'Assurance responsabilité civile',
@@ -237,7 +237,7 @@ export default function Valeurs() {
               title="Rigueur"
               description="Nous faisons de la qualité notre priorité. Grâce à des méthodes structurées et rigoureuses, chaque intervention par drone est réalisée avec précision, fiabilité et résultats irréprochables."
               color="gray"
-              image="/rigueur.png"
+              image="/newrig.png"
               items={[
                 'Sérieux professionnel',
                 'Standards élevés',
