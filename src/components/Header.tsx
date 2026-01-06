@@ -16,13 +16,13 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
   return (
     <header className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-40 transition-all border-b border-gray-100">
   <nav className="w-full">
-<div className="flex justify-between items-center h-24 md:h-[120px] px-6 md:px-[120px]">
+<div className="flex justify-between items-center min-h-[100px] md:min-h-[130px] px-6 md:px-[120px]">
       <div className="flex items-center">
         <Link to="/" className="flex-shrink-0">
-    <img 
+<img 
   src="/logo.png" 
   alt="Ellipsys Logo"
-  className="h-16 md:h-24 w-auto object-contain transition-transform hover:scale-105"
+  className="h-16 md:h-24 w-auto object-contain"
 />
         </Link>
       </div>
