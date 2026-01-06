@@ -3,6 +3,7 @@ import { ChevronRight, Briefcase, Users, Heart, Award, Send, FileText, Building2
 import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import { useSecureForm } from '../hooks/useSecureForm';
+import { HeroCarousel } from '../components/HeroCarousel';
 
 const FloatingOrb = ({ delay }: { delay: number }) => (
   <div
@@ -141,32 +142,21 @@ export default function RejoignezNous() {
   return (
     <div className="min-h-screen bg-white">
       <Header onBlueBanner={true} />
-
-     {/* BANNIÈRE HARMONISÉE - IDENTIQUE À PRESTATIONS */}
-      <div className="h-[500px] bg-gradient-to-br from-sky-600 to-blue-700 relative overflow-hidden pt-32">
-        <div className="absolute inset-0">
-          <img
-            src="/reji.png"
-            alt="Rejoignez l'équipe Ellipsys"
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        {/* FILTRE BLEUTÉ EXACT (OPACITÉ 20%) */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-600/20 to-blue-700/20" />
-
-        <div className="relative z-10 text-center text-white px-4">
+      <section className="relative pt-32 pb-20 overflow-hidden flex items-center min-h-[500px]">
+        <HeroCarousel />
+        
+        <div className="relative z-10 w-full text-center text-white px-4">
           <div className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full text-sm font-semibold mb-6">
             Rejoignez l'aventure
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
             Rejoignez-nous
           </h1>
-          <p className="text-xl md:text-2xl text-sky-100">
+          <p className="text-xl md:text-2xl text-sky-100 drop-shadow-md">
             Développons ensemble l'avenir des services par drone
           </p>
         </div>
-      </div>
+      </section>
 
       <div className="container mx-auto px-4 py-16">
         <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-12">
