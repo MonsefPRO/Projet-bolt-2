@@ -105,7 +105,7 @@ function App() {
                 <img
                   src="/logo_de_cote.png"
                   alt="Ellipsys"
-                  className="h-14 md:h-20 w-auto transition-transform duration-300 cursor-pointer"
+                className="h-20 md:h-28 w-auto transition-transform duration-300 cursor-pointer"
                 />
               </Link>
             </div>
