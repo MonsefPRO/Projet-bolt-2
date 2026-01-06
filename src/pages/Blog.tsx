@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Calendar, ArrowRight, ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
+import { HeroCarousel } from '../components/HeroCarousel';
 
 interface Article {
   id: number;
@@ -194,21 +195,18 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <div
-        className="relative bg-gradient-to-br from-gray-800 to-gray-900 py-32 pt-40 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/banblog.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'normal'
-        }}
-      >
-        <div className="absolute inset-0 bg-gray-900/30"></div>
-        <div className="container mx-auto px-4 text-center text-white relative z-10">
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">Blog & Actualités</h1>
-          <p className="text-2xl text-gray-100 drop-shadow-lg">Expertise, conseils et innovations dans le nettoyage par drone</p>
+    <section className="relative pt-32 pb-20 overflow-hidden flex items-center min-h-[400px]">
+        <HeroCarousel />
+        
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 drop-shadow-lg">
+            Blog & Actualités
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-100 drop-shadow-md max-w-3xl mx-auto font-medium">
+            Expertise, conseils et innovations dans le nettoyage par drone
+          </p>
         </div>
-      </div>
+      </section>
 
       <div className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="flex flex-wrap gap-3 mb-12 justify-center">
