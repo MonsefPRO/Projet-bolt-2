@@ -186,12 +186,16 @@ function WhyChooseSection() {
 
 export default function Valeurs() {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden flex items-center min-h-[500px]">
+    <div className="min-h-screen bg-gradient-to-b from-white via-sky-50/30 to-white">
+      <Header />
+      
+      {/* SECTION BANNIÈRE ANIMÉE CORRIGÉE */}
+      <section className="relative pt-32 pb-20 overflow-hidden flex items-center min-h-[500px]">
         <HeroCarousel />
         
         <div className="relative z-10 w-full text-center text-white px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg text-white">
               Nos valeurs
             </h1>
             <p className="text-xl md:text-2xl text-sky-100 drop-shadow-md">
@@ -200,8 +204,6 @@ export default function Valeurs() {
           </div>
         </div>
       </section>
-        </div>
-      </div>
 
       <div className="w-full px-4 py-8">
         <div className="container mx-auto max-w-6xl mb-8">
@@ -210,7 +212,6 @@ export default function Valeurs() {
             <ChevronRight className="w-4 h-4" />
             <span className="text-gray-800 font-medium">Nos valeurs</span>
           </nav>
-
         </div>
 
         <div className="w-full space-y-16 py-8">
@@ -299,7 +300,7 @@ export default function Valeurs() {
 
         <div className="container mx-auto max-w-6xl px-4">
           <section className="relative overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700 animate-[gradient_8s_ease_infinite]"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-700"></div>
             <img
               src="/reji.png" 
               alt="Contactez-nous"
@@ -307,7 +308,7 @@ export default function Valeurs() {
             />
             <div className="relative p-8 md:p-10 text-center text-white">
               <div className="max-w-3xl mx-auto">
-                <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full mb-4 animate-[bounce_2s_ease-in-out_infinite]">
+                <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full mb-4">
                   <Mail className="w-10 h-10 mx-auto" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
@@ -318,10 +319,9 @@ export default function Valeurs() {
                 </p>
                 <Link
                   to="/#contact"
-                  className="group relative inline-flex items-center justify-center px-6 py-3 text-base font-bold text-sky-600 bg-white rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="group relative inline-flex items-center justify-center px-6 py-3 text-base font-bold text-sky-600 bg-white rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   <span className="relative z-10">Contactez Ellipsys</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-sky-50 to-blue-50 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
                 </Link>
               </div>
             </div>
