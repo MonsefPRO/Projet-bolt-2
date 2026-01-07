@@ -203,7 +203,7 @@ export default function Blog() {
   Blog & Actualités
 </h1>
 <p className="text-xl md:text-2xl drop-shadow-md max-w-3xl mx-auto font-semibold" style={{ color: '#233B72' }}>
-  Expertise, conseils et innovations dans le nettoyage par drone
+  Les drones au service de l'humain
 </p>
         </div>
       </section>
