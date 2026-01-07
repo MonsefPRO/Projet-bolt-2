@@ -16,7 +16,6 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
   return (
     <header className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-40 transition-all border-b border-gray-100">
       <nav className="w-full">
-    <div className="flex justify-between items-center h-20 md:h-24 px-6 md:px-[120px]">
         <div className="flex justify-between items-center h-20 md:h-24 px-6 md:px-[120px]">
           {/* ZONE LOGO CORRIGÉE */}
           <div className="flex items-center">
@@ -28,6 +27,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
               />
             </Link>
           </div>
+
           {/* MENU PC */}
           <div className="hidden md:flex items-center space-x-12">
             <Link to="/prestations" className={`font-semibold text-lg transition-colors relative group ${
@@ -78,7 +78,7 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
                 onBlueBanner ? 'bg-white' : 'bg-sky-600'
               }`}></span>
             </Link>
-            
+
             <Link to="/rejoignez-nous" className={`font-semibold text-lg transition-colors relative group ${
               onBlueBanner ? 'text-white hover:text-sky-100' : 'text-gray-700 hover:text-sky-600'
             }`}>
@@ -109,7 +109,6 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
             </Link>
           </div>
 
-          {/* BOUTON MENU MOBILE */}
           <button
             className="md:hidden p-2 text-gray-700"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -118,7 +117,6 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
           </button>
         </div>
 
-        {/* MENU MOBILE DÉROULANT */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t px-6 py-8 space-y-6 shadow-xl animate-in slide-in-from-top duration-300">
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="block text-gray-700 hover:text-sky-600 font-bold text-xl border-b pb-2">
