@@ -20,10 +20,10 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
           {/* ZONE LOGO : Utilisation du chemin absolu et suppression des contraintes de hauteur parentes */}
           <div className="flex items-center h-full">
             <Link to="/" className="flex items-center py-2">
-            <img 
+           <img 
   src="/logo_de_cote.png" 
   alt="Ellipsys Logo"
-  className="h-20 md:h-32 w-auto object-contain transition-transform hover:scale-110"
+  className="h-24 md:h-40 w-auto object-contain transition-transform hover:scale-105"
 />
             </Link>
           </div>
