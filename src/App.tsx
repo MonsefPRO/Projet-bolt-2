@@ -99,14 +99,14 @@ function App() {
       <CookieBanner />
       <header className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-40 transition-all border-b border-gray-100">
         <nav className="w-full">
-      <div className="flex justify-between items-center h-24 md:h-[110px] px-6 md:px-[120px]">
+          <div className="flex justify-between items-center h-24 md:h-[110px] px-6 md:px-[120px]">
             <div className="flex items-center">
               <Link to="/" className="flex-shrink-0">
-              <img
-  src="/bonlogo_de_cote.png"
-  alt="Ellipsys"
-  className="h-12 md:h-24 w-auto transition-transform duration-300 cursor-pointer"
-/>
+                <img
+                  src="/bonlogo_de_cote.png"
+                  alt="Ellipsys"
+                  className="h-12 md:h-24 w-auto transition-transform duration-300 cursor-pointer"
+                />
               </Link>
             </div>
 
@@ -694,7 +694,8 @@ function App() {
                 </div>
               </div>
 
-              <form className="bg-gradient-to-br from-white to-sky-50/30 rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-sky-100 space-y-6">
+              {/* FORMULAIRE CONFIGURÉ POUR HUBSPOT */}
+              <form id="contact-form" className="bg-gradient-to-br from-white to-sky-50/30 rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-sky-100 space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-2">
                     {t('contact.form.name')} *
@@ -702,7 +703,7 @@ function App() {
                   <input
                     type="text"
                     id="name"
-                    name="name"
+                    name="lastname"
                     required
                     className="w-full px-5 py-3.5 bg-white border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all hover:border-gray-300"
                     placeholder={t('contact.form.name')}
