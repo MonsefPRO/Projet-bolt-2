@@ -238,7 +238,7 @@ function App() {
                   {t('hero.title1')} {t('hero.title2')}
                 </h1>
                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-7">
-                  <span className="block whitespace-nowrap text-black font-bold"">
+                  <span className="block whitespace-nowrap text-black font-bold">
                     {t('hero.subtitle')}
                   </span>
                   <span className="flex flex-wrap justify-center gap-2 font-bold">
@@ -264,7 +264,7 @@ function App() {
                       <span className="text-base sm:text-lg md:text-xl lg:text-2xl" style={{ color: '#334786' }}>{t('benefits.cost.title')}</span>
                     </span>
                   </span> 
-                  <span className="block text-base sm:text-lg md:text-xl lg:text-2xl text-black font-bold"
+                  <span className="block text-base sm:text-lg md:text-xl lg:text-2xl text-black font-bold">
                     {t('hero.intervention')}
                   </span>
                 </p>
