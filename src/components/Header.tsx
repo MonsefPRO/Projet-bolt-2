@@ -20,12 +20,12 @@ return (
         <div className="flex justify-between items-center h-20 md:h-24 px-6 md:px-[120px] relative">
           
           {/* ZONE LOGO CORRIGÉE : Utilisation de w-40 pour réserver l'espace du logo */}
-          <div className="flex items-center h-full w-40 md:w-60">
+         <div className="flex items-center h-full w-40 md:w-72">
             <Link to="/" className="flex items-center">
               <img 
                 src="/bonlogo_de_cote.png" 
                 alt="Ellipsys Logo"
-                className="h-12 md:h-18 w-auto object-contain transition-transform hover:scale-105"
+               className="h-12 md:h-22 w-auto object-contain transition-transform hover:scale-105"
               />
             </Link>
           </div>
