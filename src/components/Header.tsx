@@ -21,11 +21,10 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
           <div className="flex items-center relative h-full">
   <Link to="/" className="flex items-center absolute left-0">
     <img 
-      src="/bonlogo_de_cote.png" 
-      alt="Ellipsys Logo"
-      className="h-24 md:h-36 w-auto object-contain transition-transform hover:scale-105 drop-shadow-md"
-      style={{ maxWidth: 'none' }}
-    />
+  src="/logo_de_cote.png" 
+  alt="Ellipsys Logo"
+  className="h-12 md:h-18 w-auto object-contain transition-transform hover:scale-105"
+/>
   </Link>
 </div>
 
