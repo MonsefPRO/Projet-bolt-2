@@ -16,14 +16,14 @@ export default function Header({ onBlueBanner = false }: HeaderProps) {
   return (
     <header className="fixed w-full bg-white/98 backdrop-blur-md shadow-md z-40 transition-all border-b border-gray-100">
       <nav className="w-full">
-       <div className="flex justify-between items-center min-h-[100px] md:min-h-[140px] px-6 md:px-[120px]">
+     <div className="flex justify-between items-center min-h-[140px] md:min-h-[200px] px-6 md:px-[120px]">
           {/* ZONE LOGO : Utilisation du chemin absolu et suppression des contraintes de hauteur parentes */}
           <div className="flex items-center h-full">
             <Link to="/" className="flex items-center py-2">
-           <img 
+          <img 
   src="/logo_de_cote.png" 
   alt="Ellipsys Logo"
-  className="h-24 md:h-40 w-auto object-contain transition-transform hover:scale-105"
+  className="h-28 md:h-48 w-auto object-contain transition-transform hover:scale-105"
 />
             </Link>
           </div>
