@@ -108,21 +108,21 @@ export default function Valeurs() {
 
                   <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-16 items-center`}>
                     
-                    {/* IMAGE RESPONSIVE */}
-                    <div className="w-full lg:w-1/2 flex-shrink-0">
-                      <div className="h-60 sm:h-80 md:h-[400px] relative overflow-hidden rounded-2xl shadow-lg">
-                        <img
-                          src={valeur.image}
-                          alt={valeur.title}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute top-4 left-4">
-                          <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
-                            <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                   {/* IMAGE RESPONSIVE - FORMAT RECTANGLE SUR MOBILE */}
+<div className="w-full lg:w-1/2 flex-shrink-0">
+  <div className="h-40 sm:h-56 md:h-[400px] relative overflow-hidden rounded-2xl shadow-lg">
+    <img
+      src={valeur.image}
+      alt={valeur.title}
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+    />
+    <div className="absolute top-3 left-3 md:top-4 md:left-4">
+      <div className={`w-10 h-10 md:w-16 md:h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
+        <Icon className="w-5 h-5 md:w-8 md:h-8 text-white" />
+      </div>
+    </div>
+  </div>
+</div>
 
                     {/* CONTENU TEXTE ET ENGAGEMENTS */}
                     <div className="w-full lg:w-1/2 space-y-6">
