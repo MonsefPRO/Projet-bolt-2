@@ -98,15 +98,15 @@ function App() {
       <Header />
 
       <main>
-        {/* BANNIÈRE : HAUTEUR RÉDUITE SUR MOBILE (60vh au lieu de min-screen) */}
-        <section id="accueil" className="h-[65vh] md:min-h-screen pt-32 pb-16 relative overflow-hidden flex items-center">
-          <div className="absolute inset-0 bg-gradient-to-br from-sky-50/25 via-blue-50/20 to-white/25 z-10"></div>
+      {/* BANNIÈRE : HAUTEUR DYNAMIQUE POUR NE PAS COUPER LE TEXTE */}
+        <section id="accueil" className="min-h-[70vh] md:min-h-screen pt-28 pb-12 relative overflow-hidden flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-black/40 z-10"></div>
           <div className="absolute inset-0">
             {heroImages.map((image, index) => (
               <div
                 key={index}
                 className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                  index === currentHeroImage ? 'opacity-75' : 'opacity-0'
+                  index === currentHeroImage ? 'opacity-100' : 'opacity-0'
                 }`}
               >
                 <img
@@ -117,94 +117,84 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="w-full relative z-10">
+
+          <div className="w-full relative z-20">
             <div className="flex flex-col items-center justify-center">
-              <div className="space-y-7 w-full text-center px-4">
-                <h1 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#334786' }}>
-                  {t('hero.title1')} {t('hero.title2')}
+              <div className="space-y-6 w-full text-center px-4">
+                {/* TITRE : text-2xl sur mobile pour être sûr que ça tienne */}
+                <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-2xl text-white">
+                  {t('hero.title1')} <br className="md:hidden" /> {t('hero.title2')}
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 leading-relaxed space-y-7">
-                  <span className="block text-black font-bold">
+
+                {/* SOUS-TITRE ET ICONES CLIQUABLES */}
+                <div className="text-white space-y-6">
+                  <p className="text-sm sm:text-lg md:text-xl font-bold drop-shadow-md">
                     {t('hero.subtitle')}
-                  </span>
-                  <span className="flex flex-wrap justify-center gap-2 font-bold">
+                  </p>
+                  
+                  <div className="flex flex-wrap justify-center gap-2 font-bold px-2">
                     <span
                       onClick={() => scrollToSection('benefit-safety')}
-                      className="inline-flex items-center bg-gray-100/50 px-3 py-1 rounded-lg hover:bg-gray-200/50 hover:scale-105 transition-all duration-300 cursor-pointer"
+                      className="inline-flex items-center bg-white/20 backdrop-blur-md px-3 py-2 rounded-xl hover:bg-white/30 transition-all cursor-pointer border border-white/30"
                     >
-                      <Shield className="w-5 h-5 md:w-8 md:h-8 mr-1.5" style={{ color: '#334786' }} />
-                      <span className="text-sm md:text-2xl" style={{ color: '#334786' }}>{t('benefits.safety.title')}</span>
+                      <Shield className="w-4 h-4 md:w-8 md:h-8 mr-1.5 text-white" />
+                      <span className="text-[11px] sm:text-sm md:text-xl uppercase tracking-tighter md:tracking-normal">{t('benefits.safety.title')}</span>
                     </span> 
                     <span
                       onClick={() => scrollToSection('benefit-speed')}
-                      className="inline-flex items-center bg-gray-100/50 px-3 py-1 rounded-lg hover:bg-gray-200/50 hover:scale-105 transition-all duration-300 cursor-pointer"
+                      className="inline-flex items-center bg-white/20 backdrop-blur-md px-3 py-2 rounded-xl hover:bg-white/30 transition-all cursor-pointer border border-white/30"
                     >
-                      <Zap className="w-5 h-5 md:w-8 md:h-8 mr-1.5" style={{ color: '#334786' }} />
-                      <span className="text-sm md:text-2xl" style={{ color: '#334786' }}>{t('benefits.speed.title')}</span>
+                      <Zap className="w-4 h-4 md:w-8 md:h-8 mr-1.5 text-white" />
+                      <span className="text-[11px] sm:text-sm md:text-xl uppercase tracking-tighter md:tracking-normal">{t('benefits.speed.title')}</span>
                     </span>
                     <span
                       onClick={() => scrollToSection('benefit-cost')}
-                      className="inline-flex items-center bg-gray-100/50 px-3 py-1 rounded-lg hover:bg-gray-200/50 hover:scale-105 transition-all duration-300 cursor-pointer"
+                      className="inline-flex items-center bg-white/20 backdrop-blur-md px-3 py-2 rounded-xl hover:bg-white/30 transition-all cursor-pointer border border-white/30"
                     >
-                      <BarChart3 className="w-5 h-5 md:w-8 md:h-8 mr-1.5" style={{ color: '#334786' }} />
-                      <span className="text-sm md:text-2xl" style={{ color: '#334786' }}>{t('benefits.cost.title')}</span>
+                      <BarChart3 className="w-4 h-4 md:w-8 md:h-8 mr-1.5 text-white" />
+                      <span className="text-[11px] sm:text-sm md:text-xl uppercase tracking-tighter md:tracking-normal">{t('benefits.cost.title')}</span>
                     </span>
-                  </span> 
-                  <span className="block text-base sm:text-lg md:text-xl lg:text-2xl text-black font-bold mt-4">
+                  </div> 
+
+                  <p className="text-sm sm:text-lg md:text-xl font-bold drop-shadow-md">
                     {t('hero.intervention')}
-                  </span>
-                </p>
-                <div className="flex flex-wrap justify-center gap-8">
-                  <div className="flex items-center space-x-3 group cursor-pointer text-left">
-                    <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center group-hover:bg-sky-200 transition-all duration-300">
-                      <TrendingUp className="w-6 h-6 text-sky-600" />
+                  </p>
+                </div>
+
+                {/* COMPTEURS : Plus petits sur mobile */}
+                <div className="flex justify-center gap-4 md:gap-8">
+                  <div className="bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/10 text-left min-w-[120px]">
+                    <div className="text-xl md:text-3xl font-bold text-white leading-none">
+                      <AnimatedCounter end={120000} suffix="m²" />
                     </div>
-                    <div>
-                      <div className="text-xl md:text-3xl font-bold text-gray-800">
-                        <AnimatedCounter end={120000} suffix={t('hero.stat1Value')} />
-                      </div>
-                      <div className="text-xs text-black">{t('hero.stat1Label')}</div>
-                    </div>
+                    <div className="text-[10px] md:text-xs text-sky-200 font-bold uppercase tracking-widest mt-1">Traités</div>
                   </div>
-                  <div className="flex items-center space-x-3 group cursor-pointer text-left">
-                    <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center group-hover:bg-sky-200 transition-all duration-300">
-                      <Users className="w-6 h-6 text-sky-600" />
+                  <div className="bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/10 text-left min-w-[120px]">
+                    <div className="text-xl md:text-3xl font-bold text-white leading-none">
+                      <AnimatedCounter end={98} suffix="%" />
                     </div>
-                    <div>
-                      <div className="text-xl md:text-3xl font-bold text-gray-800">
-                        <AnimatedCounter end={62} suffix={t('hero.stat2Value')} />
-                      </div>
-                      <div className="text-xs text-black">{t('hero.stat2Label')}</div>
-                    </div>
+                    <div className="text-[10px] md:text-xs text-sky-200 font-bold uppercase tracking-widest mt-1">Satisfaction</div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+                {/* BOUTONS */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center px-6">
                   <Link
                     to="/devis"
-                    className="bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition-all shadow-lg flex items-center justify-center group"
+                    className="bg-brand-orange-500 text-white px-8 py-3.5 rounded-xl font-bold text-lg hover:scale-105 transition-all shadow-xl flex items-center justify-center group active:scale-95"
                   >
                     {t('hero.cta')}
-                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <button
                     onClick={() => setIsVideoModalOpen(true)}
-                    className="border-2 px-8 py-4 rounded-lg font-semibold hover:bg-sky-50 transition-all hover:scale-105 flex items-center justify-center gap-2"
-                    style={{ borderColor: '#334786', color: '#334786' }}
+                    className="bg-white/10 backdrop-blur-md border border-white/40 text-white px-8 py-3.5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2 active:scale-95"
                   >
-                    <Play className="w-5 h-5" />
+                    <Play className="w-5 h-5 fill-current" />
                     Voir la démo
                   </button>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-center gap-2 mt-12">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentHeroImage(index)}
-                  className={`transition-all duration-300 ${index === currentHeroImage ? 'w-8 h-2 bg-sky-600' : 'w-2 h-2 bg-gray-400'} rounded-full`}
-                />
-              ))}
             </div>
           </div>
         </section>
