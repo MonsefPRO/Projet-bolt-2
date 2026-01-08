@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ChevronRight, Shield, TrendingUp, Zap, CheckCircle, Leaf } from 'lucide-react';
+import { ChevronRight, Shield, TrendingUp, Zap, CheckCircle, Leaf, Award, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 
@@ -7,10 +7,13 @@ export default function PanneauxPhotovoltaiques() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <div className="h-96 bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden pt-20">
+
+      {/* HERO SECTION RESPONSIVE */}
+      <div className="h-[300px] md:h-96 bg-gradient-to-br from-amber-500 to-orange-600 relative overflow-hidden pt-20">
         <img
           src="/rony.jpg"
           alt="Nettoyage de panneaux photovoltaïques par drone"
@@ -18,176 +21,163 @@ export default function PanneauxPhotovoltaiques() {
         />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Nettoyage de panneaux photovoltaïques</h1>
-            <p className="text-xl md:text-2xl text-amber-100">Les drones au service de l'humain</p>
+            <h1 className="text-3xl md:text-6xl font-bold mb-4 leading-tight">
+              Panneaux Photovoltaïques
+            </h1>
+            <p className="text-lg md:text-2xl text-amber-100 font-medium">
+              Maximisez votre production d'énergie solaire
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-16 max-w-6xl">
-        <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-8">
-          <Link to="/" className="hover:text-amber-600">Accueil</Link>
+      <div className="container mx-auto px-4 py-8 md:py-16 max-w-6xl">
+        {/* BREADCRUMB */}
+        <nav className="hidden sm:flex items-center space-x-2 text-sm text-gray-600 mb-8">
+          <Link to="/" className="hover:text-amber-600 font-medium">Accueil</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link to="/prestations" className="hover:text-amber-600">Prestations</Link>
+          <Link to="/prestations" className="hover:text-amber-600 font-medium">Prestations</Link>
           <ChevronRight className="w-4 h-4" />
-          <span className="text-gray-800 font-medium">Nettoyage de panneaux photovoltaïques</span>
+          <span className="text-gray-800 font-bold">Photovoltaïque</span>
         </nav>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          <div className="lg:col-span-2 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+          
+          <div className="lg:col-span-2 space-y-10 md:space-y-12">
+            {/* TEXTE PRINCIPAL */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">Nettoyage de Panneaux Solaires</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Des <strong>panneaux photovoltaïques</strong> encrassés peuvent perdre <strong>jusqu'à 30 % de leur production énergétique</strong>. Poussières, pollens, fientes d'oiseaux et pollution s'accumulent, réduisant votre performance jour après jour — et impactant directement votre rentabilité énergétique.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-4">
-              Grâce à notre solution de <strong>nettoyage par drone professionnel</strong>, vous <strong>optimisez votre production solaire</strong> en <strong>toute sécurité, sans contact, sans rayures</strong>, et <strong>sans immobiliser votre site</strong>. Une intervention <strong>2 fois par an</strong> suffit pour maintenir un <strong>rendement optimal</strong>.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Notre technologie est conçue pour les <strong>sites industriels, toitures d'entreprises, hangars agricoles ou installations solaires étendues</strong>. Chaque intervention inclut un <strong>rapport avant/après</strong> avec mesures de performance, preuve chiffrée à l'appui de votre <strong>retour sur investissement (ROI)</strong>.
-              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#233B72] mb-6">Optimisez votre rendement énergétique</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg text-justify">
+                <p>
+                  Des <strong>panneaux photovoltaïques</strong> encrassés peuvent perdre <strong>jusqu'à 30 % de leur production</strong>. Poussières, pollens et pollution s'accumulent, impactant directement votre rentabilité.
+                </p>
+                <p>
+                  Grâce à notre nettoyage par drone, vous optimisez votre production en <strong>toute sécurité, sans contact et sans rayures</strong>. Une intervention régulière garantit un rendement maximal pour vos installations industrielles ou agricoles.
+                </p>
+              </div>
             </section>
 
+            {/* ÉQUIPEMENTS - GRID RESPONSIVE */}
             <section>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Équipements utilisés</h3>
-              <div className="grid md:grid-cols-2 gap-4">
+              <h3 className="text-2xl font-bold text-gray-800 mb-8">Équipements spécialisés</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { title: 'Drone agronomique certifié', desc: 'Technologie spécialisée pour zones étendues' },
-                  { title: 'Systèmes basse pression doux', desc: 'Protection maximale de vos panneaux' },
-                  { title: 'Eau déminéralisée osmosée', desc: 'Zéro résidus, zéro traces après nettoyage' },
-                  { title: 'Inspection HD et caméras thermiques', desc: 'Détection des défauts et dysfonctionnements' }
+                  { title: 'Drone Spécialisé', desc: 'Technologie certifiée pour grandes surfaces' },
+                  { title: 'Basse Pression', desc: 'Nettoyage doux pour préserver les cellules' },
+                  { title: 'Eau Osmosée', desc: 'Zéro résidu calcaire, séchage parfait' },
+                  { title: 'Thermique HD', desc: 'Détection des points chauds et défauts' }
                 ].map((item, idx) => (
-                  <div key={idx} className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-100">
-                    <h4 className="font-bold text-gray-800 mb-2 flex items-center gap-2">
-                      <Zap className="w-5 h-5 text-amber-600" />
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                  <div key={idx} className="bg-white border-2 border-amber-50 rounded-2xl p-6 hover:shadow-md transition-all">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Zap className="w-6 h-6 text-amber-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-800 text-base">{item.title}</h4>
+                        <p className="text-gray-500 text-sm leading-snug">{item.desc}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Avantages vs. méthodes traditionnelles</h3>
+            {/* AVANTAGES LISTE COMPACTE */}
+            <section className="bg-amber-50/50 rounded-3xl p-6 md:p-10 border border-amber-100">
+              <h3 className="text-xl md:text-2xl font-bold text-amber-900 mb-6">Avantages de notre solution</h3>
               <div className="space-y-3">
                 {[
-                  { title: 'Nettoyage sans contact direct', desc: 'Aucun risque d\'rayures ou endommagement des panneaux' },
-                  { title: 'Zéro risque électrocution', desc: 'Intervention complètement sécurisée sans contact électrique' },
-                  { title: 'Intervention ultra-rapide (2-3h)', desc: 'Grande surface nettoyée en quelques heures seulement' },
-                  { title: 'Production énergétique optimisée', desc: 'Récupération jusqu\'à 30% de rendement perdu' }
+                  { title: 'Zéro Contact', desc: 'Aucun risque de micro-fissures sur les panneaux.' },
+                  { title: 'Sécurité Électrique', desc: 'Aucun technicien exposé aux risques haute tension.' },
+                  { title: 'Rapidité Extrême', desc: 'Jusqu\'à 5x plus rapide qu\'un nettoyage manuel.' },
+                  { title: 'Rentabilité', desc: 'ROI immédiat par le gain de production mesurable.' }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start space-x-3 p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg border border-green-100">
-                    <div className="w-5 h-5 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
+                  <div key={idx} className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-amber-50">
+                    <div className="w-6 h-6 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                      <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-gray-700 font-semibold text-sm">{item.title}</p>
-                      <p className="text-gray-600 text-xs">{item.desc}</p>
+                      <p className="text-gray-800 font-bold text-sm md:text-base">{item.title}</p>
+                      <p className="text-gray-500 text-xs md:text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Certifications légales</h3>
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {[
-                    'Certification DGAC',
-                    'Formation photovoltaïque spécialisée',
-                    'Assurance RC Pro électricité',
-                    'Garantie decennale',
-                    'Protocoles sécurité haute tension',
-                    'Conformité législation 2026'
-                  ].map((cert, idx) => (
-                    <div key={idx} className="flex items-center space-x-2 p-3 bg-white rounded-lg border border-amber-100">
-                      <CheckCircle className="w-5 h-5 text-amber-600 flex-shrink-0" />
-                      <span className="text-sm font-semibold text-gray-800">{cert}</span>
-                    </div>
-                  ))}
-                </div>
+            {/* CERTIFICATIONS */}
+            <section className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-8 md:p-10 text-white shadow-2xl">
+              <h3 className="text-xl md:text-2xl font-bold mb-8 text-center uppercase tracking-widest text-amber-400">Garanties de Service</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  'Certifié DGAC', 'RC Pro Électricité', 'Normes 2026',
+                  'Formation PV', 'Garantie 10 ans', 'Eco-Responsable'
+                ].map((cert, idx) => (
+                  <div key={idx} className="bg-white/10 backdrop-blur-md rounded-xl p-3 text-center border border-white/10 flex flex-col items-center justify-center gap-2">
+                    <Award className="w-5 h-5 text-amber-400" />
+                    <span className="text-[10px] md:text-xs font-black uppercase">{cert}</span>
+                  </div>
+                ))}
               </div>
             </section>
-
-            <section>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Bénéfices clients</h3>
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-100">
-                <ul className="space-y-3">
-                  {[
-                    'Récupérez jusqu\'à 30% de production d\'énergie perdue',
-                    'Nettoyage sans contact direct : aucun risque de rayures ou dommages',
-                    'Intervention 5x plus rapide que le nettoyage manuel',
-                    'Produits spécialisés photovoltaïques certifiés et non abrasifs',
-                    'Planning d\'entretien bi-annuel avec rappel automatique',
-                    'Rapport de performance énergétique avant/après intervention',
-                    'Allongement de la durée de vie des panneaux'
-                  ].map((benefit, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <div className="w-6 h-6 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </section>
-
           </div>
 
+          {/* SIDEBAR STICKY RESPONSIVE */}
           <div className="lg:col-span-1">
-            <div className="sticky top-8 space-y-6">
-              <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-8 text-white shadow-xl">
-                <h3 className="text-2xl font-bold mb-4">Devis gratuit</h3>
-                <p className="mb-6 text-amber-100">Découvrez combien vous pourriez récupérer en rendement énergétique</p>
+            <div className="lg:sticky lg:top-28 space-y-6">
+              
+              {/* CARD DEVIS SOLAIRE */}
+              <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-3xl p-8 text-white shadow-xl text-center">
+                <Sun className="w-12 h-12 mx-auto mb-4" />
+                <h3 className="text-2xl font-extrabold mb-4 leading-tight">Augmentez vos revenus</h3>
+                <p className="mb-8 text-amber-50 text-sm md:text-base leading-relaxed">
+                  Nettoyez vos panneaux deux fois par an pour une production maximale toute l'année.
+                </p>
                 <Link
                   to="/devis"
-                  className="block w-full bg-white text-amber-600 text-center px-6 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors"
+                  className="block w-full bg-white text-orange-600 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg active:scale-95"
                 >
-                  Demander un devis
+                  Devis Gratuit
                 </Link>
               </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-                <h4 className="font-bold text-gray-800 mb-4">Points clés</h4>
-                <div className="space-y-4">
+              {/* POINTS FORTS COMPACTS */}
+              <div className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
+                <h4 className="font-bold text-gray-800 mb-6 border-b pb-2">Atouts Expertise</h4>
+                <div className="space-y-5">
                   {[
-                    { icon: TrendingUp, title: 'Rendement +30%', desc: 'Production énergétique maximisée' },
-                    { icon: Shield, title: 'Sans contact', desc: 'Zéro risque endommagement' },
-                    { icon: Leaf, title: 'Écologique', desc: 'Eau déminéralisée uniquement' },
-                    { icon: CheckCircle, title: 'Rapide', desc: '2-3h pour grande surface' }
+                    { icon: TrendingUp, title: 'Rendement', desc: '+30% de production' },
+                    { icon: Shield, title: 'Protection', desc: 'Aucun contact direct' },
+                    { icon: Leaf, title: 'Écologique', desc: 'Zéro chimie nocive' }
                   ].map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <item.icon className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
+                    <div key={index} className="flex items-center gap-4">
+                      <div className="p-2 bg-amber-50 rounded-xl">
+                        <item.icon className="w-5 h-5 text-amber-600" />
+                      </div>
                       <div>
-                        <div className="font-semibold text-gray-800">{item.title}</div>
-                        <div className="text-sm text-gray-600">{item.desc}</div>
+                        <div className="font-bold text-gray-800 text-sm">{item.title}</div>
+                        <div className="text-xs text-gray-500">{item.desc}</div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-                <h4 className="font-bold text-gray-800 mb-4">Autres prestations</h4>
-                <div className="space-y-2">
-                  <Link to="/prestations/nettoyage-facade" className="block text-amber-600 hover:text-amber-700 font-medium">
-                    → Nettoyage de façade
+              {/* NAVIGATION INTERNE */}
+              <div className="bg-[#233B72] rounded-3xl p-6 text-white">
+                <h4 className="font-bold mb-4 text-sm uppercase tracking-widest text-sky-300">Autres Services</h4>
+                <div className="space-y-4">
+                  <Link to="/prestations/nettoyage-facade" className="flex items-center justify-between group">
+                    <span className="text-sm font-bold group-hover:underline">Nettoyage façade</span>
+                    <ChevronRight className="w-4 h-4 text-sky-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link to="/prestations/demoussage" className="block text-amber-600 hover:text-amber-700 font-medium">
-                    → Démoussage de toiture
-                  </Link>
-                  <Link to="/prestations/elimination-frelons" className="block text-amber-600 hover:text-amber-700 font-medium">
-                    → Élimination de frelons
+                  <Link to="/prestations/demoussage" className="flex items-center justify-between group">
+                    <span className="text-sm font-bold group-hover:underline">Démoussage toiture</span>
+                    <ChevronRight className="w-4 h-4 text-sky-400 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
