@@ -149,26 +149,31 @@ export default function Realisations() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* HERO SECTION RESPONSIVE */}
-      <section className="relative pt-20 overflow-hidden flex items-center h-[300px] md:h-[450px]">
-        <HeroCarousel />
-        <div className="relative z-10 w-full text-center px-4">
-          <h1 className="text-3xl md:text-6xl font-bold mb-3 drop-shadow-lg text-[#233B72]">
-            Nos Réalisations
-          </h1>
-          <div className="flex justify-center gap-4 md:gap-8 mt-4">
-            <div className="flex items-center gap-2 bg-white/90 px-3 py-1 rounded-full shadow-sm">
-              <TrendingUp className="w-4 h-4 text-sky-600" />
-              <span className="text-xs md:text-sm font-bold text-gray-800">500+ Projets</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/90 px-3 py-1 rounded-full shadow-sm">
-              <Award className="w-4 h-4 text-green-600" />
-              <span className="text-xs md:text-sm font-bold text-gray-800">98% Satisfaits</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section className="relative pt-32 pb-20 overflow-hidden flex items-center h-[400px]">
+  <HeroCarousel />
+  <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-black/40 z-10"></div>
+  
+  <div className="relative z-20 w-full text-center px-4">
+    <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-2xl text-white">
+      Nos Réalisations
+    </h1>
+    <p className="text-xl md:text-2xl drop-shadow-lg font-semibold text-white">
+      Les drones au service de l'humain
+    </p>
 
+    {/* Stats compactes avec fond translucide comme l'accueil */}
+    <div className="flex justify-center gap-8 mt-6">
+      <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
+        <TrendingUp className="w-5 h-5 text-sky-200" />
+        <span className="font-bold text-white">500+ Projets</span>
+      </div>
+      <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
+        <Check className="w-5 h-5 text-green-300" />
+        <span className="font-bold text-white">98% Satisfaction</span>
+      </div>
+    </div>
+  </div>
+</section>
       <div className="container mx-auto max-w-7xl px-4 py-8 md:py-16">
         
         {/* FILTRES RESPONSIVES : Scroll horizontal sur mobile */}
