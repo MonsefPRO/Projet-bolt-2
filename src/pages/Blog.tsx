@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Calendar, ArrowRight, ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 import { HeroCarousel } from '../components/HeroCarousel';
+import Footer from '../components/Footer'; // IMPORT DU FOOTER
 
 interface Article {
   id: number;
@@ -24,7 +25,7 @@ export default function Blog() {
       title: "Rendement photovoltaïque : Pourquoi 30% de votre énergie s'évapore ?",
       date: "15 Janv 2026",
       image: "rendement.png",
-      excerpt: "Ce n'est plus une estimation, mais une réalité mesurée : l'accumulation de poussières fines crée un voile statique que la pluie ne peut rincer.",
+      excerpt: "Ce n'est plus une estimation, mais une reality mesurée : l'accumulation de poussières fines crée un voile statique que la pluie ne peut rincer.",
       content: `
         <div class="space-y-6 text-slate-700 leading-relaxed">
           <p class="text-lg font-medium text-[#334786]">"La pluie nettoie mes panneaux". C'est l'idée reçue la plus coûteuse du secteur solaire. En réalité, une installation non entretenue perd entre 10% et 30% de sa production annuelle.</p>
@@ -105,6 +106,8 @@ export default function Blog() {
             </div>
           </div>
         </div>
+        {/* FOOTER DANS LA VUE ARTICLE */}
+        <Footer />
       </div>
     );
   }
@@ -113,14 +116,9 @@ export default function Blog() {
     <div className="min-h-screen bg-white">
       <Header />
 
-      {/* BANNIÈRE HARMONISÉE : h-[400px] IDENTIQUE AUX RÉALISATIONS */}
       <section className="relative pt-32 pb-20 overflow-hidden flex items-center h-[400px]">
         <HeroCarousel />
-        
-        {/* FILTRE RÉFÉRENCE SOMBRE (z-10) */}
         <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-black/40 z-10"></div>
-        
-        {/* TEXTE BLANC AVEC OMBRE (z-20) */}
         <div className="relative z-20 container mx-auto px-4 text-center text-white">
           <h1 className="text-4xl md:text-7xl font-bold mb-4 drop-shadow-2xl text-white">
             Blog & Actualités
@@ -132,7 +130,6 @@ export default function Blog() {
       </section>
 
       <div className="container mx-auto px-4 py-12 md:py-16 max-w-7xl">
-        {/* FILTRES CATÉGORIES */}
         <div className="flex flex-wrap gap-2 md:gap-3 mb-12 justify-center">
           {categories.map((cat) => (
             <button
@@ -149,7 +146,6 @@ export default function Blog() {
           ))}
         </div>
 
-        {/* GRILLE D'ARTICLES */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredArticles.map((article) => (
             <div
@@ -187,6 +183,8 @@ export default function Blog() {
           ))}
         </div>
       </div>
+      {/* FOOTER DANS LA VUE LISTE */}
+      <Footer />
     </div>
   );
 }
