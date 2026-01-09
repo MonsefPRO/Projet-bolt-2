@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import { useSecureForm } from '../hooks/useSecureForm';
 import { HeroCarousel } from '../components/HeroCarousel';
+import Footer from '../components/Footer'; // IMPORT DU FOOTER
 
 // --- SECTIONS DE SOUTIEN ---
 
@@ -56,8 +57,9 @@ export default function RejoignezNous() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <section className="relative pt-32 pb-16 overflow-hidden flex items-center h-[350px] md:h-[400px]">
+      <section className="relative pt-32 pb-16 overflow-hidden flex items-center h-[350px] md:h-[450px]">
         <HeroCarousel />
+        {/* FILTRE FONCÉ HARMONISÉ */}
         <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-black/40 z-10"></div>
         <div className="relative z-20 w-full text-center px-4 text-white">
           <h1 className="text-4xl md:text-7xl font-bold mb-4 drop-shadow-2xl">Rejoignez-nous</h1>
@@ -66,35 +68,37 @@ export default function RejoignezNous() {
       </section>
 
       <div className="container mx-auto px-4 py-8 md:py-16 max-w-7xl">
-        {/* BLOCS DE SELECTION AVEC COULEURS ORIGINALES */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+        {/* BLOCS DE SELECTION AMÉLIORÉS */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-16">
           {[
-            { tab: 'candidature', icon: FileText, title: 'Candidature', color: 'green', hex: '#22c55e' },
-            { tab: 'apporteur', icon: Handshake, title: 'Apporteur', color: 'sky', hex: '#0ea5e9' },
-            { tab: 'franchisee', icon: Briefcase, title: 'Franchisé', color: 'amber', hex: '#f59e0b' },
-            { tab: 'architecte', icon: Building2, title: 'Architecte', color: 'orange', hex: '#f97316' }
-          ].map(({ tab, icon: Icon, title, color, hex }) => {
+            { tab: 'candidature', icon: FileText, title: 'Candidature', color: 'green' },
+            { tab: 'apporteur', icon: Handshake, title: 'Apporteur', color: 'sky' },
+            { tab: 'franchisee', icon: Briefcase, title: 'Franchisé', color: 'amber' },
+            { tab: 'architecte', icon: Building2, title: 'Architecte', color: 'orange' }
+          ].map(({ tab, icon: Icon, title, color }) => {
             const isActive = activeTab === tab;
             const colorClasses: any = {
-                green: 'bg-green-50 border-green-500',
-                sky: 'bg-sky-50 border-sky-500',
-                amber: 'bg-amber-50 border-amber-500',
-                orange: 'bg-orange-50 border-orange-500'
+                green: 'bg-green-50 border-green-500 shadow-green-100',
+                sky: 'bg-sky-50 border-sky-500 shadow-sky-100',
+                amber: 'bg-amber-50 border-amber-500 shadow-amber-100',
+                orange: 'bg-orange-50 border-orange-500 shadow-orange-100'
             };
 
             return (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab as any)}
-                className={`p-4 md:p-8 rounded-3xl border-2 transition-all duration-300 flex flex-col items-center text-center ${
-                  isActive ? `${colorClasses[color]} shadow-xl scale-105` : 'bg-white border-gray-100 opacity-70'
+                className={`p-6 md:p-12 rounded-[2.5rem] border-2 transition-all duration-500 flex flex-col items-center text-center group ${
+                  isActive ? `${colorClasses[color]} shadow-2xl scale-105 z-10` : 'bg-white border-gray-100 hover:border-gray-200 opacity-80 hover:opacity-100'
                 }`}
               >
-                <div className={`w-12 h-12 md:w-20 md:h-20 rounded-2xl flex items-center justify-center mb-4 transition-all shadow-md bg-white border border-gray-100`}>
+                <div className={`w-14 h-14 md:w-24 md:h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 shadow-inner ${
+                  isActive ? 'bg-white' : 'bg-gray-50 group-hover:scale-110'
+                }`}>
                   {/* ICÔNE COULEUR BLEU FONCÉ ELLIPSYS */}
-                  <Icon className="w-6 h-6 md:w-10 md:h-10 text-[#233B72]" />
+                  <Icon className="w-7 h-7 md:w-12 md:h-12 text-[#233B72]" />
                 </div>
-                <h3 className={`text-[10px] md:text-lg font-bold uppercase tracking-tight ${isActive ? 'text-gray-900' : 'text-gray-500'}`}>
+                <h3 className={`text-xs md:text-2xl font-black uppercase tracking-wider transition-colors ${isActive ? 'text-gray-900' : 'text-gray-400'}`}>
                   {title}
                 </h3>
               </button>
@@ -102,8 +106,8 @@ export default function RejoignezNous() {
           })}
         </div>
 
-        {/* AFFICHAGE DES FORMULAIRES SELON L'ONGLET ACTIF */}
-        <div className="mt-8 transition-all duration-500 max-w-4xl mx-auto">
+        {/* AFFICHAGE DES FORMULAIRES PLUS GRANDS SUR PC */}
+        <div className="mt-12 transition-all duration-500 max-w-5xl mx-auto">
           {activeTab === 'candidature' && <CandidatureSpontaneeForm />}
           {activeTab === 'apporteur' && <ApporteurAffairesForm />}
           {activeTab === 'franchisee' && <FranchiseeForm />}
@@ -112,39 +116,38 @@ export default function RejoignezNous() {
       </div>
 
       <WhyJoinSection />
-
-      <footer className="bg-gray-950 text-white py-12 px-4 text-center">
-        <p className="text-gray-500 text-sm">&copy; {new Date().getFullYear()} Ellipsys Solutions. Tous droits réservés.</p>
-      </footer>
+      
+      {/* FOOTER FINAL */}
+      <Footer />
     </div>
   );
 }
 
-// --- FORMULAIRES COMPLETS ORIGINAUX ---
+// --- FORMULAIRES COMPLETS ORIGINAUX AVEC DESIGN AMÉLIORÉ ---
 
 function CandidatureSpontaneeForm() {
   const { formData, errors, handleChange, handleSubmit, isSubmitting, submitSuccess } = useSecureForm({
     nom: '', prenom: '', email: '', telephone: '', poste: '', experience: '', motivation: ''
   });
   return (
-    <div className="bg-gradient-to-br from-white to-green-50 rounded-3xl shadow-2xl p-6 md:p-10 border-2 border-green-100 animate-fadeIn">
-      <div className="flex items-center mb-8">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mr-4 shadow-lg text-white"><FileText /></div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Candidature spontanée</h2>
+    <div className="bg-gradient-to-br from-white to-green-50 rounded-[3rem] shadow-2xl p-8 md:p-16 border-2 border-green-100 animate-fadeIn">
+      <div className="flex items-center mb-10">
+        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mr-6 shadow-lg text-white"><FileText className="w-8 h-8" /></div>
+        <h2 className="text-3xl md:text-4xl font-black text-gray-800">Candidature spontanée</h2>
       </div>
       {submitSuccess ? <SuccessView color="green" /> : (
-        <form onSubmit={handleSubmit(() => {})} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit(() => {})} className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="nom" placeholder="Nom *" onChange={handleChange} required className="input-field-custom" />
             <input name="prenom" placeholder="Prénom *" onChange={handleChange} required className="input-field-custom" />
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="email" type="email" placeholder="Email *" onChange={handleChange} required className="input-field-custom" />
             <input name="telephone" type="tel" placeholder="Téléphone *" onChange={handleChange} required className="input-field-custom" />
           </div>
           <input name="poste" placeholder="Poste recherché *" onChange={handleChange} required className="input-field-custom" />
-          <textarea name="motivation" placeholder="Votre motivation *" rows={5} onChange={handleChange} required className="input-field-custom"></textarea>
-          <button className="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-all shadow-lg">Envoyer mon profil</button>
+          <textarea name="motivation" placeholder="Votre motivation *" rows={6} onChange={handleChange} required className="input-field-custom"></textarea>
+          <button className="w-full bg-green-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-green-700 transition-all shadow-xl active:scale-95">Envoyer mon profil</button>
         </form>
       )}
     </div>
@@ -156,23 +159,23 @@ function ApporteurAffairesForm() {
     nom: '', prenom: '', email: '', telephone: '', entreprise: '', secteur: '', message: ''
   });
   return (
-    <div className="bg-gradient-to-br from-white to-sky-50 rounded-3xl shadow-2xl p-6 md:p-10 border-2 border-sky-100 animate-fadeIn">
-      <div className="flex items-center mb-8">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center mr-4 shadow-lg text-white"><Handshake /></div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Devenir apporteur d'affaires</h2>
+    <div className="bg-gradient-to-br from-white to-sky-50 rounded-[3rem] shadow-2xl p-8 md:p-16 border-2 border-sky-100 animate-fadeIn">
+      <div className="flex items-center mb-10">
+        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center mr-6 shadow-lg text-white"><Handshake className="w-8 h-8" /></div>
+        <h2 className="text-3xl md:text-4xl font-black text-gray-800">Devenir apporteur d'affaires</h2>
       </div>
       {submitSuccess ? <SuccessView color="sky" /> : (
-        <form onSubmit={handleSubmit(() => {})} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit(() => {})} className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="nom" placeholder="Nom *" onChange={handleChange} required className="input-field-custom" />
             <input name="prenom" placeholder="Prénom *" onChange={handleChange} required className="input-field-custom" />
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="email" type="email" placeholder="Email *" onChange={handleChange} required className="input-field-custom" />
             <input name="telephone" type="tel" placeholder="Téléphone *" onChange={handleChange} required className="input-field-custom" />
           </div>
-          <textarea name="message" placeholder="Votre message..." rows={4} onChange={handleChange} className="input-field-custom"></textarea>
-          <button className="w-full bg-sky-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-sky-700 transition-all shadow-lg">Envoyer la demande</button>
+          <textarea name="message" placeholder="Votre message..." rows={5} onChange={handleChange} className="input-field-custom"></textarea>
+          <button className="w-full bg-sky-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-sky-700 transition-all shadow-xl active:scale-95">Envoyer la demande</button>
         </form>
       )}
     </div>
@@ -184,27 +187,27 @@ function FranchiseeForm() {
     nom: '', prenom: '', email: '', telephone: '', ville: '', apport: '', experience: '', motivation: ''
   });
   return (
-    <div className="bg-gradient-to-br from-white to-amber-50 rounded-3xl shadow-2xl p-6 md:p-10 border-2 border-amber-100 animate-fadeIn">
-      <div className="flex items-center mb-8">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center mr-4 shadow-lg text-white"><Briefcase /></div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Devenir franchisé</h2>
+    <div className="bg-gradient-to-br from-white to-amber-50 rounded-[3rem] shadow-2xl p-8 md:p-16 border-2 border-amber-100 animate-fadeIn">
+      <div className="flex items-center mb-10">
+        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center mr-6 shadow-lg text-white"><Briefcase className="w-8 h-8" /></div>
+        <h2 className="text-3xl md:text-4xl font-black text-gray-800">Devenir franchisé</h2>
       </div>
       {submitSuccess ? <SuccessView color="amber" /> : (
-        <form onSubmit={handleSubmit(() => {})} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit(() => {})} className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="nom" placeholder="Nom *" onChange={handleChange} required className="input-field-custom" />
             <input name="prenom" placeholder="Prénom *" onChange={handleChange} required className="input-field-custom" />
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="email" type="email" placeholder="Email *" onChange={handleChange} required className="input-field-custom" />
             <input name="telephone" type="tel" placeholder="Téléphone *" onChange={handleChange} required className="input-field-custom" />
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="ville" placeholder="Ville souhaitée *" onChange={handleChange} required className="input-field-custom" />
             <input name="apport" placeholder="Apport personnel" onChange={handleChange} className="input-field-custom" />
           </div>
-          <textarea name="motivation" placeholder="Parlez-nous de votre projet..." rows={4} onChange={handleChange} className="input-field-custom"></textarea>
-          <button className="w-full bg-amber-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-amber-700 shadow-lg">Demander une documentation</button>
+          <textarea name="motivation" placeholder="Parlez-nous de votre projet..." rows={5} onChange={handleChange} className="input-field-custom"></textarea>
+          <button className="w-full bg-amber-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-amber-700 shadow-lg active:scale-95 transition-all">Demander une documentation</button>
         </form>
       )}
     </div>
@@ -216,24 +219,24 @@ function ArchitecteForm() {
     nom: '', prenom: '', email: '', telephone: '', cabinet: '', localisation: '', specialites: '', message: ''
   });
   return (
-    <div className="bg-gradient-to-br from-white to-orange-50 rounded-3xl shadow-2xl p-6 md:p-10 border-2 border-orange-100 animate-fadeIn">
-      <div className="flex items-center mb-8">
-        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mr-4 shadow-lg text-white"><Building2 /></div>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Groupe d'architectes</h2>
+    <div className="bg-gradient-to-br from-white to-orange-50 rounded-[3rem] shadow-2xl p-8 md:p-16 border-2 border-orange-100 animate-fadeIn">
+      <div className="flex items-center mb-10">
+        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center mr-6 shadow-lg text-white"><Building2 className="w-8 h-8" /></div>
+        <h2 className="text-3xl md:text-4xl font-black text-gray-800">Groupe d'architectes</h2>
       </div>
       {submitSuccess ? <SuccessView color="orange" /> : (
-        <form onSubmit={handleSubmit(() => {})} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit(() => {})} className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="nom" placeholder="Nom *" onChange={handleChange} required className="input-field-custom" />
             <input name="prenom" placeholder="Prénom *" onChange={handleChange} required className="input-field-custom" />
           </div>
           <input name="cabinet" placeholder="Nom du cabinet *" onChange={handleChange} required className="input-field-custom" />
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             <input name="email" type="email" placeholder="Email professionnel *" onChange={handleChange} required className="input-field-custom" />
             <input name="telephone" type="tel" placeholder="Téléphone *" onChange={handleChange} required className="input-field-custom" />
           </div>
-          <textarea name="message" placeholder="Quels sont vos besoins en drone ?" rows={4} onChange={handleChange} className="input-field-custom"></textarea>
-          <button className="w-full bg-orange-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-700 shadow-lg">Rejoindre le réseau</button>
+          <textarea name="message" placeholder="Quels sont vos besoins en drone ?" rows={5} onChange={handleChange} className="input-field-custom"></textarea>
+          <button className="w-full bg-orange-600 text-white py-5 rounded-2xl font-black text-xl hover:bg-orange-700 shadow-lg active:scale-95 transition-all">Rejoindre le réseau</button>
         </form>
       )}
     </div>
@@ -257,12 +260,9 @@ function SuccessView({ color }: { color: string }) {
     const bg = color === 'green' ? 'bg-green-500' : color === 'sky' ? 'bg-sky-500' : color === 'amber' ? 'bg-amber-500' : 'bg-orange-500';
     return (
         <div className="text-center py-10">
-            <div className={`w-20 h-20 ${bg} rounded-full flex items-center justify-center mx-auto mb-4 text-white text-3xl shadow-lg animate-bounce`}>✓</div>
-            <h3 className="text-2xl font-bold">Demande envoyée !</h3>
-            <p className="text-gray-600 mt-2">Nous reviendrons vers vous dans les plus brefs délais.</p>
+            <div className={`w-24 h-24 ${bg} rounded-full flex items-center justify-center mx-auto mb-6 text-white text-4xl shadow-xl animate-bounce`}>✓</div>
+            <h3 className="text-3xl font-black text-gray-800">Demande envoyée !</h3>
+            <p className="text-gray-500 text-lg mt-3">Nous reviendrons vers vous dans les plus brefs délais.</p>
         </div>
     );
 }
-
-// Ajoute ce style dans ton index.css ou un fichier style global
-// .input-field-custom { @apply w-full px-4 py-3 bg-white/80 border border-gray-200 rounded-xl outline-none focus:border-[#233B72] focus:bg-white transition-all text-sm md:text-base; }
