@@ -13,33 +13,37 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 export default function App() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage(); // Ajout de language pour conditionner les textes hors i18n
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const heroImages = [
-    { src: '/rony.jpg', alt: 'Expert drone Ellipsys' },
+    { src: '/rony.jpg', alt: language === 'fr' ? 'Expert drone Ellipsys' : 'Ellipsys drone expert' },
     { src: '/ares.png', alt: 'Drone ARES' },
-    { src: '/abateur_de_frelons.png', alt: 'Abatteur de frelons' },
-    { src: '/rony2.jpg', alt: 'Expert drone en action' },
+    { src: '/abateur_de_frelons.png', alt: language === 'fr' ? 'Abatteur de frelons' : 'Hornet removal drone' },
+    { src: '/rony2.jpg', alt: language === 'fr' ? 'Expert drone en action' : 'Drone expert in action' },
     { src: '/chronos.jpg', alt: 'Drone Chronos' },
-    { src: '/rony4.jpg', alt: 'Expert drone Ellipsys' },
+    { src: '/rony4.jpg', alt: language === 'fr' ? 'Expert drone Ellipsys' : 'Ellipsys drone expert' },
     { src: '/chronos2.jpg', alt: 'Drone Chronos 2' },
-    { src: '/rony5.jpg', alt: 'Expert drone Ellipsys' }
+    { src: '/rony5.jpg', alt: language === 'fr' ? 'Expert drone Ellipsys' : 'Ellipsys drone expert' }
   ];
 
   const testimonials = [
     {
-      text: "Service exceptionnel ! Le nettoyage de notre entrepôt a été réalisé en un temps record. Aucune interruption de notre activité. Je recommande vivement.",
+      text: language === 'fr' 
+        ? "Service exceptionnel ! Le nettoyage de notre entrepôt a été réalisé en un temps record. Aucune interruption de notre activité. Je recommande vivement."
+        : "Exceptional service! Our warehouse cleaning was completed in record time with zero business interruption. Highly recommended.",
       name: "Jean Martin",
-      role: "Directeur logistique, Société Industrie+",
+      role: language === 'fr' ? "Directeur logistique, Société Industrie+" : "Logistics Director, Industrie+ Corp",
       image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
     },
     {
-      text: "Technologie impressionnante et résultats impeccables. Notre façade n'a jamais été aussi propre. L'équipe est professionnelle et ponctuelle.",
+      text: language === 'fr'
+        ? "Technologie impressionnante et résultats impeccables. Notre façade n'a jamais été aussi propre. L'équipe est professionnelle et ponctuelle."
+        : "Impressive technology and spotless results. Our building facade has never looked better. The team is professional and punctual.",
       name: "Sophie Dubois",
-      role: "Syndic de copropriété, Résidence Le Parc",
+      role: language === 'fr' ? "Syndic de copropriété, Résidence Le Parc" : "Property Manager, Le Parc Residency",
       image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
     }
   ];
@@ -65,7 +69,6 @@ export default function App() {
       <Header />
 
       <main className="flex-grow">
-        {/* SECTION HERO */}
         <section id="accueil" className="min-h-[70vh] md:min-h-screen pt-28 pb-12 relative overflow-hidden flex items-center">
           <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-black/40 z-10"></div>
           <div className="absolute inset-0">
@@ -100,11 +103,15 @@ export default function App() {
             <div className="flex justify-center gap-4 mt-8">
               <div className="bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/10 text-left min-w-[120px]">
                 <div className="text-xl md:text-3xl font-bold text-white"><AnimatedCounter end={120000} suffix="m²" /></div>
-                <div className="text-[10px] md:text-xs text-sky-200 font-bold uppercase tracking-widest mt-1">Traités</div>
+                <div className="text-[10px] md:text-xs text-sky-200 font-bold uppercase tracking-widest mt-1">
+                  {language === 'fr' ? 'Traités' : 'Treated'}
+                </div>
               </div>
               <div className="bg-black/20 backdrop-blur-sm p-3 rounded-2xl border border-white/10 text-left min-w-[120px]">
                 <div className="text-xl md:text-3xl font-bold text-white"><AnimatedCounter end={98} suffix="%" /></div>
-                <div className="text-[10px] md:text-xs text-sky-200 font-bold uppercase tracking-widest mt-1">Satisfaction</div>
+                <div className="text-[10px] md:text-xs text-sky-200 font-bold uppercase tracking-widest mt-1">
+                  {language === 'fr' ? 'Satisfaction' : 'Satisfaction'}
+                </div>
               </div>
             </div>
 
@@ -113,7 +120,7 @@ export default function App() {
                 {t('hero.cta')}
               </Link>
               <button onClick={() => setIsVideoModalOpen(true)} className="bg-white/10 backdrop-blur-md border border-white/40 text-white px-8 py-3.5 rounded-xl font-bold text-lg flex items-center justify-center gap-2">
-                <Play className="w-5 h-5 fill-current" /> Voir la démo
+                <Play className="w-5 h-5 fill-current" /> {language === 'fr' ? 'Voir la démo' : 'Watch Demo'}
               </button>
             </div>
           </div>
@@ -122,7 +129,6 @@ export default function App() {
         <CertificationsSection />
         <DroneBenefits />
 
-        {/* PRESTATIONS 2x2 MOBILE */}
         <section className="py-16 px-4 bg-gradient-to-br from-sky-50 to-blue-50">
           <div className="container mx-auto max-w-7xl">
             <h2 className="text-2xl md:text-5xl font-bold mb-12 text-center text-[#334786]">{t('mainServices.title')}</h2>
@@ -137,7 +143,7 @@ export default function App() {
                       <h3 className="text-sm md:text-2xl font-bold mb-2 text-[#334786]">{t(`mainServices.${key}.title`)}</h3>
                     </div>
                     <Link to="/prestations" className="mt-4 pt-4 border-t border-gray-100 text-sky-600 font-bold text-xs md:text-base flex items-center">
-                      Voir <ChevronRight className="w-4 h-4 ml-1" />
+                      {language === 'fr' ? 'Voir' : 'View'} <ChevronRight className="w-4 h-4 ml-1" />
                     </Link>
                   </Hover3DCard>
                 </ScrollReveal>
@@ -146,7 +152,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* SECTION AVIS */}
         <section id="avis" className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-[#334786]">{t('testimonials.title')}</h2>
@@ -156,7 +161,7 @@ export default function App() {
                 <div className="flex justify-center mb-3 text-yellow-400">
                   {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
                 </div>
-                <p className="text-gray-600 text-sm">98% satisfaction</p>
+                <p className="text-gray-600 text-sm">98% {language === 'fr' ? 'satisfaction' : 'satisfaction'}</p>
               </div>
               <div className="flex-1 bg-white p-6 md:p-10 rounded-2xl shadow-xl border border-gray-100 relative">
                 <p className="text-gray-700 md:text-lg italic mb-6">"{testimonials[currentTestimonial].text}"</p>
@@ -176,7 +181,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* SECTION CONTACT */}
         <section id="contact" className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center text-[#334786]">{t('quote.title')}</h2>
@@ -198,7 +202,9 @@ export default function App() {
                   <input type="tel" placeholder={t('contact.form.phone')} className="w-full p-4 border border-gray-200 rounded-xl" />
                 </div>
                 <textarea placeholder={t('quote.form.message')} rows={4} className="w-full p-4 border border-gray-200 rounded-xl resize-none"></textarea>
-                <button className="w-full bg-[#233B72] text-white py-4 rounded-xl font-bold hover:bg-sky-900 transition-all">Envoyer</button>
+                <button className="w-full bg-[#233B72] text-white py-4 rounded-xl font-bold hover:bg-sky-900 transition-all">
+                  {language === 'fr' ? 'Envoyer' : 'Send'}
+                </button>
               </form>
             </div>
           </div>
@@ -206,8 +212,6 @@ export default function App() {
       </main>
 
       <VideoModal isOpen={isVideoModalOpen} onClose={() => setIsVideoModalOpen(false)} videoSrc="/videodemo.mp4" />
-      
-      {/* TON NOUVEAU FOOTER CENTRALISÉ */}
       <Footer />
     </div>
   );
