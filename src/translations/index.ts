@@ -3213,159 +3213,84 @@ export const translations = {
       project1: {
 
         title: 'Nettoyage de façade - Immeuble de bureaux',
-
         location: 'Paris 15ème',
-
         date: 'Octobre 2024',
-
         description: 'Nettoyage complet d\'une façade vitrée de 8 étages avec technologie drone. Intervention réalisée en 2 jours sans interruption d\'activité.',
-
         benefit1: 'Aucun échafaudage nécessaire',
-
         benefit2: 'Zéro interruption d\'activité',
-
         benefit3: 'Économie de 45% vs méthode traditionnelle',
-
         benefit4: 'Résultat impeccable sur toute la surface',
-
         stat1Label: 'Durée',
-
         stat1Value: '2 jours',
-
         stat2Label: 'Économie',
-
         stat2Value: '-45%',
-
         stat3Label: 'Surface',
-
         stat3Value: '2500 m²'
-
-      },
-
-      noProjects: 'Aucun projet dans cette catégorie',
-
-      cta: {
-
-        title: 'Votre projet mérite la même qualité',
-
-        subtitle: 'Obtenez un devis personnalisé sous 24h',
-
-        button: 'Demander un devis'
-
-      }
-
     },
-
+      noProjects: 'Aucun projet dans cette catégorie',
+      cta: {
+        title: 'Votre projet mérite la même qualité',
+        subtitle: 'Obtenez un devis personnalisé sous 24h',
+        button: 'Demander un devis'
+      }
+    },
     valeurs: {
-
       title: 'Nos valeurs',
-
       subtitle: 'L\'innovation au service de l\'humain',
-
       breadcrumb: {
-
         home: 'Accueil',
-
         current: 'Nos valeurs'
-
       },
-
       intro: 'Chez Ellipsys Solutions, la technologie est au service de l\'humain. Nos valeurs guident chacune de nos actions pour des prestations fiables, responsables et de haute qualité.',
-
       value1: {
-
         title: 'Bienveillance et proximité',
-
         description: 'L\'humain au cœur de notre activité. Relation personnalisée, écoute, transparence et accompagnement attentif.',
-
         item1: 'Écoute active de vos besoins',
-
         item2: 'Transparence totale',
-
         item3: 'Suivi personnalisé',
-
         item4: 'Disponibilité garantie'
-
       },
 
       value2: {
-
         title: 'Rigueur et qualité',
-
         description: 'La qualité est notre exigence. Méthodes structurées et rigoureuses pour des résultats irréprochables.',
-
         item1: 'Sérieux professionnel',
-
         item2: 'Standards élevés',
-
         item3: 'Méthodes éprouvées',
-
         item4: 'Solutions pérennes'
-
       },
 
       value3: {
-
         title: 'Engagement responsable',
-
         description: 'Engagement environnemental au cœur de nos pratiques. Produits respectueux et démarche durable.',
-
         item1: 'Produits certifiés AB',
-
         item2: 'Respect environnemental',
-
         item3: 'Approche durable',
-
         item4: 'Empreinte minimale'
-
       },
 
       value4: {
-
         title: 'Technologie française',
-
         description: 'Innovation dans notre ADN. Drones français, technologies avancées, excellence et sécurité maximale.',
-
         item1: 'Drones fabriqués en France',
-
         item2: 'Innovation constante',
-
         item3: 'Sécurité maximale',
-
         item4: 'Savoir-faire français'
-
       },
-
       whyChoose: {
-
         title: 'Pourquoi choisir Ellipsys ?',
-
         subtitle: 'Les raisons qui font notre différence',
-
         reason1: 'Proximité client',
-
         reason2: 'Bienveillance',
-
         reason3: 'Rigueur',
-
         reason4: 'Innovation',
-
         reason5: 'Produits certifiés',
-
         reason6: 'Entreprise engagée'
-
       },
-
       cta: {
-
         title: 'Prêt à travailler avec nous ?',
-
         subtitle: 'Découvrez comment nos valeurs font la différence pour votre projet.',
-
         button: 'Contactez Ellipsys'
-
       }
-
     }
-
   }
