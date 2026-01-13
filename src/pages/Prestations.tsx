@@ -19,7 +19,7 @@ import { HeroCarousel } from '../components/HeroCarousel';
 import Footer from '../components/Footer';
 
 export default function Prestations() {
-  const prestations = [
+const prestations = [
     {
       id: 'nettoyage-facade',
       title: 'Nettoyage de façades',
@@ -27,7 +27,7 @@ export default function Prestations() {
         "Une façade encrassée ou négligée nuit à l'image de votre bâtiment et accélère la dégradation des matériaux. Grâce à notre technologie de nettoyage par drone, certifiée et sans recours à l'échafaudage ou à la nacelle, redonnez éclat, propreté et durabilité à vos façades professionnelles en toute sécurité.",
       image: '/ares.png',
       image2: '/chronos.jpg',
-      link: '/NettoyageFacade', // CORRECTION : Correspond au fichier NettoyageFacade.tsx
+      link: '/prestations/nettoyage-facade', // SYNCHRONISÉ AVEC main.tsx
       icon: Droplets,
       benefits: [
         'Sécurité maximale : zéro risque de chute',
@@ -45,7 +45,7 @@ export default function Prestations() {
         "Sans traitement régulier, les mousses et lichens dégradent l'étanchéité de votre toiture. Préservez votre patrimoine avec notre service de démoussage par drone, une solution sécurisée et rapide pour une toiture durable.",
       image: '/Demoussage drone 1.jpg',
       image2: '/5kmh_et_jusqu’a_600m2_heure_de_traitement.png',
-      link: '/Demoussage', // CORRECTION : Correspond au fichier Demoussage.tsx
+      link: '/prestations/demoussage', // SYNCHRONISÉ AVEC main.tsx
       icon: Shield,
       benefits: [
         'Zéro déplacement sur la toiture : tuiles préservées',
@@ -63,7 +63,7 @@ export default function Prestations() {
         "Des panneaux encrassés perdent jusqu'à 30% de rendement. Notre nettoyage professionnel par drone vous permet de récupérer une production maximale et d'optimiser votre investissement.",
       image: '/rony.jpg',
       image2: '/rony4.jpg',
-      link: '/PanneauxPhotovoltaiques', // CORRECTION : Correspond au fichier PanneauxPhotovoltaiques.tsx
+      link: '/prestations/panneaux-photovoltaiques', // SYNCHRONISÉ AVEC main.tsx
       icon: Sun,
       benefits: [
         "Récupérez jusqu'à 30% de production d'énergie",
@@ -81,7 +81,7 @@ export default function Prestations() {
         "L'élimination des nids de frelons en hauteur est un risque sérieux. Notre technologie drone traite efficacement les nids difficiles d'accès avec un minimum d'exposition humaine.",
       image: '/abateur_de_frelons.png',
       image2: '/frel.png',
-      link: '/EliminationFrelons', // CORRECTION : Correspond au fichier EliminationFrelons.tsx
+      link: '/prestations/elimination-frelons', // SYNCHRONISÉ AVEC main.tsx
       icon: AlertTriangle,
       benefits: [
         'Intervention 100% sécurisée à distance',
