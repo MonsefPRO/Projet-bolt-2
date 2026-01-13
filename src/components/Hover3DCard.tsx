@@ -22,7 +22,6 @@ export function Hover3DCard({ children, className = '' }: Hover3DCardProps) {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
-
     const width = rect.width;
     const height = rect.height;
 
@@ -50,10 +49,18 @@ export function Hover3DCard({ children, className = '' }: Hover3DCardProps) {
         rotateX,
         rotateY,
         transformStyle: 'preserve-3d',
+        perspective: '1000px', // Ajout de perspective pour stabiliser le clic
       }}
       className={className}
     >
-      <div style={{ transform: 'translateZ(75px)', transformStyle: 'preserve-3d' }}>
+      <div 
+        style={{ 
+          transform: 'translateZ(0px)', // Réduit à 0 pour coller au plan de clic
+          transformStyle: 'preserve-3d',
+          position: 'relative',
+          zIndex: 50 // Force le contenu au premier plan
+        }}
+      >
         {children}
       </div>
     </motion.div>
