@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CheckCircle, Clock, FileText, Headphones, Home, ChevronRight, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { CheckCircle, Home, ChevronRight, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { useSecureForm } from '../hooks/useSecureForm';
 import { validateDevisForm } from '../utils/validation';
 import { useState, useEffect } from 'react';
@@ -48,21 +48,20 @@ export default function Devis() {
         throw new Error('Spam détecté');
       }
 
-      // Simulation d'envoi pour confirmer le succès au hook
-      console.log('Données envoyées:', data);
-      
-      // On attend 1 seconde pour le côté professionnel
+      // Simulation d'un délai d'envoi pour le côté pro
       await new Promise(resolve => setTimeout(resolve, 1000));
-
+      
+      console.log('Formulaire soumis avec succès:', data);
+      
       // IMPORTANT : On retourne un objet de succès pour que le hook 
-      // désactive l'erreur et affiche le message de réussite.
+      // mette à jour l'état interne (submitSuccess = true, submitError = null)
       return { success: true };
     }
   });
 
   const { fields, isSubmitting, submitError, submitSuccess } = form;
 
-  // Redirection automatique vers l'accueil 5 secondes après le succès
+  // Redirection automatique vers l'accueil après 5 secondes en cas de succès
   useEffect(() => {
     if (submitSuccess) {
       const timer = setTimeout(() => {
@@ -75,7 +74,9 @@ export default function Devis() {
   const handleChange = (name: string, value: string) => {
     form.handleChange({ target: { name, value } } as any);
   };
+  
   const handleBlur = (name: string) => form.handleBlur(name);
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     return form.handleSubmit()(e);
   };
@@ -108,14 +109,15 @@ export default function Devis() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-8 md:gap-12">
             
+            {/* SIDEBAR */}
             <div className="order-2 lg:order-1 lg:sticky lg:top-28 space-y-6 self-start">
               <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
                 <div className="bg-[#233B72] text-white p-6">
-                  <h2 className="text-xl font-bold mb-1">Comment ça marche ?</h2>
+                  <h2 className="text-xl font-bold mb-1 text-white">Comment ça marche ?</h2>
                   <p className="text-sky-200 text-xs">Un processus simple et rapide</p>
                 </div>
-                <div className="p-6 space-y-6">
-                  {[
+                <div className="p-6 space-y-6 text-gray-800">
+                   {[
                     { step: 1, title: 'Formulaire', desc: 'Décrivez votre projet' },
                     { step: 2, title: 'Analyse', desc: 'Étude technique sous 24h' },
                     { step: 3, title: 'Devis', desc: 'Proposition détaillée' },
@@ -135,21 +137,24 @@ export default function Devis() {
               </div>
             </div>
 
+            {/* FORMULAIRE OU MESSAGE DE SUCCÈS */}
             <div className="order-1 lg:order-2">
               <div className="bg-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl border-2 border-white relative">
                 
-                {/* NOTIFICATION DE SUCCÈS PERSISTANTE */}
                 {submitSuccess ? (
-                  <div className="bg-green-50 border-2 border-green-500 p-8 rounded-3xl flex flex-col items-center text-center gap-4 animate-bounce shadow-xl my-4">
-                    <CheckCircle2 className="w-16 h-16 text-green-600" />
+                  /* NOTIFICATION VERTE DE SUCCÈS */
+                  <div className="py-12 flex flex-col items-center text-center gap-6 animate-in fade-in zoom-in duration-500">
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+                      <CheckCircle2 className="w-12 h-12 text-green-600" />
+                    </div>
                     <div>
-                      <h2 className="text-2xl font-black text-green-800 mb-2">Devis envoyé !</h2>
-                      <p className="text-green-700 font-medium">
-                        Merci de votre confiance. Nos techniciens étudient votre projet.<br/>
-                        <span className="font-bold underline">Nous vous répondons sous 24h maximum.</span>
+                      <h2 className="text-3xl font-black text-green-800 mb-2">Devis envoyé !</h2>
+                      <p className="text-gray-600 text-lg">
+                        Merci de votre confiance. <br />
+                        <span className="font-bold text-[#233B72]">Nous vous répondons sous 24h maximum.</span>
                       </p>
                     </div>
-                    <p className="text-xs text-green-600 mt-4 italic">Redirection vers l'accueil dans quelques secondes...</p>
+                    <p className="text-sm text-gray-400 italic">Redirection vers l'accueil...</p>
                   </div>
                 ) : (
                   <>
@@ -158,6 +163,7 @@ export default function Devis() {
                     </h2>
 
                     <form className="space-y-5 md:space-y-6" onSubmit={handleSubmit}>
+                      {/* Honeypot anti-spam */}
                       <input
                         type="text"
                         name="website"
@@ -167,6 +173,7 @@ export default function Devis() {
                         tabIndex={-1}
                       />
 
+                      {/* MESSAGE D'ERREUR : S'affiche uniquement s'il y a un vrai problème de soumission */}
                       {submitError && (
                         <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-xl flex gap-3 animate-shake">
                           <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
@@ -176,27 +183,27 @@ export default function Devis() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
-                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1">Nom / Entreprise *</label>
+                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1 text-gray-800">Nom / Entreprise *</label>
                           <input
                             type="text"
                             name="name"
                             value={fields.name?.value || ''}
                             onChange={(e) => handleChange('name', e.target.value)}
                             onBlur={() => handleBlur('name')}
-                            className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl focus:bg-white transition-all outline-none ${
+                            className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl focus:bg-white transition-all outline-none text-gray-900 ${
                               fields.name?.error && fields.name?.touched ? 'border-red-300' : 'border-gray-100 focus:border-sky-500'
                             }`}
-                            placeholder="Ex: Jean Dupont"
+                            placeholder="Ex: Groupe EL AIDI"
                           />
                         </div>
 
                         <div className="space-y-2">
-                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1">Type de client</label>
+                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1 text-gray-800">Type de client</label>
                           <select
                             name="companyType"
                             value={fields.companyType?.value || ''}
                             onChange={(e) => handleChange('companyType', e.target.value)}
-                            className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:bg-white transition-all outline-none focus:border-sky-500 appearance-none"
+                            className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:bg-white transition-all outline-none focus:border-sky-500 text-gray-900 appearance-none"
                           >
                             <option value="">Sélectionnez...</option>
                             <option value="particulier">Particulier</option>
@@ -208,14 +215,14 @@ export default function Devis() {
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                         <div className="space-y-2">
-                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1">Email *</label>
+                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1 text-gray-800">Email *</label>
                           <input
                             type="email"
                             name="email"
                             value={fields.email?.value || ''}
                             onChange={(e) => handleChange('email', e.target.value)}
                             onBlur={() => handleBlur('email')}
-                            className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl transition-all outline-none ${
+                            className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl transition-all outline-none text-gray-900 ${
                               fields.email?.error && fields.email?.touched ? 'border-red-300' : 'border-gray-100 focus:border-sky-500'
                             }`}
                             placeholder="votre@email.com"
@@ -223,14 +230,14 @@ export default function Devis() {
                         </div>
 
                         <div className="space-y-2">
-                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1">Téléphone *</label>
+                          <label className="text-xs md:text-sm font-bold text-gray-700 ml-1 text-gray-800">Téléphone *</label>
                           <input
                             type="tel"
                             name="phone"
                             value={fields.phone?.value || ''}
                             onChange={(e) => handleChange('phone', e.target.value)}
                             onBlur={() => handleBlur('phone')}
-                            className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl transition-all outline-none ${
+                            className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl transition-all outline-none text-gray-900 ${
                               fields.phone?.error && fields.phone?.touched ? 'border-red-300' : 'border-gray-100 focus:border-sky-500'
                             }`}
                             placeholder="06 -- -- -- --"
@@ -239,13 +246,13 @@ export default function Devis() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs md:text-sm font-bold text-gray-700 ml-1">Prestation *</label>
+                        <label className="text-xs md:text-sm font-bold text-gray-700 ml-1 text-gray-800">Prestation *</label>
                         <select
                           name="service"
                           value={fields.service?.value || ''}
                           onChange={(e) => handleChange('service', e.target.value)}
                           onBlur={() => handleBlur('service')}
-                          className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl outline-none transition-all ${
+                          className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl outline-none transition-all text-gray-900 ${
                             fields.service?.error && fields.service?.touched ? 'border-red-300' : 'border-gray-100 focus:border-sky-500'
                           }`}
                         >
@@ -257,14 +264,14 @@ export default function Devis() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs md:text-sm font-bold text-gray-700 ml-1">Votre projet en détails *</label>
+                        <label className="text-xs md:text-sm font-bold text-gray-700 ml-1 text-gray-800">Votre projet en détails *</label>
                         <textarea
                           name="message"
-                          rows={6}
+                          rows={4}
                           value={fields.message?.value || ''}
                           onChange={(e) => handleChange('message', e.target.value)}
                           onBlur={() => handleBlur('message')}
-                          className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl transition-all outline-none resize-none ${
+                          className={`w-full px-4 py-3 bg-gray-50 border-2 rounded-xl transition-all outline-none resize-none text-gray-900 ${
                             fields.message?.error && fields.message?.touched ? 'border-red-300' : 'border-gray-100 focus:border-sky-500'
                           }`}
                           placeholder="Décrivez votre besoin..."
@@ -279,7 +286,7 @@ export default function Devis() {
                             onChange={(e) => handleChange('rgpd', e.target.checked ? 'true' : '')}
                             className="mt-1 mr-3 w-5 h-5 text-sky-600 border-gray-300 rounded focus:ring-sky-500 transition-all group-hover:scale-110"
                           />
-                          <span className="text-[10px] md:text-xs text-gray-600 leading-tight">
+                          <span className="text-[10px] md:text-xs text-gray-600 leading-tight text-gray-800">
                             J'accepte que mes données soient utilisées pour traiter ma demande. *
                           </span>
                         </label>
@@ -290,7 +297,7 @@ export default function Devis() {
                         disabled={isSubmitting}
                         className="w-full bg-gradient-to-r from-brand-orange-500 to-red-600 text-white px-8 py-4 md:py-5 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-3"
                       >
-                        <span>{isSubmitting ? 'Envoi...' : 'Demander mon devis'}</span>
+                        <span>{isSubmitting ? 'Envoi en cours...' : 'Demander mon devis'}</span>
                         {!isSubmitting && <ChevronRight className="w-6 h-6" />}
                       </button>
                     </form>
