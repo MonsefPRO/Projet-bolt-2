@@ -27,7 +27,7 @@ export default function Prestations() {
         "Une façade encrassée ou négligée nuit à l'image de votre bâtiment et accélère la dégradation des matériaux. Grâce à notre technologie de nettoyage par drone, certifiée et sans recours à l'échafaudage ou à la nacelle, redonnez éclat, propreté et durabilité à vos façades professionnelles en toute sécurité.",
       image: '/ares.png',
       image2: '/chronos.jpg',
-      link: '/prestations/nettoyage-facade', // CORRECTION : 'nettoyage' en minuscule pour coller au main.tsx
+      link: '/prestations/nettoyage-facade',
       icon: Droplets,
       benefits: [
         'Sécurité maximale : zéro risque de chute',
@@ -45,7 +45,7 @@ export default function Prestations() {
         "Sans traitement régulier, les mousses et lichens dégradent l'étanchéité de votre toiture. Préservez votre patrimoine avec notre service de démoussage par drone, une solution sécurisée et rapide pour une toiture durable.",
       image: '/Demoussage drone 1.jpg',
       image2: '/5kmh_et_jusqu’a_600m2_heure_de_traitement.png',
-      link: '/prestations/demoussage', // OK : Correspond au main.tsx
+      link: '/prestations/demoussage',
       icon: Shield,
       benefits: [
         'Zéro déplacement sur la toiture : tuiles préservées',
@@ -63,7 +63,7 @@ export default function Prestations() {
         "Des panneaux encrassés perdent jusqu'à 30% de rendement. Notre nettoyage professionnel par drone vous permet de récupérer une production maximale et d'optimiser votre investissement.",
       image: '/rony.jpg',
       image2: '/rony4.jpg',
-      link: '/prestations/panneaux-photovoltaiques', // OK : Correspond au main.tsx
+      link: '/prestations/panneaux-photovoltaiques',
       icon: Sun,
       benefits: [
         "Récupérez jusqu'à 30% de production d'énergie",
@@ -81,7 +81,7 @@ export default function Prestations() {
         "L'élimination des nids de frelons en hauteur est un risque sérieux. Notre technologie drone traite efficacement les nids difficiles d'accès avec un minimum d'exposition humaine.",
       image: '/abateur_de_frelons.png',
       image2: '/frel.png',
-      link: '/prestations/elimination-frelons', // OK : Correspond au main.tsx
+      link: '/prestations/elimination-frelons',
       icon: AlertTriangle,
       benefits: [
         'Intervention 100% sécurisée à distance',
@@ -96,10 +96,10 @@ export default function Prestations() {
 
   const getColorClasses = (color: string) => {
     const colors: any = {
-      sky: { gradient: 'from-sky-500 to-blue-600', text: 'text-sky-600', bg: 'bg-sky-50', border: 'border-sky-200' },
-      green: { gradient: 'from-green-500 to-emerald-600', text: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' },
-      amber: { gradient: 'from-amber-500 to-orange-600', text: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200' },
-      red: { gradient: 'from-red-500 to-rose-600', text: 'text-red-600', bg: 'bg-red-50', border: 'border-red-200' }
+      sky: { gradient: 'from-[#233B72] to-blue-600', text: 'text-[#233B72]', bg: 'bg-slate-50', border: 'border-blue-100' },
+      green: { gradient: 'from-green-600 to-emerald-600', text: 'text-green-600', bg: 'bg-green-50', border: 'border-green-100' },
+      amber: { gradient: 'from-orange-500 to-amber-600', text: 'text-orange-600', bg: 'bg-orange-50', border: 'border-orange-100' },
+      red: { gradient: 'from-red-600 to-rose-700', text: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' }
     };
     return colors[color] || colors.sky;
   };
@@ -108,12 +108,13 @@ export default function Prestations() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Header />
 
+      {/* HERO SECTION HARMONISÉE : Overlay Risques/Valeurs */}
       <section className="relative pt-20 overflow-hidden flex items-center h-[300px] md:h-[450px]">
         <HeroCarousel />
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-blue-900/20 to-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/40 via-blue-900/40 to-black/60 z-10"></div>
         <div className="relative z-20 w-full text-center px-4">
-          <h1 className="text-3xl md:text-6xl font-bold mb-3 drop-shadow-2xl text-white">
-            Nos Prestations par Drone
+          <h1 className="text-3xl md:text-7xl font-extrabold mb-3 drop-shadow-2xl text-white uppercase tracking-tighter">
+            Nos Prestations
           </h1>
           <p className="text-lg md:text-2xl drop-shadow-lg font-semibold text-white">
             L'expertise aérienne au service de votre patrimoine
@@ -122,13 +123,13 @@ export default function Prestations() {
       </section>
 
       <div className="container mx-auto px-4 py-8 md:py-16 max-w-7xl">
-        <nav className="hidden sm:flex items-center space-x-2 text-sm text-gray-600 mb-8 md:mb-12">
-          <Link to="/" className="hover:text-sky-600">Accueil</Link>
+        <nav className="hidden sm:flex items-center space-x-2 text-sm text-gray-600 mb-8 md:mb-12 font-medium">
+          <Link to="/" className="hover:text-[#233B72]">Accueil</Link>
           <ChevronRight className="w-4 h-4" />
-          <span className="text-gray-800 font-medium">Prestations</span>
+          <span className="text-gray-900">Prestations</span>
         </nav>
 
-        <div className="space-y-12 md:space-y-24">
+        <div className="space-y-12 md:space-y-28">
           {prestations.map((prestation, index) => {
             const Icon = prestation.icon;
             const colors = getColorClasses(prestation.color);
@@ -136,64 +137,64 @@ export default function Prestations() {
 
             return (
               <ScrollReveal key={prestation.id} delay={0.1}>
-                <Hover3DCard className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden p-5 md:p-10 lg:p-12">
-                  <h2 className="text-2xl md:text-5xl font-extrabold mb-6 md:mb-10 text-center lg:text-left text-[#233B72]">
+                <Hover3DCard className="bg-white rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden p-6 md:p-12 lg:p-14">
+                  <h2 className="text-2xl md:text-5xl font-black mb-8 md:mb-12 text-center lg:text-left text-[#233B72] leading-tight">
                     {prestation.title}
                   </h2>
 
-                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}>
-                    <div className="w-full lg:w-1/2 space-y-4">
-                      <div className="grid grid-cols-1 gap-4">
-                        <div className="h-56 sm:h-72 md:h-80 relative overflow-hidden rounded-2xl shadow-lg">
-                          <img src={prestation.image} alt={prestation.title} className="w-full h-full object-cover" />
-                          <div className="absolute top-4 left-4">
-                            <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br ${colors.gradient} rounded-xl flex items-center justify-center shadow-lg`}>
-                              <Icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 lg:gap-16 items-center`}>
+                    <div className="w-full lg:w-1/2 space-y-6">
+                      <div className="grid grid-cols-1 gap-6">
+                        <div className="h-64 sm:h-72 md:h-80 relative overflow-hidden rounded-3xl shadow-2xl">
+                          <img src={prestation.image} alt={prestation.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                          <div className="absolute top-5 left-5">
+                            <div className={`w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br ${colors.gradient} rounded-2xl flex items-center justify-center shadow-2xl text-white`}>
+                              <Icon className="w-8 h-8 md:w-10 md:h-10" />
                             </div>
                           </div>
                         </div>
-                        <div className="hidden lg:block h-80 relative overflow-hidden rounded-2xl shadow-lg">
-                          <img src={prestation.image2} alt={`${prestation.title} - Détail`} className="w-full h-full object-cover" />
+                        <div className="hidden lg:block h-72 relative overflow-hidden rounded-3xl shadow-lg border-4 border-white">
+                          <img src={prestation.image2} alt={`${prestation.title} - Expertise`} className="w-full h-full object-cover" />
                         </div>
                       </div>
                     </div>
 
-                    <div className="w-full lg:w-1/2 space-y-6">
-                      <p className="text-gray-600 text-base md:text-lg leading-relaxed text-justify">
+                    <div className="w-full lg:w-1/2 space-y-8">
+                      <p className="text-gray-600 text-lg md:text-xl leading-relaxed text-justify font-medium">
                         {prestation.description}
                       </p>
 
-                      <div className={`${colors.bg} ${colors.border} border rounded-2xl p-5 md:p-6`}>
-                        <h3 className="font-bold text-gray-800 mb-4 text-md md:text-lg flex items-center gap-2">
-                          <CheckCircle className={`w-5 h-5 ${colors.text}`} />
-                          Pourquoi nous choisir ?
+                      <div className={`${colors.bg} ${colors.border} border-2 rounded-[2rem] p-6 md:p-8 shadow-inner`}>
+                        <h3 className="font-bold text-gray-900 mb-5 text-lg md:text-xl flex items-center gap-3">
+                          <CheckCircle className={`w-6 h-6 ${colors.text}`} />
+                          Points clés de l'intervention :
                         </h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                           {prestation.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start gap-3">
-                              <div className={`w-5 h-5 rounded-full bg-white border-2 ${colors.border} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                                <div className={`w-2 h-2 rounded-full ${colors.gradient} bg-gradient-to-br`} />
+                            <li key={idx} className="flex items-start gap-4">
+                              <div className={`w-6 h-6 rounded-full bg-white border-2 ${colors.border} flex items-center justify-center flex-shrink-0 mt-1 shadow-sm`}>
+                                <div className={`w-2.5 h-2.5 rounded-full ${colors.gradient} bg-gradient-to-br`} />
                               </div>
-                              <span className="text-gray-700 text-sm md:text-base">{benefit}</span>
+                              <span className="text-gray-800 text-base md:text-lg font-bold">{benefit}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                      <div className="flex flex-col sm:flex-row gap-5 pt-6">
                         <Link
                           to={prestation.link}
-                          className={`flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r ${colors.gradient} text-white px-6 py-4 rounded-xl font-bold hover:shadow-lg transition-all active:scale-95 group`}
+                          className={`flex-1 inline-flex items-center justify-center gap-3 bg-gradient-to-r ${colors.gradient} text-white px-8 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition-all active:scale-95 uppercase tracking-wider`}
                         >
                           En savoir plus
-                          <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                          <ChevronRight className="w-6 h-6" />
                         </Link>
 
                         <Link
-                          to="/devis" // CORRECTION : 'devis' en minuscule pour coller au main.tsx
-                          className={`flex-1 inline-flex items-center justify-center gap-2 border-2 ${colors.text} border-current px-6 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all active:scale-95`}
+                          to="/devis"
+                          className={`flex-1 inline-flex items-center justify-center gap-3 border-2 ${colors.text} border-current px-8 py-5 rounded-2xl font-black text-lg hover:bg-slate-50 transition-all active:scale-95 uppercase tracking-wider`}
                         >
-                          Devis gratuit
+                          Devis Gratuit
                         </Link>
                       </div>
                     </div>
@@ -204,25 +205,31 @@ export default function Prestations() {
           })}
         </div>
 
-        <div className="mt-16 md:mt-24 bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-8 md:p-16 text-center text-white shadow-2xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Un projet spécifique ?</h2>
-          <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto px-4">
-            Cartographie, thermographie ou inspection technique : nos experts s'adaptent à vos besoins les plus complexes.
-          </p>
+        {/* SECTION CTA HARMONISÉE */}
+        <div className="mt-24 md:mt-32 bg-gradient-to-br from-[#233B72] via-blue-900 to-black rounded-[3rem] p-10 md:p-20 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-6xl font-black mb-8 uppercase tracking-tighter">Un projet spécifique ?</h2>
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto font-medium">
+              Cartographie, thermographie ou inspection technique : nos experts déploient des solutions sur-mesure pour vos besoins complexes.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <Link
-              to="/devis" // CORRECTION : Minuscule
-              className="bg-brand-orange-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-brand-orange-600 transition-all shadow-lg flex items-center justify-center gap-2"
-            >
-              Demander un devis
-              <ChevronRight className="w-5 h-5" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link
+                to="/devis"
+                className="bg-white text-[#233B72] px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 uppercase tracking-widest"
+              >
+                Je fais ma demande !
+                <ChevronRight className="w-6 h-6" />
+              </Link>
 
-            <a href="tel:0467209709" className="border-2 border-white/30 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center">
-              Nous appeler
-            </a>
+              <a href="tel:0467209709" className="border-2 border-white/40 text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center uppercase tracking-widest">
+                Nous appeler
+              </a>
+            </div>
           </div>
+          {/* Lueurs décoratives */}
+          <div className="absolute -top-20 -left-20 w-80 h-80 bg-orange-500 opacity-20 blur-[100px]"></div>
+          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-blue-400 opacity-20 blur-[100px]"></div>
         </div>
       </div>
       <CertificationsSection />
