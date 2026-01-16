@@ -138,7 +138,7 @@ export default function Risques() {
         {/* NOUVELLE SECTION : LE TABLEAU DE L'HONNÊTETÉ (SEO & RÉASSURANCE) */}
         <ScrollReveal>
             <div className="mt-32 max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-[#1a2e5a] mb-12 text-center">Pourquoi le drone est votre meilleur levier de gestion des risques</h2>
+                <h2 className="text-3xl font-bold text-[#1a2e5a] mb-12 text-center">Votre meilleur levier de gestion des risques</h2>
                 <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-2xl bg-white">
                     <table className="w-full text-left border-collapse">
                         <thead className="bg-[#1a2e5a] text-white">
