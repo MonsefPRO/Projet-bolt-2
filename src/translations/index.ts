@@ -9,6 +9,13 @@ export const translations = {
       values: 'Nos valeurs',
       quote: 'Demander un devis'
     },
+    /* AJOUT DES CLÉS POUR LE HEADER */
+    risques: {
+      title: 'Risques & Cadre Légal'
+    },
+    rejoignez: {
+      title: 'Rejoignez-nous'
+    },
     banner: {
       offer: 'Offre spéciale : -15% sur votre première intervention jusqu\'au 31 décembre 2025'
     },
@@ -775,6 +782,13 @@ export const translations = {
       values: 'Our Values',
       quote: 'Request a Quote'
     },
+    /* AJOUT DES CLÉS POUR LE HEADER ANGLAIS */
+    risques: {
+      title: 'Risks & Legal'
+    },
+    rejoignez: {
+      title: 'Join Us'
+    },
     banner: {
       offer: 'Special offer: -15% off your first intervention until December 31, 2025'
     },
@@ -1229,552 +1243,249 @@ export const translations = {
         service2: 'Hornet Nest Removal'
       }
     },
-    devis: {
+    privacy: {
       backHome: 'Back to home',
-      responseBadge: '📞 Guaranteed response within 24h',
-      title: 'Request a free quote',
-      subtitle: 'Get a personalized estimate for your drone cleaning project',
-      howItWorks: {
-        title: 'How it works?',
-        subtitle: 'A simple and transparent 4-step process',
-        step1Title: 'Quote Request',
-        step1Desc: 'Fill out the form with your project details.',
-        step2Title: 'Project Analysis',
-        step2Desc: 'Our team contacts you within 24h to discuss specificities.',
-        step3Title: 'Technical Visit',
-        step3Desc: 'If necessary, free visit to precisely assess your needs.',
-        step4Title: 'Detailed Quote',
-        step4Desc: 'Full quote with service details, rates, and schedule.'
+      title: 'Privacy Policy',
+      lastUpdated: 'Last updated: ',
+      intro: 'At Ellipsys, we are committed to protecting your privacy and personal data. This policy explains how we collect, use, and protect your information in accordance with GDPR.',
+      section1: {
+        title: '1. Data Controller',
+        company: 'Business name:',
+        companyName: 'Ellipsys',
+        website: 'Website:',
+        websiteUrl: 'ellipsys-solution.com',
+        email: 'Email:',
+        emailAddress: 'contact@ellipsys-group.com',
+        phone: 'Phone:',
+        phoneNumber: '04 67 20 97 09',
+        note: 'The data controller is the person who determines the purposes and means of personal data processing.'
       },
-      included: {
-        title: 'What\'s included',
-        item1: 'Detailed analysis of your project',
-        item2: 'Area to be treated and accessibility',
-        item3: 'Recommended treatment type',
-        item4: 'Products used (biodegradable)',
-        item5: 'Estimated intervention duration',
-        item6: 'Number of passes required',
-        item7: 'Proposed intervention schedule',
-        item8: 'Warranty and post-intervention follow-up',
-        item9: 'Professional Liability Insurance',
-        item10: 'Before/after photos (optional)'
+      section2: {
+        title: '2. Data Collected',
+        intro: 'We only collect the data necessary to manage our services:',
+        identificationTitle: 'Identification Data',
+        identificationDesc: 'Surname, first name, business name, email, phone number, mailing address',
+        projectTitle: 'Project Data',
+        projectDesc: 'Building type, area, location, project description, desired timeline',
+        connectionTitle: 'Connection Data',
+        connectionDesc: 'IP address, browser type, pages visited, visit duration'
       },
-      info: {
-        title: 'Useful Information',
-        delaysTitle: 'Lead Times',
-        delay1: '• Response: within 24h',
-        delay2: '• Quote: 2-3 business days',
-        delay3: '• Intervention: according to schedule',
-        delay4: '• Emergency: contact us',
-        documentsTitle: 'Documents',
-        doc1: '• Free detailed quote',
-        doc2: '• Insurance certificate',
-        doc3: '• Prevention plan',
-        doc4: '• Product certificates',
-        supportTitle: 'Support',
-        support1: '• Personalized advice',
-        support2: '• Dedicated project follow-up',
-        support3: '• Technical support',
-        support4: '• Responsive after-sales'
+      section3: {
+        title: '3. Purposes of Processing',
+        intro: 'Your data is used to:',
+        purpose1: 'Respond to your quote and contact requests',
+        purpose2: 'Manage our commercial relationship',
+        purpose3: 'Improve our website and services',
+        purpose4: 'Send you information about our services (with your consent)',
+        purpose5: 'Comply with our legal and regulatory obligations'
       },
-      form: {
-        title: 'Quote request form',
-        nameLabel: 'Name / Company *',
-        namePlaceholder: 'Your name or business name',
-        companyTypeLabel: 'Customer Type',
-        companyTypeSelect: 'Select...',
-        companyTypeParticulier: 'Individual',
-        companyTypeEntreprise: 'Company',
-        companyTypeCopropriete: 'Condominium / Syndicate',
-        companyTypeCollectivite: 'Local Authority',
-        emailLabel: 'Email *',
-        emailPlaceholder: 'your@email.com',
-        phoneLabel: 'Phone *',
-        phonePlaceholder: '04 67 20 97 09',
-        addressLabel: 'Project Address *',
-        addressPlaceholder: 'Full address',
-        postalCodeLabel: 'Postal Code *',
-        postalCodePlaceholder: '75001',
-        buildingTypeLabel: 'Building Type *',
-        buildingTypeSelect: 'Select...',
-        buildingTypeIndustrial: 'Industrial Building',
-        buildingTypeCommercial: 'Commercial Building',
-        buildingTypeResidential: 'Condominium / Residential',
-        buildingTypeHeritage: 'Monument / Heritage',
-        buildingTypeOther: 'Other',
-        serviceLabel: 'Desired Service *',
-        serviceSelect: 'Select...',
-        serviceFacade: 'Facade Cleaning',
-        serviceToiture: 'Roof De-mossing',
-        serviceFrelons: 'Hornet Nest Removal',
-        serviceMaintenance: 'Maintenance Contract',
-        serviceOther: 'Other / Not sure',
-        surfaceLabel: 'Approximate area (m²)',
-        surfacePlaceholder: 'Ex: 500 m²',
-        timelineLabel: 'Desired Timeline',
-        timelineSelect: 'Select...',
-        timelineUrgent: 'Urgent (within 1 week)',
-        timelineCourt: 'Short term (2-4 weeks)',
-        timelineMoyen: 'Medium term (1-3 months)',
-        timelineFlexible: 'Flexible',
-        messageLabel: 'Detailed project description *',
-        messagePlaceholder: 'Describe your project in detail: current state, problems encountered, expected results, specific constraints...',
-        rgpdText: 'I agree to my data being used to process my quote request. In accordance with GDPR, you can exercise your rights of access, rectification, and erasure by contacting us. *',
-        submitButton: 'Send my quote request',
-        submitting: 'Sending...',
-        requiredNote: '* Required fields. Guaranteed response within 24h • Free no-obligation quote',
-        successMessage: 'Your request has been sent successfully! We will contact you within 24h.'
+      section4: {
+        title: '4. Legal Basis',
+        intro: 'The processing of your data is based on:',
+        consent: 'Your consent:',
+        consentDesc: 'for sending marketing communications',
+        contract: 'Performance of a contract:',
+        contractDesc: 'to process your quote requests',
+        interest: 'Our legitimate interest:',
+        interestDesc: 'to improve our services'
       },
-      help: {
-        title: 'Need help filling out this form?',
-        subtitle: 'Our team is available to assist you with your request',
-        callButton: '📞 Call us',
-        emailButton: '✉️ Send us an email'
+      section5: {
+        title: '5. Retention Period',
+        intro: 'We keep your data:',
+        contact: 'Contact data:',
+        contactDuration: '3 years after the last contact',
+        contractual: 'Contractual data:',
+        contractualDuration: '10 years (accounting obligations)',
+        navigation: 'Navigation data:',
+        navigationDuration: '13 months maximum'
+      },
+      section6: {
+        title: '6. Data Recipients',
+        intro: 'Your data may be shared with:',
+        recipient1: 'Our internal team for processing your requests',
+        recipient2: 'Our technical providers (hosting, CRM) under confidentiality contract',
+        recipient3: 'Competent authorities in case of legal obligation',
+        noSale: '✓ We never sell your data to third parties'
+      },
+      section7: {
+        title: '7. Your GDPR Rights',
+        intro: 'In accordance with GDPR, you have the following rights:',
+        accessTitle: 'Right of access',
+        accessDesc: 'Obtain a copy of your personal data',
+        rectificationTitle: 'Right to rectification',
+        rectificationDesc: 'Correct your inaccurate or incomplete data',
+        erasureTitle: 'Right to erasure',
+        erasureDesc: 'Delete your data under certain conditions',
+        objectionTitle: 'Right to object',
+        objectionDesc: 'Object to the processing of your data',
+        restrictionTitle: 'Right to restriction',
+        restrictionDesc: 'Limit the processing of your data',
+        portabilityTitle: 'Right to portability',
+        portabilityDesc: 'Retrieve your data in a structured format',
+        exerciseTitle: 'How to exercise your rights?',
+        exerciseIntro: 'For any request concerning your personal data, contact us:',
+        exerciseEmail: '📧 Email:',
+        exercisePhone: '📞 Phone:',
+        exerciseNote: 'We will respond within a maximum of one month.'
+      },
+      section8: {
+        title: '8. Cookies',
+        intro: 'Our site uses cookies to improve your experience:',
+        necessaryTitle: 'Necessary cookies',
+        necessaryDesc: 'Essential for site functioning (navigation, preferences). They cannot be deactivated.',
+        analyticalTitle: 'Analytical cookies',
+        analyticalDesc: 'Help us understand how you use our site (pages visited, time spent). Anonymized data.',
+        marketingTitle: 'Marketing cookies',
+        marketingDesc: 'Allow for content and ad personalization based on your interests.',
+        manageNote: 'You can manage your cookie preferences at any time via the banner appearing on your first visit.'
+      },
+      section9: {
+        title: '9. Security',
+        intro: 'We implement appropriate security measures:',
+        measure1: 'Sensitive data encryption (SSL/TLS)',
+        measure2: 'Restricted access to personal data',
+        measure3: 'Regular and secure backups',
+        measure4: 'Servers hosted in France (OVH/Supabase)',
+        measure5: 'Regular security audits'
+      },
+      section10: {
+        title: '10. Modifications',
+        text: 'This policy may be modified to reflect changes in our practices or legislation. We will inform you of any major changes by email or via a banner on our site.',
+        lastUpdate: 'Last updated: '
+      },
+      section11: {
+        title: '11. Supervisory Authority',
+        intro: 'If you feel your rights are not respected, you can lodge a complaint with the CNIL:',
+        cnilName: 'Commission Nationale de l\'Informatique et des Libertés (CNIL)',
+        cnilAddress1: '3 Place de Fontenoy - TSA 80715',
+        cnilAddress2: '75334 PARIS CEDEX 07',
+        cnilPhone: 'Phone: 01 53 73 22 22',
+        cnilWebsite: 'Website:'
+      },
+      questions: {
+        title: 'Questions about your data?',
+        subtitle: 'Our team is at your disposal to answer all your questions regarding your data protection',
+        contactButton: '✉️ Contact us',
+        homeButton: 'Back to home'
       }
     },
-    nettoyageFacade: {
+    prestations: {
       hero: {
+        title: 'Certified professional drone services',
+        subtitle: 'Innovative and secure solutions for building maintenance',
+        certified: 'DGAC Certified',
+        productsAB: 'AB Certified Products',
+        compliant2026: '2026 Compliant'
+      },
+      breadcrumb: {
+        home: 'Home',
+        current: 'Services'
+      },
+      excellence: {
+        title: 'Certified excellence and safety',
+        intro: 'Ellipsys is a DGAC and EASA certified company, specialized in professional drone services. We comply with 2026 legislation and exclusively use AB-certified and biodegradable products. Our interventions are 3 to 5 times faster than traditional methods, with no risk to operators, featuring personalized client follow-up at every stage.',
+        securedTitle: '100% Secure',
+        securedDesc: 'Zero accidents, zero fall risk',
+        ecoTitle: 'Eco-friendly Products',
+        ecoDesc: 'AB-certified and biodegradable',
+        fastTitle: 'Fast Interventions',
+        fastDesc: '3 to 5x faster than classic methods'
+      },
+      service1: {
         title: 'Facade cleaning by drone',
-        subtitle: 'Innovative solution for all building types'
+        description: 'A dirty and poorly maintained facade deteriorates your building\'s image and accelerates material degradation. Restore shine and cleanliness to your facades through our certified drone technology, without scaffolding or lift platforms.',
+        benefit1: 'Maximum safety: zero fall risk, no rappelling or scaffolding',
+        benefit2: 'Intervention 3x faster than traditional methods',
+        benefit3: 'AB-certified and biodegradable cleaning products',
+        benefit4: 'DGAC certifications and 2026 legislation compliance',
+        benefit5: 'Personalized client follow-up with before/after photo report',
+        benefit6: 'Specialized: historic facades, monuments, industrial and logistics buildings',
+        benefit7: 'Long-lasting water-repellent protection included',
+        learnMore: 'Learn more',
+        requestQuote: 'Request a quote'
       },
-      breadcrumb: {
-        home: 'Home',
-        current: 'Facade cleaning'
+      service2: {
+        title: 'Roof de-mossing by drone',
+        description: 'Without regular treatment, moss and lichen destroy your roof\'s seal and reduce its lifespan by 30%. Protect and prolong the longevity of your roofing with our secure and certified drone service.',
+        benefit1: 'Intervention without walking on the roof: tile preservation',
+        benefit2: 'Treatment 70% faster than traditional de-mossing',
+        benefit3: 'AB-certified and ecological anti-moss products',
+        benefit4: 'DGAC certified operators and 2026 regulation compliance',
+        benefit5: 'Preventive anti-regrowth treatment effective up to 10 years',
+        benefit6: 'Detailed intervention report and annual client follow-up',
+        benefit7: 'High-performance waterproofing available'
       },
-      intro: {
-        title: 'Facade cleaning by drone: technology serving your building maintenance',
-        paragraph1: 'Ellipsys offers a revolutionary solution for facade cleaning by drone, combining maximum safety, exceptional efficiency, and profitability. Our drone facade cleaning service represents a major advance in professional building maintenance, advantageously replacing traditional methods like scaffolding or lift platforms.',
-        paragraph2: 'Thanks to this innovative technology and our DGAC-certified pilots, we operate on all types of facades: natural stone, concrete, brick, render, metal cladding, glass facades, and even historic monuments. Our drone, equipped with high-performance high-pressure systems, allows for deep cleaning while fully preserving the integrity of the materials. Our method effectively eliminates dirt, atmospheric pollution, moss, lichen, algae deposits and restores your facade to its original shine.',
-        paragraph3: 'Discover why more and more property managers, condominiums, and industrial companies are choosing our certified drone services for the maintenance of their facades.'
+      service3: {
+        title: 'Photovoltaic panel cleaning',
+        description: 'Dirty panels lose between 20 and 30% of their energy yield, which is money lost every day. With professional cleaning twice a year, regain up to 30% additional production and maximize your return on investment.',
+        benefit1: 'Regain up to 30% of lost energy production',
+        benefit2: 'Non-contact cleaning: no risk of scratches or damage',
+        benefit3: 'Intervention 5x plus rapide que le manuel',
+        benefit4: 'Certified non-abrasive specialized photovoltaic products',
+        benefit5: 'DGAC certification and 2026 legislation compliance',
+        benefit6: 'Bi-annual maintenance planning with automatic reminder',
+        benefit7: 'Energy performance report before/after intervention',
+        benefit8: 'Source: National Renewable Energy Laboratory (NREL) - USA'
       },
-      facadeTypes: {
-        title: 'All types of facades: expertise adapted to each surface',
-        type1: 'Natural stone facades - Delicate cleaning respecting authenticity',
-        type2: 'Concrete buildings - Efficient treatment without surface erosion',
-        type3: 'Brick walls - Precise cleaning preserving porosity',
-        type4: 'Render and plaster - Gentle intervention for fragile surfaces',
-        type5: 'Metal cladding - Cleaning without rust or corrosion',
-        type6: 'Glass facades - Specialized treatment for sensitive surfaces',
-        type7: 'Roofs and gutters - Easy access and deep cleaning',
-        type8: 'Historic monuments - Certifications for listed buildings'
-      },
-      techniques: {
-        title: 'Specialized techniques and equipment for optimal cleaning',
-        intro: 'Our approach combines cutting-edge technology and professional expertise to guarantee exceptional results while preserving your surfaces.',
-        equipment1Title: 'High-performance drones',
-        equipment1Desc: 'Our professional drones offer a range of up to 500 meters and exceptional stability, even in difficult weather conditions. Equipped with advanced stabilization systems and HD cameras, they allow precise intervention at all heights.',
-        equipment2Title: 'Programmable high-pressure systems',
-        equipment2Desc: 'Nozzle system adjustable from 20 to 200 bars allowing pressure adaptation to each surface type. Intelligent detection to avoid material damage and ensure a perfect result.',
-        equipment3Title: 'Biodegradable chemical treatments',
-        equipment3Desc: 'Ecological and biodegradable cleaning products certified ISO 14001. Effectively eliminate moss, lichen, and algae without persistent pollutants.',
-        technique1: 'High-pressure hydro-jet: deep cleaning without damaging materials',
-        technique2: 'Preventive biocide treatment: long-lasting protection against moss reappearance',
-        technique3: 'Water-repellent application: long-term protection against water infiltration',
-        technique4: 'Thermal drone inspection: diagnosis of non-visible defects'
-      },
-      process: {
-        title: 'Professional facade cleaning process: 4 guaranteed steps',
-        intro: 'Our proven method ensures an impeccable result and guaranteed customer satisfaction.',
-        step1Title: 'Inspection and detailed diagnosis',
-        step1Desc: 'Full prior visit to your building. Thorough evaluation of the facade condition, identification of critical areas, analysis of materials and pollution. Thermal diagnosis if necessary. Precise quote established on-site.',
-        step2Title: 'Secure site preparation',
-        step2Desc: 'Protection of sensitive areas (windows, AC, signage). Installation of safety barriers. Coordination with your team. Compliance with RGPT (drone safety). Systems test.',
-        step3Title: 'High-performance drone cleaning',
-        step3Desc: 'Precise application of the treatment adapted to your facade type. Progressive cleaning with real-time pressure adjustment. HD video monitoring of the result. Preventive water-repellent pass.',
-        step4Title: 'Finishing and long-lasting protective treatment',
-        step4Desc: 'Application of a certified water-repellent product for 18-24 months protection. Detailed intervention report with before/after photos. Regular maintenance advice included.',
-        step5Title: 'Post-intervention follow-up',
-        step5Desc: 'Follow-up contact at 30 days to verify your satisfaction. Free technical assistance for 12 months. Annual inspection recommended for regular maintenance.'
-      },
-      certifications: {
-        title: 'Legal certifications and compliance guarantees',
-        intro: 'Ellipsys holds all certifications required to legally practice this activity in full safety.',
-        cert1: 'DGAC Certification (Direction Générale de l\'Aviation Civile) - Professional drone operation authorization',
-        cert2: 'Certified pilots with theoretical certificate and practical training validated by an approved body',
-        cert3: 'Specific Professional Liability Insurance for drone operations - full coverage',
-        cert4: 'Compliance with NF EN 13414 standard for safety in access work',
-        cert5: 'GDPR compliance for data collection during inspections',
-        cert6: 'ISO 9001 (quality) and ISO 14001 (environment) certifications',
-        cert7: 'Labor code compliance - Accident declaration and safety monitoring',
-        cert8: 'Environmental standards for use of certified biodegradable products'
-      },
-      comparison: {
-        title: 'Comparison: Drone vs. Scaffolding vs. Lift Platforms vs. Manual Cleaning',
-        intro: 'Discover why drone cleaning represents the best solution for your building.',
-        traditionalMethods: 'Traditional Methods',
-        droneMethod: 'Ellipsys Drone Cleaning',
-        criteria: {
-          safety: {
-            title: 'Operator Safety',
-            traditional: 'High risk: work at height, falls, electrocution, chronic sector accidents',
-            drone: 'Zero risk: operators on the ground, no personal exposure'
-          },
-          cost: {
-            title: 'Total Intervention Cost',
-            traditional: 'Very expensive: scaffolding rental €3-4,000/day, lift platform €500-800/day, large teams',
-            drone: 'Economical: fixed price, no heavy equipment rental, less personnel'
-          },
-          speed: {
-            title: 'Intervention Duration',
-            traditional: 'Slow: installation 2-3 days, cleaning 5-10 days, dismantling 1-2 days = 2 weeks minimum',
-            drone: 'Fast: intervention 2-4 days, without prior installation = considerable time saving'
-          },
-          damage: {
-            title: 'Material Damage Risk',
-            traditional: 'High: degradation of delicate surfaces, accelerated wear, apparent marks',
-            drone: 'Minimal: adjusted pressure, no direct contact, impeccable result'
-          },
-          disruption: {
-            title: 'Business Disruption',
-            traditional: 'Very disruptive: multi-floor bulk, loss of access, ground work disruption',
-            drone: 'Discreet: outdoor and discreet operation, normal activity maintained'
-          },
-          environmental: {
-            title: 'Environmental Impact',
-            traditional: 'Polluting: waste, contaminated water, aggressive chemicals',
-            drone: 'Ecological: zero waste, minimal water consumption, biodegradable products'
-          },
-          maintenance: {
-            title: 'Regular Maintenance',
-            traditional: 'Expensive: repeated high quotes, long to schedule',
-            drone: 'Profitable: affordable regular maintenance, programmable at will'
-          }
-        }
-      },
-      benefits: {
-        title: 'Customer benefits and long-term advantages',
-        intro: 'Beyond immediate intervention, our services offer lasting benefits.',
-        client: {
-          title: 'Benefits for your building and operations',
-          benefit1: 'Property value preservation - New facade = increased asset value',
-          benefit2: 'Extended lifespan - Preventive treatment delays renewal by 5-10 years',
-          benefit3: 'Improved aesthetics - Strengthened professional image for clients/visitors',
-          benefit4: 'Health compliance - Elimination of algae/lichen harmful to old structures',
-          benefit5: 'Facilitated access - No disruption to operational functioning',
-          benefit6: 'Planning flexibility - Rapid availability, intervention without public alert'
-        },
-        environmental: {
-          title: 'Positive environmental impact',
-          benefit1: 'Water saving: -80% consumption compared to traditional methods',
-          benefit2: 'Zero polluting chemistry: biodegradable products + targeted treatment',
-          benefit3: 'Carbon footprint reduction: less personnel, less equipment transport',
-          benefit4: 'Ecosystem protection: treated wastewater drainage, no pollutant infiltration',
-          benefit5: '2030 Agenda contribution: ISO 14001 certified practice'
-        }
-      },
-      results: {
-        title: 'Guaranteed results',
-        result1: 'Complete elimination of dirt and deposits',
-        result2: 'Restores the original shine of your facades',
-        result3: 'Lasting protection against weathering',
-        result4: 'Preservation of material integrity',
-        result5: 'Immediately visible results',
-        result6: 'Customer satisfaction guarantee'
-      },
-      sidebar: {
-        quoteTitle: 'Request your quote',
-        quoteSubtitle: 'Response within 24h by our experts',
-        quoteButton: 'Get a quote',
-        benefitsTitle: 'Key Advantages',
-        benefit1Title: 'Maximum safety',
-        benefit1Desc: 'Zero risk for operators',
-        benefit2Title: 'Speed',
-        benefit2Desc: 'Fast intervention',
-        benefit3Title: 'Ecological',
-        benefit3Desc: 'Water saving',
-        benefit4Title: 'Economical',
-        benefit4Desc: 'Competitive rate',
-        otherServicesTitle: 'Other services',
-        service1: 'Roof de-mossing',
-        service2: 'Hornet nest removal'
-      }
-    },
-    panneauxPhotovoltaiques: {
-      hero: {
-        title: 'Photovoltaic panel cleaning by drone',
-        subtitle: 'Maximize your solar energy production'
-      },
-      breadcrumb: {
-        home: 'Home',
-        current: 'Solar panel cleaning'
-      },
-      intro: {
-        title: 'Photovoltaic panel cleaning by drone: optimizing your energy profitability',
-        paragraph1: 'Ellipsys offers an innovative photovoltaic panel cleaning service by drone, specifically designed to maximize your energy production and the profitability of your solar installation. Drone photovoltaic panel cleaning offers optimal drone solar maintenance without risk.',
-        paragraph2: 'Dust, pollen, debris, mineral deposits, and lichen reduce the energy efficiency of your panels by 15 to 25% depending on weather conditions. Significant accumulation can decrease production by 30-40%. Our DGAC-certified drone technology cleans your panels thoroughly while preserving their integrity and seal.',
-        paragraph3: 'Through our regular interventions, benefit from optimal production, preventive maintenance, and an extended lifespan of your installation. Discover how regular drone cleaning improves your energy ROI.'
-      },
-      impacts: {
-        title: 'Impact of dirt on your energy production',
-        intro: 'Understanding the importance of solar panel cleanliness.',
-        impact1: 'Fine dust: -5 to 10% energy yield',
-        impact2: 'Mineral deposits (limescale): -10 to 15% yield',
-        impact3: 'Pollen and debris: -8 to 12% yield',
-        impact4: 'Mixed accumulation: -15 to 25% yield',
-        impact5: 'Extreme dirt: -30 to 40% yield'
-      },
-      techniques: {
-        title: 'Specialized techniques and equipment for solar panels',
-        intro: 'Approach adapted to the specific constraints of photovoltaic installations.',
-        equipment1: 'Agronomic drones certified anti-failure for agricultural environments',
-        equipment2: 'Gentle watering systems (10-20 bars) without risk of glass damage',
-        equipment3: 'Demineralized or RO water to avoid residual scale',
-        technique1: 'Low-pressure cleaning: debris elimination without thermal shock',
-        technique2: 'Final demineralized water rinse: streak-free mineral drying',
-        technique3: 'HD visual inspection: detection of flaws, cracks, micro-cracks',
-        technique4: 'Anti-static treatment: protection against dust accumulation'
-      },
-      certifications: {
-        title: 'Legal certifications for drone solar maintenance',
-        intro: 'Interventions on photovoltaic installations in full legality.',
-        cert1: 'DGAC Certification - Authorization for professional drone exploitation',
-        cert2: 'Specialized training for photovoltaic panel cleaning',
-        cert3: 'Professional Liability Insurance coverage for panels',
-        cert4: 'Photovoltaic electrical knowledge and electrical safety',
-        cert5: 'ISO 9001 certifications and respect for electrical standards',
-        cert6: 'Intervention protocol for risk zones (electrocution)',
-        cert7: 'Labor code respect for outdoor environments',
-        cert8: 'GDPR compliance for photovoltaic data'
-      },
-      comparison: {
-        title: 'Comparison: Drone vs. Traditional Panel Cleaning Methods',
-        intro: 'Why drones are revolutionizing solar maintenance.',
-        criteria: {
-          safety: {
-            title: 'Operator Safety',
-            traditional: 'VERY DANGEROUS: Roof falls, electrocution, chronic risks',
-            drone: 'MAXIMUM SAFETY: Zero personal exposure, ground operators'
-          },
-          speed: {
-            title: 'Intervention Duration',
-            traditional: 'SLOW: Equipment setup + work 1-2 days per hectare',
-            drone: 'ULTRA-FAST: 2-3 hours for 1000 m² of panels'
-          },
-          quality: {
-            title: 'Cleaning Quality',
-            traditional: 'RISKY: Visible streaks, uneven cleaning, thermal shocks',
-            drone: 'OPTIMAL: Homogeneous cleaning, streak-free, no material damage'
-          },
-          damage: {
-            title: 'Panel Damage Risk',
-            traditional: 'HIGH: Glass scratches, micro-cracks, electrical safety risks',
-            drone: 'MINIMAL: Controlled approach, no direct contact, electrical safety'
-          },
-          maintenance: {
-            title: 'Maintenance Frequency',
-            traditional: 'EXPENSIVE: One-off interventions, onerous to schedule',
-            drone: 'PROGRAMMABLE: Affordable and flexible regular maintenance plans'
-          },
-          roi: {
-            title: 'Economic Profitability',
-            traditional: 'Reduced ROI: intervention costs decrease energy benefits',
-            drone: 'OPTIMIZED ROI: Low maintenance cost vs. energy production gains'
-          },
-          environmental: {
-            title: 'Environmental Impact',
-            traditional: 'High water consumption, polluting chemical products',
-            drone: 'ECO-RESPONSIBLE: Minimal water, zero chemistry, zero waste management'
-          }
-        }
-      },
-      benefits: {
-        title: 'Customer benefits and energy optimization',
-        intro: 'Beyond cleaning, a direct impact on your profitability.',
-        client: {
-          title: 'Benefits for your photovoltaic installation',
-          benefit1: 'Maximizing production: +15 to 25% yield restored',
-          benefit2: 'Increased revenue: significant gains from electricity resale',
-          benefit3: 'Panel preservation: prevention of premature aging',
-          benefit4: 'Preventive maintenance: detection of cracks and micro-defects',
-          benefit5: 'Improved ROI: reduced maintenance costs vs. energy gains',
-          benefit6: 'Extended lifespan: +5 to 10 years of installation operation'
-        },
-        environmental: {
-          title: 'Positive environmental impact',
-          benefit1: 'Optimized renewable energy: maximum production potential',
-          benefit2: 'Water saving: -90% vs. manual cleaning',
-          benefit3: 'Zero pollutants: biodegradable demineralized water, zero chemistry',
-          benefit4: 'Carbon footprint reduction: less equipment transport',
-          benefit5: 'Energy transition: optimization of existing green energy'
-        }
-      },
-      frequency: {
-        title: 'Recommended photovoltaic panel cleaning frequency',
-        intro: 'Schedule regular maintenance for optimal yield.',
-        frequency1: 'Rural/agricultural areas: 2-4 times a year (dust/pollen)',
-        frequency2: 'Urban areas: 1-2 times a year (atmospheric pollution)',
-        frequency3: 'Coastal areas: 3-4 times a year (sea salt deposits)',
-        frequency4: 'After storm/weather event: urgent intervention'
-      },
-      sidebar: {
-        quoteTitle: 'Solar maintenance quote',
-        quoteSubtitle: 'Response within 24h - Fast intervention',
-        quoteButton: 'Request a quote',
-        benefitsTitle: 'Key Advantages',
-        benefit1: 'Maximum safety',
-        benefit2: 'Optimized production',
-        benefit3: 'Preventive maintenance',
-        benefit4: 'Improved ROI',
-        otherServicesTitle: 'Other drone services',
-        service1: 'Roof de-mossing',
-        service2: 'Facade cleaning'
-      }
-    },
-    eliminationFrelons: {
-      hero: {
+      service4: {
         title: 'Hornet nest elimination by drone',
-        subtitle: 'Fast, secure, and risk-free intervention, even in hard-to-reach areas'
-      },
-      breadcrumb: {
-        home: 'Home',
-        prestations: 'Services',
-        current: 'Hornet nest elimination'
-      },
-      intro: {
-        title: 'Hornet nest elimination by drone: secure and certified emergency intervention',
-        paragraph1: 'Ellipsys offers a revolutionary solution for hornet nest elimination by drone, combining maximum safety, formidable efficiency, and rapid intervention. Drone hornet nest elimination represents the only human risk-free solution for destroying nests at height.',
-        paragraph2: 'Eliminating a hornet nest, particularly invasive Asian hornets, represents a real danger when carried out without suitable equipment. Thanks to our DGAC-certified drone intervention, we effectively eliminate nests located at height or in difficult-to-access areas, without human exposure to the risk of serious stings.',
-        paragraph3: 'This innovative drone pest control method allows for targeted and secure destruction of the nest, while ensuring a fast and professional intervention. Whether the nest is installed in a tree, on a roof, an industrial building, or an inaccessible structure, our drone solution offers a reliable, durable, and safety-compliant result.',
-        warningTitle: 'EMERGENCY: Important warning on Asian hornets',
-        warningText: 'NEVER attempt to destroy a hornet nest yourself. Non-professional intervention can lead to serious, even fatal, accidents. Asian hornets are particularly aggressive when their nest is threatened and can attack in a coordinated group. Multiple stings can cause anaphylactic shock. ALWAYS call upon certified and insured professionals.'
-      },
-      techniques: {
-        title: 'Specialized techniques and equipment for hornet elimination',
-        intro: 'Our approach combines high-performance drones and certified destructive products.',
-        equipment1: 'Professional high-altitude drones: access to nests up to 50+ meters',
-        equipment2: 'Precision injection systems: complete destruction without debris',
-        equipment3: 'Certified eco-friendly destruction products: targeted nest destruction',
-        equipment4: 'HD thermal cameras: precise nest localization before intervention',
-        technique1: 'Precision drone injection: direct insecticide product injection into nest',
-        technique2: 'Thermal destruction: total elimination of colonies + queen',
-        technique3: 'Selective chemical destruction: ecological product without environmental risk',
-        technique4: 'Post-destruction follow-up: full elimination verification after 48-72h'
-      },
-      certifications: {
-        title: 'Legal certifications for hornet nest elimination by drone',
-        intro: 'Ellipsys holds all certifications required for this specialized activity.',
-        cert1: 'DGAC Certification - Professional drone exploitation authorization at height',
-        cert2: 'Certified pilots with theoretical certificate + practical emergency training',
-        cert3: 'DGAC Biocide Approval - Use of certified destruction products',
-        cert4: 'Professional Liability Insurance specific to hornet nests',
-        cert5: 'Professional pest control certification (3D certification)',
-        cert6: 'Respect for European Directive 2009/128/EC on biocides',
-        cert7: 'NF EN 13414 safety standard for access work at height',
-        cert8: 'Environmental and health safety standards compliance'
-      },
-      comparison: {
-        title: 'Comparison: Drone vs. Traditional Elimination Methods',
-        intro: 'Discover why drones are the ONLY safe solution.',
-        criteria: {
-          safety: {
-            title: 'Operator Safety',
-            traditional: 'EXTREMELY DANGEROUS: Risk of serious/fatal stings, group attacks',
-            drone: 'ABSOLUTE SAFETY: Zero exposure, ground operators protected'
-          },
-          speed: {
-            title: 'Intervention Speed',
-            traditional: 'SLOW: 1-2 days preparation + 1-2 days intervention = 3 days minimum',
-            drone: 'ULTRA-FAST: 2-4 hours intervention for complete destruction'
-          },
-          access: {
-            title: 'Nest Access',
-            traditional: 'LIMITED: Impossible for high-altitude nests, inaccessible areas',
-            drone: 'UNLIMITED: Access up to 50+ meters, all positions possible'
-          },
-          effectiveness: {
-            title: 'Destruction Effectiveness',
-            traditional: 'PARTIAL: Risk of incomplete destruction, queen escapes',
-            drone: 'TOTAL: Guaranteed complete destruction of queen + colony'
-          },
-          disruption: {
-            title: 'Disruption',
-            traditional: 'VERY DISRUPTIVE: 10-20 meter exclusion zone, long duration',
-            drone: 'DISCREET: Fast intervention, short-term restricted zone'
-          },
-          risk: {
-            title: 'Complication Risk',
-            traditional: 'VERY HIGH: Stings, anaphylactic shocks, hospitalizations',
-            drone: 'ZERO: No exposure to stings, completely secure'
-          },
-          cost: {
-            title: 'Total Intervention Cost',
-            traditional: 'EXPENSIVE + HIDDEN: Unforeseen hospitalization costs from stings',
-            drone: 'FIXED AND TRANSPARENT: Single price without extra costs'
-          }
-        }
-      },
-      benefitsExtended: {
-        title: 'Customer benefits and maximum protection',
-        intro: 'Full protection for residents and environment.',
-        client: {
-          title: 'Benefits for residents and operations',
-          benefit1: 'Maximum safety: zero risk of stings or anaphylactic shock',
-          benefit2: 'Rapid intervention: 24-48h after detection',
-          benefit3: 'Guaranteed destruction: queen + full colony eliminated',
-          benefit4: 'Long-term peace of mind: 3-month post-destruction follow-up',
-          benefit5: 'No disruption: discreet intervention without evacuation',
-          benefit6: 'Prevention: advice on future re-infestation prevention'
-        },
-        environmental: {
-          title: 'Responsible environmental impact',
-          benefit1: 'Ecological and certified destruction products: zero pollution',
-          benefit2: 'Targeted intervention: no immediate environmental impact',
-          benefit3: 'Invasive population control: preventing Asian hornet expansion',
-          benefit4: 'Zero chemical waste: complete destruction without residue',
-          benefit5: 'Certified biodegradable biocides: ecosystem respect'
-        }
-      },
-      whyDrone: {
-        title: 'Why choose elimination by drone?',
-        benefit1Title: 'No human risk-taking',
-        benefit1Desc: '100% secure intervention without sting exposure',
-        benefit2Title: 'Access to difficult nests',
-        benefit2Desc: 'Reaches nests at height or in inaccessible zones',
-        benefit3Title: 'Fast intervention',
-        benefit3Desc: 'Precise drone method, immediate result',
-        benefit4Title: 'Asian hornet specialist',
-        benefit4Desc: 'Recognized expertise on this invasive species'
-      },
-      benefits: {
-        title: 'Key benefits of our intervention',
+        description: 'Eliminating a hornet nest, specifically Asian hornets, represents a real danger when carried out without suitable equipment. Thanks to our drone intervention, we effectively eliminate nests located at height or in difficult-to-reach areas, without human exposure to the risk of stings. This innovative method allows for targeted and secure destruction of the nest, while ensuring a fast and professional intervention.',
         benefit1: 'No human risk-taking: 100% secure intervention',
         benefit2: 'Access to high or hard-to-reach nests',
         benefit3: 'Fast and precise drone method',
         benefit4: 'Specially adapted for Asian hornets',
-        benefit5: 'DGAC-certified professional intervention',
+        benefit5: 'Professional DGAC-certified intervention',
         benefit6: 'Targeted destruction without danger to immediate environment',
         benefit7: 'Intervention report with before/after photos'
       },
-      interventionTypes: {
-        title: 'Intervention Types',
-        type1: 'Asian hornet nests',
-        type2: 'High-altitude nests (trees, roofs)',
-        type3: 'Hard-to-reach nests',
-        type4: 'Nests on industrial buildings',
-        type5: 'Nests in urban environments',
-        type6: 'Nests in sensitive zones',
-        type7: 'Emergency interventions',
-        type8: 'Post-intervention follow-up'
-      },
-      sidebar: {
-        urgentTitle: 'Urgent intervention?',
-        urgentSubtitle: 'Contact us quickly for safe elimination of your hornet nest',
-        quoteButton: '👉 Request a free quote',
-        contactButton: 'Contact us',
-        guaranteesTitle: 'Our guarantees',
-        guarantee1: 'Certified secure intervention',
-        guarantee2: 'DGAC certified pilots',
-        guarantee3: 'Professional liability insurance',
-        guarantee4: 'Detailed intervention report',
-        otherServicesTitle: 'Other services',
-        service1: 'Facade Cleaning',
-        service2: 'Roof De-mossing'
-      },
       cta: {
-        title: 'A hornet nest to eliminate?',
-        subtitle: 'Take no risk. Contact our experts for a fast, safe, and professional intervention.',
-        quoteButton: '👉 Request a free quote',
-        contactButton: 'Contact us quickly'
+        title: 'Need a custom service?',
+        subtitle: 'For specific requests, we also offer complementary missions: mapping, thermography, technical photography, analyses…',
+        quoteButton: 'Request a quote',
+        contactButton: 'Contact us'
+      }
+    },
+    realisations: {
+      badge: 'Portfolio & References',
+      title: 'Our Projects',
+      subtitle: 'Discover our drone cleaning and maintenance projects. Over 180,000 m² successfully treated across France.',
+      stats: {
+        projects: 'Projects completed',
+        satisfaction: 'Customer satisfaction'
+      },
+      backHome: 'Back to home',
+      categories: {
+        all: 'All projects',
+        commercial: 'Commercial',
+        industrial: 'Industrial',
+        residential: 'Residential',
+        heritage: 'Heritage'
+      },
+      comparison: {
+        before: 'Before',
+        after: 'After'
+      },
+      project1: {
+        title: 'Facade Cleaning - Office Building',
+        location: 'Paris 15th',
+        date: 'October 2024',
+        description: 'Complete cleaning of an 8-story glass facade with drone technology. Intervention completed in 2 days without business interruption.',
+        benefit1: 'No scaffolding required',
+        benefit2: 'Zero business interruption',
+        benefit3: '45% saving vs. traditional method',
+        benefit4: 'Flawless result over the entire surface',
+        stat1Label: 'Duration',
+        stat1Value: '2 days',
+        stat2Label: 'Saving',
+        stat2Value: '-45%',
+        stat3Label: 'Area',
+        stat3Value: '2,500 m²'
+      },
+      noProjects: 'No projects in this category',
+      cta: {
+        title: 'Your project deserves the same quality',
+        subtitle: 'Get a personalized quote within 24h',
+        button: 'Request a quote'
       }
     },
     valeurs: {
@@ -1811,7 +1522,7 @@ export const translations = {
       },
       value4: {
         title: 'French Technology',
-        description: 'Innovation in our DNA. French drones, advanced technologies, excellence and maximum safety.',
+        description: 'Innovation in our DNA. French drones, advanced technologies, excellence, and maximum safety.',
         item1: 'Drones made in France',
         item2: 'Constant innovation',
         item3: 'Maximum safety',
