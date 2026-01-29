@@ -1,232 +1,260 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  ChevronRight,
-  Shield,
-  Droplets,
-  AlertTriangle,
-  Sun,
-  CheckCircle
+import { 
+  ChevronLeft, 
+  ChevronRight, 
+  Building2, 
+  Home, 
+  Factory, 
+  Landmark, 
+  Check, 
+  Calendar, 
+  MapPin, 
+  TrendingUp, 
+  Award 
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
-import CertificationsSection from '../components/CertificationsSection';
-import { Hover3DCard } from '../components/Hover3DCard';
-import { ScrollReveal } from '../components/ScrollReveal';
 import { HeroCarousel } from '../components/HeroCarousel';
 import Footer from '../components/Footer';
 
-export default function Prestations() {
-  const { t } = useLanguage();
+interface Realisation {
+  id: number;
+  title: string;
+  category: string;
+  location: string;
+  date: string;
+  surface: string;
+  service: string;
+  imageBefore: string;
+  imageAfter: string;
+  description: string;
+  benefits: string[];
+  stats: {
+    label: string;
+    value: string;
+  }[];
+}
 
-  const prestations = [
+export default function Realisations() {
+  const { t, language } = useLanguage();
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [comparisonSlider, setComparisonSlider] = useState<{[key: number]: number}>({});
+
+  const realisations: Realisation[] = [
     {
-      id: 'nettoyage-facade',
-      title: t('prestations.service1.title'),
-      description: t('prestations.service1.description'),
-      image: '/ares.png',
-      image2: '/chronos.jpg',
-      link: '/prestations/nettoyage-facade',
-      icon: Droplets,
+      id: 1,
+      title: language === 'fr' ? "Immeuble de bureaux" : "Office Building",
+      category: "commercial",
+      location: "Paris 15ème",
+      date: language === 'fr' ? "Octobre 2024" : "October 2024",
+      surface: "2 500 m²",
+      service: t('mainServices.facade.title'),
+      imageBefore: "bati1.png",
+      imageAfter: "bati2.png",
+      description: language === 'fr' 
+        ? "Nettoyage complet d'une façade vitrée de 8 étages par drone. Intervention réalisée sans interruption d'activité."
+        : "Complete drone cleaning of an 8-story glass facade. Operation carried out without business interruption.",
       benefits: [
-        t('prestations.service1.benefit1'),
-        t('prestations.service1.benefit2'),
-        t('prestations.service1.benefit3'),
-        t('prestations.service1.benefit4'),
-        t('prestations.service1.benefit5')
+        language === 'fr' ? "Aucun échafaudage nécessaire" : "No scaffolding required",
+        language === 'fr' ? "Économie de 45% vs traditionnel" : "45% savings vs traditional",
+        language === 'fr' ? "Zéro interruption d'activité" : "Zero business interruption"
       ],
-      color: 'sky'
+      stats: [
+        { label: language === 'fr' ? "Durée" : "Duration", value: "2 j" },
+        { label: language === 'fr' ? "Économie" : "Savings", value: "-45%" },
+        { label: "Surface", value: "2500m²" }
+      ]
     },
     {
-      id: 'demoussage',
-      title: t('prestations.service2.title'),
-      description: t('prestations.service2.description'),
-      image: '/Demoussage drone 1.jpg',
-      image2: '/5kmh_et_jusqu’a_600m2_heure_de_traitement.png',
-      link: '/prestations/demoussage',
-      icon: Shield,
+      id: 2,
+      title: language === 'fr' ? "Entrepôt industriel" : "Industrial Warehouse",
+      category: "industrial",
+      location: "Lyon",
+      date: language === 'fr' ? "Septembre 2024" : "September 2024",
+      surface: "5 000 m²",
+      service: t('mainServices.demoussage.title'),
+      imageBefore: "indus1.png",
+      imageAfter: "indus2.png",
+      description: language === 'fr'
+        ? "Traitement anti-mousse longue durée par drone sur une toiture industrielle de grande envergure."
+        : "Long-lasting drone anti-moss treatment on a large-scale industrial roof.",
       benefits: [
-        t('prestations.service2.benefit1'),
-        t('prestations.service2.benefit2'),
-        t('prestations.service2.benefit3'),
-        t('prestations.service2.benefit4'),
-        t('prestations.service2.benefit5')
+        language === 'fr' ? "Traitement 100% homogène" : "100% homogeneous treatment",
+        language === 'fr' ? "Accès zones difficiles" : "Access to difficult areas",
+        language === 'fr' ? "Produit écologique certifié" : "Certified eco-friendly product"
       ],
-      color: 'green'
+      stats: [
+        { label: language === 'fr' ? "Durée" : "Duration", value: "3 j" },
+        { label: language === 'fr' ? "Économie" : "Savings", value: "-50%" },
+        { label: "Surface", value: "5000m²" }
+      ]
     },
     {
-      id: 'panneaux-photovoltaiques',
-      title: t('prestations.service3.title'),
-      description: t('prestations.service3.description'),
-      image: '/rony.jpg',
-      image2: '/rony4.jpg',
-      link: '/prestations/panneaux-photovoltaiques',
-      icon: Sun,
+      id: 3,
+      title: language === 'fr' ? "Résidence de 6 étages" : "6-Story Residency",
+      category: "residential",
+      location: "Bordeaux",
+      date: language === 'fr' ? "Août 2024" : "August 2024",
+      surface: "1 800 m²",
+      service: t('mainServices.facade.title'),
+      imageBefore: "38.png", 
+      imageAfter: "39.png",
+      description: language === 'fr'
+        ? "Ravalement par drone en milieu habité. Aucune nuisance sonore ou visuelle pour les résidents."
+        : "Drone facade restoration in a residential area. No noise or visual nuisance for residents.",
       benefits: [
-        t('prestations.service3.benefit1'),
-        t('prestations.service3.benefit2'),
-        t('prestations.service3.benefit3'),
-        t('prestations.service3.benefit4'),
-        t('prestations.service3.benefit7')
+        language === 'fr' ? "Pas de gêne résidents" : "No resident disturbance",
+        language === 'fr' ? "Traitement anti-pollution" : "Anti-pollution treatment",
+        language === 'fr' ? "Garantie résultat 2 ans" : "2-year result guarantee"
       ],
-      color: 'amber'
+      stats: [
+        { label: language === 'fr' ? "Durée" : "Duration", value: "3 j" },
+        { label: language === 'fr' ? "Économie" : "Savings", value: "-40%" },
+        { label: "Surface", value: "1800m²" }
+      ]
     },
     {
-      id: 'elimination-frelons',
-      title: t('prestations.service4.title'),
-      description: t('prestations.service4.description'),
-      image: '/abateur_de_frelons.png',
-      image2: '/frel.png',
-      link: '/prestations/elimination-frelons',
-      icon: AlertTriangle,
+      id: 4,
+      title: language === 'fr' ? "Monument historique" : "Historic Monument",
+      category: "heritage",
+      location: "Toulouse",
+      date: language === 'fr' ? "Juillet 2024" : "July 2024",
+      surface: "800 m²",
+      service: "Inspection + Nettoyage",
+      imageBefore: "36.png",
+      imageAfter: "37.png",
+      description: language === 'fr'
+        ? "Nettoyage délicat d'une façade classée avec validation de l'Architecte des Bâtiments de France."
+        : "Delicate cleaning of a listed facade with validation from France's heritage architects.",
       benefits: [
-        t('prestations.service4.benefit1'),
-        t('prestations.service4.benefit2'),
-        t('prestations.service4.benefit3'),
-        t('prestations.service4.benefit5'),
-        t('prestations.service4.benefit6')
+        language === 'fr' ? "Respect du patrimoine" : "Heritage preservation",
+        language === 'fr' ? "Produits non agressifs" : "Non-aggressive products",
+        language === 'fr' ? "Inspection thermique HD" : "HD thermal inspection"
       ],
-      color: 'red'
+      stats: [
+        { label: language === 'fr' ? "Durée" : "Duration", value: "4 j" },
+        { label: language === 'fr' ? "Précision" : "Precision", value: "100%" },
+        { label: "Surface", value: "800m²" }
+      ]
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colors: any = {
-      sky: { gradient: 'from-[#233B72] to-blue-600', text: 'text-[#233B72]', bg: 'bg-slate-50', border: 'border-blue-100' },
-      green: { gradient: 'from-green-600 to-emerald-600', text: 'text-green-600', bg: 'bg-green-50', border: 'border-green-100' },
-      amber: { gradient: 'from-orange-500 to-amber-600', text: 'text-orange-600', bg: 'bg-orange-50', border: 'border-orange-100' },
-      red: { gradient: 'from-red-600 to-rose-700', text: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' }
-    };
-    return colors[color] || colors.sky;
+  const categories = [
+    { id: 'all', label: t('realisations.categories.all'), icon: Building2 },
+    { id: 'commercial', label: t('realisations.categories.commercial'), icon: Building2 },
+    { id: 'industrial', label: t('realisations.categories.industrial'), icon: Factory },
+    { id: 'residential', label: t('realisations.categories.residential'), icon: Home },
+    { id: 'heritage', label: t('realisations.categories.heritage'), icon: Landmark }
+  ];
+
+  const filteredRealisations = selectedCategory === 'all'
+    ? realisations
+    : realisations.filter(r => r.category === selectedCategory);
+
+  const handleSliderChange = (id: number, value: number) => {
+    setComparisonSlider(prev => ({ ...prev, [id]: value }));
   };
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white">
       <Header />
-
+      
       <section className="relative pt-20 overflow-hidden flex items-center h-[300px] md:h-[450px]">
         <HeroCarousel />
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/40 via-blue-900/40 to-black/60 z-10"></div>
+        
         <div className="relative z-20 w-full text-center px-4">
-          <h1 className="text-3xl md:text-7xl font-extrabold mb-3 drop-shadow-2xl text-white uppercase tracking-tighter">
-            {t('prestations.hero.title')}
+          <h1 className="text-3xl md:text-7xl font-extrabold mb-4 drop-shadow-2xl text-white uppercase tracking-tighter">
+            {t('realisations.title')}
           </h1>
           <p className="text-lg md:text-2xl drop-shadow-lg font-semibold text-white">
-            {t('prestations.hero.subtitle')}
+            {t('realisations.subtitle')}
           </p>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-8 md:py-16 max-w-7xl">
-        <nav className="hidden sm:flex items-center space-x-2 text-sm text-gray-600 mb-8 md:mb-12 font-medium">
-          <Link to="/" className="hover:text-[#233B72]">{t('prestations.breadcrumb.home')}</Link>
-          <ChevronRight className="w-4 h-4" />
-          <span className="text-gray-900 font-bold">{t('prestations.breadcrumb.current')}</span>
-        </nav>
-
-        <div className="space-y-12 md:space-y-28">
-          {prestations.map((prestation, index) => {
-            const Icon = prestation.icon;
-            const colors = getColorClasses(prestation.color);
-            const isEven = index % 2 === 0;
-
+      <div className="container mx-auto max-w-7xl px-4 py-8 md:py-16">
+        <div className="flex overflow-x-auto pb-4 md:pb-0 md:flex-wrap gap-2 md:gap-3 mb-10 md:mb-16 no-scrollbar justify-start md:justify-center">
+          {categories.map(cat => {
+            const Icon = cat.icon;
             return (
-              <ScrollReveal key={prestation.id} delay={0.1}>
-                <Hover3DCard className="bg-white rounded-[2.5rem] shadow-xl border border-gray-100 overflow-hidden p-6 md:p-12 lg:p-14">
-                  <h2 className="text-2xl md:text-5xl font-black mb-8 md:mb-12 text-center lg:text-left text-[#233B72] leading-tight uppercase tracking-tighter">
-                    {prestation.title}
-                  </h2>
-
-                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 lg:gap-16 items-center`}>
-                    <div className="w-full lg:w-1/2 space-y-6">
-                      <div className="grid grid-cols-1 gap-6">
-                        <div className="h-64 sm:h-72 md:h-80 relative overflow-hidden rounded-3xl shadow-2xl">
-                          <img src={prestation.image} alt={prestation.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                          <div className="absolute top-5 left-5">
-                            <div className={`w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br ${colors.gradient} rounded-2xl flex items-center justify-center shadow-2xl text-white`}>
-                              <Icon className="w-8 h-8 md:w-10 md:h-10" />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="hidden lg:block h-72 relative overflow-hidden rounded-3xl shadow-lg border-4 border-white">
-                          <img src={prestation.image2} alt={`${prestation.title} - Expertise`} className="w-full h-full object-cover" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="w-full lg:w-1/2 space-y-8">
-                      <p className="text-gray-600 text-lg md:text-xl leading-relaxed text-justify font-medium">
-                        {prestation.description}
-                      </p>
-
-                      <div className={`${colors.bg} ${colors.border} border-2 rounded-[2rem] p-6 md:p-8 shadow-inner`}>
-                        <h3 className="font-bold text-gray-900 mb-5 text-lg md:text-xl flex items-center gap-3 uppercase tracking-tight">
-                          <CheckCircle className={`w-6 h-6 ${colors.text}`} />
-                          {t('prestations.excellence.title')} :
-                        </h3>
-                        <ul className="space-y-4">
-                          {prestation.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start gap-4">
-                              <div className={`w-6 h-6 rounded-full bg-white border-2 ${colors.border} flex items-center justify-center flex-shrink-0 mt-1 shadow-sm`}>
-                                <div className={`w-2.5 h-2.5 rounded-full ${colors.gradient} bg-gradient-to-br`} />
-                              </div>
-                              <span className="text-gray-800 text-base md:text-lg font-bold">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="flex flex-col sm:flex-row gap-5 pt-6">
-                        <Link
-                          to={prestation.link}
-                          className={`flex-1 inline-flex items-center justify-center gap-3 bg-gradient-to-r ${colors.gradient} text-white px-8 py-5 rounded-2xl font-black text-lg hover:shadow-2xl transition-all active:scale-95 uppercase tracking-wider`}
-                        >
-                          {t('prestations.service1.learnMore')}
-                          <ChevronRight className="w-6 h-6" />
-                        </Link>
-
-                        <Link
-                          to="/devis"
-                          className={`flex-1 inline-flex items-center justify-center gap-3 border-2 ${colors.text} border-current px-8 py-5 rounded-2xl font-black text-lg hover:bg-slate-50 transition-all active:scale-95 uppercase tracking-wider`}
-                        >
-                          {t('nav.quote')}
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </Hover3DCard>
-              </ScrollReveal>
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-black whitespace-nowrap transition-all text-sm md:text-base shadow-sm ${
+                  selectedCategory === cat.id
+                    ? 'bg-[#233B72] text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-600 hover:bg-[#f97316] hover:text-white'
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                <span>{cat.label}</span>
+              </button>
             );
           })}
         </div>
 
-        <div className="mt-24 md:mt-32 bg-gradient-to-br from-[#233B72] via-blue-900 to-black rounded-[3rem] p-10 md:p-20 text-center text-white shadow-2xl relative overflow-hidden">
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-6xl font-black mb-8 uppercase tracking-tighter">
-              {t('prestations.cta.title')}
-            </h2>
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto font-medium">
-              {t('prestations.cta.subtitle')}
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
+          {filteredRealisations.map(realisation => {
+            const sliderValue = comparisonSlider[realisation.id] || 50;
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/devis"
-                className="bg-white text-[#233B72] px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-2xl flex items-center justify-center gap-3 uppercase tracking-widest"
-              >
-                {t('hero.cta')}
-                <ChevronRight className="w-6 h-6" />
-              </Link>
+            return (
+              <div key={realisation.id} className="group bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-2xl transition-all duration-500">
+                <div className="relative h-64 sm:h-72 md:h-80 bg-gray-200 overflow-hidden touch-none">
+                  <div className="absolute inset-0">
+                    <img src={realisation.imageAfter} alt="After" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - sliderValue}% 0 0)` }}>
+                    <img src={realisation.imageBefore} alt="Before" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute top-0 bottom-0 w-1 bg-white shadow-2xl z-20" style={{ left: `${sliderValue}%` }}>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-xl flex gap-1">
+                         <ChevronLeft className="w-4 h-4 text-[#233B72]" />
+                         <ChevronRight className="w-4 h-4 text-[#233B72]" />
+                    </div>
+                  </div>
+                  <input type="range" min="0" max="100" value={sliderValue} onChange={(e) => handleSliderChange(realisation.id, parseInt(e.target.value))} className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" />
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="bg-black/70 backdrop-blur-md text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest">{t('realisations.comparison.before')}</span>
+                  </div>
+                  <div className="absolute top-4 right-4 z-20">
+                    <span className="bg-[#233B72]/90 backdrop-blur-md text-white px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest">{t('realisations.comparison.after')}</span>
+                  </div>
+                </div>
 
-              <a href="tel:0467209709" className="border-2 border-white/40 text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-white/10 transition-all flex items-center justify-center uppercase tracking-widest">
-                {t('contact.phone')}
-              </a>
-            </div>
-          </div>
-          <div className="absolute -top-20 -left-20 w-80 h-80 bg-orange-500 opacity-20 blur-[100px]"></div>
-          <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-blue-400 opacity-20 blur-[100px]"></div>
+                <div className="p-8 md:p-10 flex-grow flex flex-col">
+                  <h3 className="text-2xl md:text-3xl font-black text-[#233B72] mb-4 leading-tight uppercase tracking-tighter">{realisation.title}</h3>
+                  <div className="flex flex-wrap gap-4 mb-6 text-xs font-bold uppercase text-gray-400">
+                    <div className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-[#f97316]" /> {realisation.location}</div>
+                    <div className="flex items-center gap-1.5"><Calendar className="w-4 h-4 text-[#f97316]" /> {realisation.date}</div>
+                  </div>
+                  <p className="text-gray-600 text-sm md:text-base mb-8 font-medium leading-relaxed">{realisation.description}</p>
+                  
+                  <div className="grid grid-cols-3 gap-3 mb-8">
+                    {realisation.stats.map((stat, idx) => (
+                      <div key={idx} className="bg-slate-50 border border-slate-100 rounded-2xl p-3 text-center">
+                        <div className="text-base md:text-xl font-black text-[#233B72]">{stat.value}</div>
+                        <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{stat.label}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="space-y-3 mt-auto border-t border-gray-50 pt-6">
+                    {realisation.benefits.map((benefit, idx) => (
+                      <div key={idx} className="flex items-center gap-3 text-xs md:text-sm text-gray-700">
+                        <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0"><Check className="w-3 h-3 text-green-600" /></div>
+                        <span className="font-bold">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-      <CertificationsSection />
+
       <Footer />
     </div>
   );
