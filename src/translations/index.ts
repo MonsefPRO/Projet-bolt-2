@@ -939,8 +939,8 @@ export const translations = {
       offer: 'Special offer: -15% off your first intervention until December 31, 2025'
     },
     hero: {
-      title1: 'Drones at the service',
-      title2: 'of humanity',
+      title1: 'Drones',
+      title2: 'serving people',
       subtitle: 'Building and solar panel maintenance reinvented through cutting-edge technology',
       badge1: 'Safety',
       badge2: 'Efficiency',
