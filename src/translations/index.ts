@@ -1,4 +1,4 @@
-ort const translations = {
+export const translations = {
   fr: {
     nav: {
       home: 'Accueil',
