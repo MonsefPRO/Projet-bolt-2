@@ -13,129 +13,70 @@ import {
   TrendingUp, 
   Award 
 } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 import { HeroCarousel } from '../components/HeroCarousel';
 import Footer from '../components/Footer';
 
-interface Realisation {
-  id: number;
-  title: string;
-  category: string;
-  location: string;
-  date: string;
-  surface: string;
-  service: string;
-  imageBefore: string;
-  imageAfter: string;
-  description: string;
-  benefits: string[];
-  stats: {
-    label: string;
-    value: string;
-  }[];
-}
-
 export default function Realisations() {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [comparisonSlider, setComparisonSlider] = useState<{[key: number]: number}>({});
 
-  const realisations: Realisation[] = [
+  // Utilisation des clés du dictionnaire pour les projets
+  const realisations = [
     {
       id: 1,
-      title: "Immeuble de bureaux",
+      title: t('realisations.project1.title'),
       category: "commercial",
-      location: "Paris 15ème",
-      date: "Octobre 2024",
-      surface: "2 500 m²",
-      service: "Nettoyage de façade",
+      location: t('realisations.project1.location'),
+      date: t('realisations.project1.date'),
+      surface: t('realisations.project1.stat3Value'),
+      service: t('mainServices.facade.title'),
       imageBefore: "bati1.png",
       imageAfter: "bati2.png",
-      description: "Nettoyage complet d'une façade vitrée de 8 étages par drone. Intervention réalisée sans interruption d'activité.",
+      description: t('realisations.project1.description'),
       benefits: [
-        "Aucun échafaudage nécessaire",
-        "Économie de 45% vs traditionnel",
-        "Zéro interruption d'activité"
+        t('realisations.project1.benefit1'),
+        t('realisations.project1.benefit2'),
+        t('realisations.project1.benefit3')
       ],
       stats: [
-        { label: "Durée", value: "2 j" },
-        { label: "Économie", value: "-45%" },
-        { label: "Surface", value: "2500m²" }
+        { label: t('realisations.project1.stat1Label'), value: t('realisations.project1.stat1Value') },
+        { label: t('realisations.project1.stat2Label'), value: t('realisations.project1.stat2Value') },
+        { label: t('realisations.project1.stat3Label'), value: t('realisations.project1.stat3Value') }
       ]
     },
     {
       id: 2,
-      title: "Entrepôt industriel",
+      title: t('servicesSection.industrial.title'),
       category: "industrial",
-      location: "Lyon",
-      date: "Septembre 2024",
+      location: "Lyon, FR",
+      date: "Sept. 2024",
       surface: "5 000 m²",
-      service: "Démoussage de toiture",
+      service: t('mainServices.demoussage.title'),
       imageBefore: "indus1.png",
       imageAfter: "indus2.png",
-      description: "Traitement anti-mousse longue durée par drone sur une toiture industrielle de grande envergure.",
+      description: t('mainServices.demoussage.description'),
       benefits: [
-        "Traitement 100% homogène",
-        "Accès zones difficiles",
-        "Produit écologique certifié"
+        t('prestations.service2.benefit1'),
+        t('prestations.service2.benefit2'),
+        t('prestations.service2.benefit3')
       ],
       stats: [
-        { label: "Durée", value: "3 j" },
-        { label: "Économie", value: "-50%" },
-        { label: "Surface", value: "5000m²" }
+        { label: t('realisations.project1.stat1Label'), value: "3 j" },
+        { label: t('realisations.project1.stat2Label'), value: "-50%" },
+        { label: t('realisations.project1.stat3Label'), value: "5000m²" }
       ]
-    },
-    {
-        id: 3,
-        title: "Résidence de 6 étages",
-        category: "residential",
-        location: "Bordeaux",
-        date: "Août 2024",
-        surface: "1 800 m²",
-        service: "Nettoyage de façade",
-        imageBefore: "38.png", 
-        imageAfter: "39.png",
-        description: "Ravalement par drone en milieu habité. Aucune nuisance sonore ou visuelle pour les résidents.",
-        benefits: [
-          "Pas de gêne résidents",
-          "Traitement anti-pollution",
-          "Garantie résultat 2 ans"
-        ],
-        stats: [
-          { label: "Durée", value: "3 j" },
-          { label: "Économie", value: "-40%" },
-          { label: "Surface", value: "1800m²" }
-        ]
-      },
-      {
-        id: 4,
-        title: "Monument historique",
-        category: "heritage",
-        location: "Toulouse",
-        date: "Juillet 2024",
-        surface: "800 m²",
-        service: "Inspection + Nettoyage",
-        imageBefore: "36.png",
-        imageAfter: "37.png",
-        description: "Nettoyage délicat d'une façade classée avec validation de l'Architecte des Bâtiments de France.",
-        benefits: [
-          "Respect du patrimoine",
-          "Produits non agressifs",
-          "Inspection thermique HD"
-        ],
-        stats: [
-          { label: "Durée", value: "4 j" },
-          { label: "Précision", value: "100%" },
-          { label: "Surface", value: "800m²" }
-        ]
-      }
+    }
   ];
 
   const categories = [
-    { id: 'all', label: 'Tous', icon: Building2 },
-    { id: 'commercial', label: 'Pro', icon: Building2 },
-    { id: 'industrial', label: 'Usine', icon: Factory },
-    { id: 'residential', label: 'Habitat', icon: Home },
-    { id: 'heritage', label: 'Patrimoine', icon: Landmark }
+    { id: 'all', label: t('realisations.categories.all'), icon: Building2 },
+    { id: 'commercial', label: t('realisations.categories.commercial'), icon: Building2 },
+    { id: 'industrial', label: t('realisations.categories.industrial'), icon: Factory },
+    { id: 'residential', label: t('realisations.categories.residential'), icon: Home },
+    { id: 'heritage', label: t('realisations.categories.heritage'), icon: Landmark }
   ];
 
   const filteredRealisations = selectedCategory === 'all'
@@ -150,27 +91,27 @@ export default function Realisations() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* HERO SECTION HARMONISÉE */}
+      {/* HERO SECTION */}
       <section className="relative pt-20 overflow-hidden flex items-center h-[300px] md:h-[450px]">
         <HeroCarousel />
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/40 via-blue-900/40 to-black/60 z-10"></div>
         
         <div className="relative z-20 w-full text-center px-4">
           <h1 className="text-3xl md:text-7xl font-extrabold mb-4 drop-shadow-2xl text-white uppercase tracking-tighter">
-            Nos Réalisations
+            {t('realisations.title')}
           </h1>
           <p className="text-lg md:text-2xl drop-shadow-lg font-semibold text-white">
-            L'excellence technologique en action
+            {t('realisations.subtitle')}
           </p>
 
           <div className="flex justify-center gap-4 md:gap-8 mt-8">
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
               <TrendingUp className="w-5 h-5 text-orange-400" />
-              <span className="font-bold text-white text-xs md:text-sm">500+ Projets</span>
+              <span className="font-bold text-white text-xs md:text-sm">500+ {t('realisations.stats.projects')}</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
               <Check className="w-5 h-5 text-green-400" />
-              <span className="font-bold text-white text-xs md:text-sm">98% Satisfaction</span>
+              <span className="font-bold text-white text-xs md:text-sm">{t('realisations.stats.satisfaction')}</span>
             </div>
           </div>
         </div>
@@ -178,7 +119,7 @@ export default function Realisations() {
 
       <div className="container mx-auto max-w-7xl px-4 py-8 md:py-16">
         
-        {/* FILTRES HARMONISÉS */}
+        {/* FILTRES */}
         <div className="flex overflow-x-auto pb-4 md:pb-0 md:flex-wrap gap-2 md:gap-3 mb-10 md:mb-16 no-scrollbar justify-start md:justify-center">
           {categories.map(cat => {
             const Icon = cat.icon;
@@ -204,27 +145,16 @@ export default function Realisations() {
             const sliderValue = comparisonSlider[realisation.id] || 50;
 
             return (
-              <div
-                key={realisation.id}
-                className="group bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-2xl transition-all duration-500"
-              >
+              <div key={realisation.id} className="group bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-2xl transition-all duration-500">
                 {/* SLIDER AVANT/APRÈS */}
                 <div className="relative h-64 sm:h-72 md:h-80 bg-gray-200 overflow-hidden touch-none">
                   <div className="absolute inset-0">
-                    <img src={realisation.imageAfter} alt="Après" className="w-full h-full object-cover" />
+                    <img src={realisation.imageAfter} alt="After" className="w-full h-full object-cover" />
                   </div>
-
-                  <div
-                    className="absolute inset-0 transition-none"
-                    style={{ clipPath: `inset(0 ${100 - sliderValue}% 0 0)` }}
-                  >
-                    <img src={realisation.imageBefore} alt="Avant" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 transition-none" style={{ clipPath: `inset(0 ${100 - sliderValue}% 0 0)` }}>
+                    <img src={realisation.imageBefore} alt="Before" className="w-full h-full object-cover" />
                   </div>
-
-                  <div
-                    className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_15px_rgba(0,0,0,0.5)] z-20"
-                    style={{ left: `${sliderValue}%` }}
-                  >
+                  <div className="absolute top-0 bottom-0 w-1 bg-white shadow-[0_0_15px_rgba(0,0,0,0.5)] z-20" style={{ left: `${sliderValue}%` }}>
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-2.5 shadow-2xl">
                        <div className="flex gap-0.5">
                          <ChevronLeft className="w-4 h-4 text-[#233B72]" />
@@ -232,26 +162,21 @@ export default function Realisations() {
                        </div>
                     </div>
                   </div>
-
-                  <input
-                    type="range"
-                    min="0"
-                    max="100"
-                    value={sliderValue}
-                    onChange={(e) => handleSliderChange(realisation.id, parseInt(e.target.value))}
-                    className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
-                  />
-
+                  <input type="range" min="0" max="100" value={sliderValue} onChange={(e) => handleSliderChange(realisation.id, parseInt(e.target.value))} className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="bg-black/70 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-white/20">Avant</span>
+                    <span className="bg-black/70 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-white/20">
+                      {t('realisations.comparison.before')}
+                    </span>
                   </div>
                   <div className="absolute top-4 right-4 z-20">
-                    <span className="bg-[#233B72]/90 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-white/20">Après</span>
+                    <span className="bg-[#233B72]/90 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-widest border border-white/20">
+                      {t('realisations.comparison.after')}
+                    </span>
                   </div>
                 </div>
 
                 <div className="p-8 md:p-10 flex-grow flex flex-col">
-                  <h3 className="text-2xl md:text-3xl font-black text-[#233B72] mb-4 leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-black text-[#233B72] mb-4 leading-tight uppercase tracking-tighter">
                     {realisation.title}
                   </h3>
 
@@ -278,7 +203,7 @@ export default function Realisations() {
                   </div>
 
                   <div className="space-y-3 mt-auto border-t border-gray-50 pt-6">
-                    {realisation.benefits.map((benefit, idx) => (
+                    {realisations[0].benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center gap-3 text-xs md:text-sm text-gray-700">
                         <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
                           <Check className="w-3.5 h-3.5 text-green-600" />
@@ -294,27 +219,20 @@ export default function Realisations() {
         </div>
       </div>
 
-      {/* BANNIÈRE FINALE HARMONISÉE */}
+      {/* BANNIÈRE FINALE */}
       <div className="bg-gradient-to-br from-[#233B72] via-blue-900 to-black text-white py-16 md:py-24 px-4 overflow-hidden relative">
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <Award className="w-12 h-12 text-orange-500 mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter">
-            Votre bâtiment mérite ce résultat
+            {t('realisations.cta.title')}
           </h2>
           <p className="text-sky-100 text-base md:text-xl mb-10 opacity-90 font-medium">
-            Rejoignez les centaines de clients qui ont déjà fait confiance à l'expertise drone Ellipsys.
+            {t('realisations.cta.subtitle')}
           </p>
-          <Link
-            to="/devis"
-            className="inline-flex items-center gap-3 bg-white text-[#233B72] px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase tracking-widest"
-          >
-            Je fais ma demande !
+          <Link to="/devis" className="inline-flex items-center gap-3 bg-white text-[#233B72] px-10 py-5 rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase tracking-widest">
+            {t('hero.cta')}
             <ChevronRight className="w-6 h-6" />
           </Link>
-        </div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-           <div className="absolute -top-24 -left-24 w-96 h-96 bg-orange-500 rounded-full blur-[120px]"></div>
-           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-500 rounded-full blur-[120px]"></div>
         </div>
       </div>
 
