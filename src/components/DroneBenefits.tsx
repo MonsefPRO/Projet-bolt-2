@@ -37,13 +37,13 @@ export default function DroneBenefits() {
     <section className="py-12 md:py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4">
         
-        {/* TITRE : Ajusté sur deux lignes sur mobile avec <br /> */}
+        {/* TITRE : Maintenant lié au dictionnaire de traduction */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-2xl md:text-5xl font-bold mb-6" style={{ color: '#334786' }}>
-            Pourquoi choisir le <br className="md:hidden" /> nettoyage par drone ?
+          <h2 className="text-2xl md:text-5xl font-bold mb-6 uppercase tracking-tighter" style={{ color: '#334786' }}>
+            {t('benefits.title').split('?')[0]} <br className="md:hidden" /> ?
           </h2>
           <p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed text-justify md:text-center max-w-4xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed text-justify md:text-center max-w-4xl mx-auto font-medium"
             dangerouslySetInnerHTML={{ __html: t('benefits.summary') }}
           />
         </div>
@@ -57,9 +57,9 @@ export default function DroneBenefits() {
               <div
                 key={index}
                 id={benefit.id}
-                className="bg-white rounded-2xl shadow-xl md:shadow-lg overflow-hidden transition-all duration-300 md:hover:-translate-y-2"
+                className="bg-white rounded-2xl shadow-xl md:shadow-lg overflow-hidden transition-all duration-300 md:hover:-translate-y-2 border border-gray-100"
               >
-                {/* HEADER DU BLOC : Bouton sur mobile, div simple sur PC */}
+                {/* HEADER DU BLOC */}
                 <button
                   onClick={() => window.innerWidth < 768 && toggleBenefit(index)}
                   className="w-full flex items-center justify-between md:justify-start md:flex-col md:items-start p-5 md:p-8 text-left cursor-default md:cursor-default group"
@@ -71,7 +71,7 @@ export default function DroneBenefits() {
                     >
                       <benefit.icon className="w-6 h-6 md:w-8 md:h-8 text-white" strokeWidth={2.5} />
                     </div>
-                    <h3 className="text-lg md:text-2xl font-bold md:mb-4" style={{ color: '#334786' }}>
+                    <h3 className="text-lg md:text-2xl font-black uppercase tracking-tight" style={{ color: '#334786' }}>
                       {benefit.title}
                     </h3>
                   </div>
@@ -89,8 +89,8 @@ export default function DroneBenefits() {
                     ${isExpanded ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0 md:max-h-none hidden md:block'}
                   `}
                 >
-                  <p
-                    className="text-gray-600 leading-relaxed text-sm md:text-lg text-justify border-t border-gray-50 pt-4 md:border-0 md:pt-0"
+                  <div
+                    className="text-gray-600 leading-relaxed text-sm md:text-lg text-justify border-t border-gray-50 pt-4 md:border-0 md:pt-0 font-medium"
                     dangerouslySetInnerHTML={{ __html: benefit.description }}
                   />
                 </div>
